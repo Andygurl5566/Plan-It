@@ -10,9 +10,9 @@
 User.destroy_all
 
 
-lucy = User.create(name: "Lucy", password: "password", username:"lucy")
+testUser = User.create(name: "test", password: "test", username:"test")
 
-lucy.avatar.attach(
+testUser.avatar.attach(
     io: File.open("./public/avatars/meet-me.png"),
     filename: "meet-me.png",
     content_type: "application/png"
