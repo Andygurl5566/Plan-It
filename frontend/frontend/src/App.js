@@ -12,6 +12,7 @@ import Landing from './Components/Landing';
 
 
 
+
 function App() {
   const [currentUser, setCurrentUser] = useState({});
   // const [currentAvatar, setCurrentAvatar] = useState({});
@@ -33,17 +34,16 @@ function App() {
     <NavBar/>
     <Outlet/>
 
-    {/* <Container> */}
     <Routes>
 
       <Route path = "/login" element={<Login />}/>
-      <Route path = "/profile" element={<Profile />}/>
+      <Route path = "/profile" element={<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
       <Route path = "/projects" element={<ProjectsPage />}/>
       <Route path = "/signup" element={<Signup />}/>
       <Route path = "/" element={<Landing />}/>
     </Routes>
 
-    {/* </Container> */}
+    
     </>
   );
 }

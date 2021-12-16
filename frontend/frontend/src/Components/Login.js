@@ -30,15 +30,15 @@ const Login= ({setCurrentUser}) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    }).then((res) => {
+    })
+    .then(() => navigate("/profile"))
+    .then((res) => {
       console.log(res)
       if (res.ok) {
         res.json().then((user) => {
           setCurrentUser(user); 
           console.log(user.name)
-
         })
-        .then(() => navigate("/projects"))
       } else {
         res.json().then((errors) => {
           console.error(errors);
