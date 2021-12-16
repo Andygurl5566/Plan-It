@@ -10,8 +10,8 @@
 User.destroy_all
 
 
-nia = User.create(name: "Nia", password: "test", username:"test", bio: "Crafty mc crafterson", image: "https://thispersondoesnotexist.com/image")
-ben = User.create(name: "Ben", password: "test2", username:"test2", bio: "Just a narly dude in this Narly world", image: "https://thispersondoesnotexist.com/image")
+nia = User.create(name: "Nia", password: "12345ABC!", username:"test", bio: "Crafty mc crafterson", image: "https://thispersondoesnotexist.com/image")
+ben = User.create(name: "Ben", password: "54321ABC!", username:"test2", bio: "Just a narly dude in this Narly world", image: "https://thispersondoesnotexist.com/image")
 
 nia.avatar.attach(
     io: File.open("./public/avatars/meet-me.png"),

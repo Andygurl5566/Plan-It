@@ -9,7 +9,7 @@ const Login= ({setCurrentUser}) => {
   const countReducer = useSelector(state => state.countReducer)
   const dispatch = useDispatch()
 
-  // let navigate = useNavigate()
+  let navigate = useNavigate()
   
   const [formData, setFormData] = useState({
     username: "",
@@ -38,7 +38,7 @@ const Login= ({setCurrentUser}) => {
           console.log(user.name)
 
         })
-        // .then(() => navigate("/welcome"))
+        .then(() => navigate("/projects"))
       } else {
         res.json().then((errors) => {
           console.error(errors);
@@ -51,20 +51,21 @@ const Login= ({setCurrentUser}) => {
     return ( 
 <>
     <h1>Login</h1>
-    <h2>Counter redux test {countReducer} </h2>  
+    
+    {/* <h2>Counter redux test {countReducer} </h2>  
     <button onClick={()=> dispatch(increment())}>Test Redux</button>
-        
+         */}
 
     <form onSubmit={handleSubmit}>
 
     <div class="form-group">
-        <label for="exampleInputEmail1">TEST USER AVATAR</label>
+        {/* <label for="exampleInputEmail1">TEST USER AVATAR</label>
         <input type="file" name="profile" onChange={handleChange} class="form-control"  placeholder="Upload image"/>
       <div class="form-group">
-    </div>
+    </div> */}
 
         <label for="exampleInputEmail1">Username</label>
-        <input type="text" name="username" value={formData.username} onChange={handleChange} class="form-control"  placeholder="Enter Email"/>
+        <input type="text" name="username" value={formData.username} onChange={handleChange} class="form-control"  placeholder="Enter Username"/>
       
       </div>
       <div class="form-group">
