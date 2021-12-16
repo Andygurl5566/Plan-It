@@ -9,7 +9,7 @@ function ProjectCard({project}){
                 <h5 className="card-title">{project.title}</h5>
                 {/* 🔴🟠🟡🟢🔵🟣🟤⚫⚪ */}
 
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">{project.details}</p>
                 
                 <a href="/entries" class="btn btn-primary">View Entries</a>
             </div>

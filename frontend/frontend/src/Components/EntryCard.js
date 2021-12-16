@@ -9,7 +9,7 @@ function EntryCard({entries}){
             <h5 className="card-title">{entries.title}</h5>
             {/* 🔴🟠🟡🟢🔵🟣🟤⚫⚪ */}
 
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">{entries.details}.</p>
             
             <a href="#" class="btn btn-primary">Details</a>
             <a href="/projects" class="btn btn-primary">Back</a>
