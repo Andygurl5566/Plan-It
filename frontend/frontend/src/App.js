@@ -9,7 +9,7 @@ import NavBar from './Components/NavBar';
 import ProjectsPage from './Components/ProjectsPage';
 import Signup from './Components/Signup';
 import Landing from './Components/Landing';
-import ProjectCard from './Components/ProjectCard';
+import EntryPage from './Components/EntryPage';
 
 
 
@@ -42,6 +42,7 @@ function App() {
       <Route path = "/projects" element={<ProjectsPage currentUser={currentUser} />}/>
       <Route path = "/signup" element={<Signup />}/>
       <Route path = "/" element={<Landing />}/>
+      <Route path = "/entries" element={<EntryPage currentUser={currentUser} />}/>
       
     </Routes>
 
