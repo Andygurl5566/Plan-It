@@ -9,6 +9,7 @@ import NavBar from './Components/NavBar';
 import ProjectsPage from './Components/ProjectsPage';
 import Signup from './Components/Signup';
 import Landing from './Components/Landing';
+import ProjectCard from './Components/ProjectCard';
 
 
 
@@ -38,9 +39,10 @@ function App() {
 
       <Route path = "/login" element={<Login />}/>
       <Route path = "/profile" element={<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
-      <Route path = "/projects" element={<ProjectsPage />}/>
+      <Route path = "/projects" element={<ProjectsPage currentUser={currentUser} />}/>
       <Route path = "/signup" element={<Signup />}/>
       <Route path = "/" element={<Landing />}/>
+      
     </Routes>
 
     

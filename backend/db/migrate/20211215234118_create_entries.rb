@@ -10,7 +10,6 @@ class CreateEntries < ActiveRecord::Migration[6.1]
       t.string :tag
       t.string :image
 
-      t.integer :user_id
       t.integer :project_id
 
 

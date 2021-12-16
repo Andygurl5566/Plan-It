@@ -7,6 +7,8 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.string :tag
       t.string :start_date
       t.string :due_date
+      
+      t.integer :user_id
 
       t.timestamps
     end

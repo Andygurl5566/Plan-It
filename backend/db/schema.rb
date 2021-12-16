@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 2021_12_15_234127) do
     t.string "due_date"
     t.string "tag"
     t.string "image"
-    t.integer "user_id"
     t.integer "project_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -63,6 +62,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_234127) do
     t.string "tag"
     t.string "start_date"
     t.string "due_date"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

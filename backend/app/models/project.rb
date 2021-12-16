@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
     
+    belongs_to :user
     has_many :entries
-    has_many :users, through: :entries
 end

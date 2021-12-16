@@ -1,7 +1,44 @@
-function ProjectsPage(){
+import {useEffect, useState} from "react"
+import {Link} from "react-router-dom"
+import ProjectCard from "./ProjectCard"
+
+
+
+
+
+function ProjectsPage({currentUser}){
+
+    const [edited, setEdited] = useState(true)
+    const [projectList, setProjects] = useState([])
+
+    useEffect(() => {
+        fetch('/projects')
+            .then((r) => r.json())
+            .then((projects) => {
+               
+                setProjects(projects)
+                console.log(projects)
+            })
+    }, [])
+
     return(
         <>
-        <h1>Project Page</h1>
+        <h1>{currentUser.name}'s Projects </h1>
+
+        <div id= "projectDiv">
+        {projectList.map((project) => {
+            return (
+                <div id="GardenCardsDiv">
+                    <ProjectCard 
+                    
+                    project={project} 
+                    
+                    />
+                </div>
+            )})
+            }
+            
+        </div>
         </>
     )
 }
