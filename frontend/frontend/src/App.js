@@ -7,6 +7,8 @@ import Login from './Components/Login';
 import Profile from './Components/Profile';
 import NavBar from './Components/NavBar';
 import ProjectsPage from './Components/ProjectsPage';
+import Signup from './Components/Signup';
+import Landing from './Components/Landing';
 
 
 
@@ -37,6 +39,8 @@ function App() {
       <Route path = "/login" element={<Login />}/>
       <Route path = "/profile" element={<Profile />}/>
       <Route path = "/projects" element={<ProjectsPage />}/>
+      <Route path = "/signup" element={<Signup />}/>
+      <Route path = "/" element={<Landing />}/>
     </Routes>
 
     {/* </Container> */}
