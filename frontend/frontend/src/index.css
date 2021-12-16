@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#projectCardsDiv { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  grid-auto-rows: minmax(3rem, auto);
+  padding-right: 10%;
+  padding-left: 15%;
+
+
+}
+
+.card-title{
+  margin: 10px;
+}
+
+.pagetitle{
+  margin: 15px;
+  padding:10px;
+  padding-left: 15%
+}

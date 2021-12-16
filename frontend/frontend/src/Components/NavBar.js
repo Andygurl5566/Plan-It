@@ -6,7 +6,7 @@ function NavBar(){
         <>
        <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Home</a>
+    <a class="nav-link active" href="/">Home</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="/profile">Profile</a>
@@ -17,9 +17,6 @@ function NavBar(){
   <li class="nav-item">
     <a class="nav-link" href="#">Entries</a>
   </li>
-  {/* <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li> */}
 </ul>
         
         </>

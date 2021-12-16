@@ -23,12 +23,12 @@ function ProjectsPage({currentUser}){
 
     return(
         <>
-        <h1>{currentUser.name}'s Projects </h1>
+        <h1 className="pagetitle">{currentUser.name}'s Projects </h1>
 
-        <div id= "projectDiv">
+        <div id= "projectCardsDiv">
         {projectList.map((project) => {
             return (
-                <div id="GardenCardsDiv">
+                <div id="ProjectCards">
                     <ProjectCard 
                     
                     project={project} 
