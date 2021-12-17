@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users, only: [:index, :show, :create]
   resources :projects, only: [:index, :destroy, :create, :update]
-  resources :entries, only: [:index, ]
+  resources :entries, only: [:index,:destroy, :create, :update ]
 
   post "/signup", to: "users#create"
   post "/login", to: "sessions#create"
