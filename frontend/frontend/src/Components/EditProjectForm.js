@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 function EditProjectForm({id, project, edited, setEdited}){
 
-    let navigate = useNavigate()
+   
     const [currentProject, setCurrentProject] = useState({});
     const [toggle, setToggle] = useState(false);
 
@@ -53,9 +53,7 @@ function EditProjectForm({id, project, edited, setEdited}){
             console.log(toggle)
         }
 
-        function navigateBack(){
-          navigate("/projects")
-        }
+       
 
 
 
@@ -90,7 +88,7 @@ function EditProjectForm({id, project, edited, setEdited}){
 
                   <div className ="formbuttondiv">
                       <button type = "submit" className="btn btn-primary"> Submit </button>
-                      <a href="#" onClick={navigateBack} className="btn btn-primary"> Close </a>
+                     
                   </div>
               </div>
             </div>

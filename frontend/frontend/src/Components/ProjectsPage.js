@@ -1,10 +1,6 @@
 import {useEffect, useState} from "react"
-import {Link} from "react-router-dom"
 import ProjectCard from "./ProjectCard"
 import { useNavigate } from "react-router-dom";
-
-
-
 
 
 
@@ -50,7 +46,7 @@ function ProjectsPage({currentUser}){
                          project={project}
                         onDeleteProject={handleDeleteProject}  
                         edited ={edited}
-                        setedited={setEdited}                 
+                        setEdited={setEdited}                 
                         />
                     </div>
                 )})
