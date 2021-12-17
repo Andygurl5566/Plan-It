@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_234127) do
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.string "image"
+    t.string "description"
     t.string "tag"
     t.string "start_date"
     t.string "due_date"

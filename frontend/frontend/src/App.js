@@ -10,6 +10,7 @@ import ProjectsPage from './Components/ProjectsPage';
 import Signup from './Components/Signup';
 import Landing from './Components/Landing';
 import EntryPage from './Components/EntryPage';
+import NewProjectForm from './Components/NewProjectForm';
 
 
 
@@ -43,7 +44,8 @@ function App() {
       <Route path = "/signup" element={<Signup />}/>
       <Route path = "/" element={<Landing />}/>
       <Route path = "/entries" element={<EntryPage currentUser={currentUser} />}/>
-      
+      <Route path = "/new_project" element={<NewProjectForm />}/>
+
     </Routes>
 
     

@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration[6.1]
 
       t.string :title
       t.string :image
+      t.string :description
       t.string :tag
       t.string :start_date
       t.string :due_date
