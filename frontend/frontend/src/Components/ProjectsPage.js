@@ -21,6 +21,13 @@ function ProjectsPage({currentUser}){
             })
     }, [])
 
+    function handleDeleteProject(deletedProject) {
+        setProjects((projects) =>
+          projects.filter((projects) => projects.id !== deletedProject.id)
+        );
+      }
+
+
     return(
         <>
         <h1 className="pagetitle">{currentUser.name}'s Projects </h1>
@@ -29,10 +36,9 @@ function ProjectsPage({currentUser}){
         {projectList.map((project) => {
             return (
                 <div id="ProjectCards">
-                    <ProjectCard 
-                    
-                    project={project} 
-                    
+                    <ProjectCard  
+                    project={project}
+                    onDeleteProject={handleDeleteProject}                   
                     />
                 </div>
             )})

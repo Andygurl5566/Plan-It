@@ -20,10 +20,10 @@ nia.avatar.attach(
 )
 
 project1 = Project.create(title:"Glassblowing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
-project3 = Project.create(title:"Glassblowing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
-project4 = Project.create(title:"Glassblowing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
-project5 = Project.create(title:"Glassblowing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
-project6 = Project.create(title:"Glassblowing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
+project3 = Project.create(title:"Workouts", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
+project4 = Project.create(title:"Robotics", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
+project5 = Project.create(title:"Baking", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
+project6 = Project.create(title:"3D Printing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
 
 project2 = Project.create(title:"Tiny Home Remodel",user_id: ben.id, image:"http://images.huffingtonpost.com/2016-08-09-1470757977-4233983-image6.jpg", tag:"renovation", start_date:"12/15/21", due_date:"TBD")
 
