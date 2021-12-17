@@ -1,7 +1,15 @@
+import EditProjectForm from "./EditProjectForm";
+import React, { useState } from "react";
 
-
-function ProjectCard({project, onDeleteProject}){
+function ProjectCard({project, onDeleteProject, edited, setEdited}){
     const {id} = project
+    const [toggle, setToggle] = useState(false);
+
+    function handleToggle(){
+    
+      setToggle(!toggle)
+      console.log(toggle)
+  }
     
     function confirmDelete(){
         let result = window.confirm("Are you sure you want to delete this project?")
@@ -32,8 +40,11 @@ function ProjectCard({project, onDeleteProject}){
 
                 <p class="card-text">{project.details}</p>
                 
-                <a href="/entries" class="btn btn-primary">View Entries</a>
-                <a href="#" onClick={confirmDelete} class="btn btn-primary">Delete </a>
+                <a href="/entries" className="btn btn-primary">View Entries</a>
+                <button onClick={handleToggle} className="btn btn-primary"> {toggle == false? "Edit":"Close"} </button>
+                <a href="#" onClick={confirmDelete} className="btn btn-primary">Delete </a>
+
+                {toggle == false? "" : <EditProjectForm id={id} project={project} edited={edited} setEdited={setEdited}/>}
             </div>
         </div>
     )

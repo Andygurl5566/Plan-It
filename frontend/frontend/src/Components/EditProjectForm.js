@@ -1,7 +1,7 @@
 import {Link, useNavigate} from 'react-router-dom'
 import React, { useState } from "react";
 
-function NewProjectForm(){
+function EditProjectForm({id, project, edited, setEdited}){
 
     let navigate = useNavigate()
     const [currentProject, setCurrentProject] = useState({});
@@ -11,10 +11,9 @@ function NewProjectForm(){
     const [formData, setFormData] = useState({
         title: "",
         image: "",
-        description:""
-        
-        
-
+        description:"",
+        user_id: `${project.user_id}`
+      
     });
     const handleChange = (e) => {
         setFormData({
@@ -24,28 +23,30 @@ function NewProjectForm(){
       };
       const handleSubmit = (event) => {
         event.preventDefault();
-        fetch("/projects", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }).then((res) => {
-            console.log(res)
-            if (res.ok) {
-              res.json().then((project) => {
-                setCurrentProject(project);
-              })
-              .then(() => navigate("/projects"))
-            } else {
-              res.json().then((errors) => {
-                console.error(errors);
-              });
-            }
-          });
-        
-        }
-
+        fetch(`/projects/${id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData)
+          
+          }).then((res) => {
+              console.log(res)
+              if (res.ok) {
+                res.json().then((project) => {
+                  
+                  setCurrentProject(project)
+                  setEdited(!edited)
+                })
+                
+              } else {
+                res.json().then((errors) => {
+                  console.error(errors);
+                });
+              }
+            });
+          
+          }
         function handleToggle(){
             
             setToggle(!toggle)
@@ -99,4 +100,4 @@ function NewProjectForm(){
     )
 }
 
-export default NewProjectForm
+export default EditProjectForm

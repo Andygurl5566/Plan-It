@@ -11,12 +11,16 @@ import Signup from './Components/Signup';
 import Landing from './Components/Landing';
 import EntryPage from './Components/EntryPage';
 import NewProjectForm from './Components/NewProjectForm';
+import EditProjectForm from './Components/EditProjectForm';
 
 
 
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
+  const [projectList, setProjects] = useState([])
+  const [edited, setEdited] = useState(true)
+
   // const [currentAvatar, setCurrentAvatar] = useState({});
 
   useEffect(() => {
@@ -29,7 +33,15 @@ function App() {
         })
   }, [])
 
-
+  useEffect(() => {
+    fetch('/projects')
+        .then((r) => r.json())
+        .then((projects) => {
+            // console.log(Gardens)
+            setProjects(projects)
+            console.log(projects)
+        })
+}, [edited])
 
   return (
     <>
@@ -45,6 +57,8 @@ function App() {
       <Route path = "/" element={<Landing />}/>
       <Route path = "/entries" element={<EntryPage currentUser={currentUser} />}/>
       <Route path = "/new_project" element={<NewProjectForm />}/>
+      <Route path = "/project/edit" element={<EditProjectForm />}/>
+
 
     </Routes>
 

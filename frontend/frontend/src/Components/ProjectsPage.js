@@ -26,7 +26,7 @@ function ProjectsPage({currentUser}){
                 setProjects(projects)
                 console.log(projects)
             })
-    }, [])
+    }, [edited])
 
     function handleDeleteProject(deletedProject) {
         setProjects((projects) =>
@@ -48,7 +48,9 @@ function ProjectsPage({currentUser}){
                     <div id="ProjectCards">
                         <ProjectCard  
                          project={project}
-                        onDeleteProject={handleDeleteProject}                   
+                        onDeleteProject={handleDeleteProject}  
+                        edited ={edited}
+                        setedited={setEdited}                 
                         />
                     </div>
                 )})
