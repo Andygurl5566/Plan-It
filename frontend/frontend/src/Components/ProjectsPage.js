@@ -17,10 +17,10 @@ function ProjectsPage({currentUser}){
     useEffect(() => {
         fetch('/projects')
             .then((r) => r.json())
-            .then((projects) => {
-               
+            .then((projects) => {  
+
                 setProjects(projects)
-                console.log(projects)
+              
             })
     }, [edited])
 
@@ -45,7 +45,7 @@ function ProjectsPage({currentUser}){
                         <ProjectCard  
                          project={project}
                         onDeleteProject={handleDeleteProject}  
-                        edited ={edited}
+                        edited = {edited}
                         setEdited={setEdited}                 
                         />
                     </div>

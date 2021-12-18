@@ -6,10 +6,12 @@ function ProjectCard({project, onDeleteProject, edited, setEdited}){
     const {id} = project
     const [toggle, setToggle] = useState(false);
 
+
     function handleToggle(){
     
       setToggle(!toggle)
       console.log(toggle)
+
   }
     
     function confirmDelete(){
@@ -18,6 +20,7 @@ function ProjectCard({project, onDeleteProject, edited, setEdited}){
             handleDeleteProject()
         }
     }
+
 
     function handleDeleteProject() {
         fetch(`/projects/${id}`, {
@@ -32,8 +35,11 @@ function ProjectCard({project, onDeleteProject, edited, setEdited}){
 
 
     return(
+
         <div className = "card" style={{ width: '25rem' }}>
+
             <div className = "card-body">
+
                 <img className="card-img-top" src={project.image} alt="Card image cap"/>
 
                 <h5 className="card-title">{project.title}</h5>
@@ -41,15 +47,11 @@ function ProjectCard({project, onDeleteProject, edited, setEdited}){
 
                 <p class="card-text">{project.details}</p>
                 
-                <button
-                className= "redirect_btn"> 
-                <Link className="btn btn-primary" 
-                to={`/projects/${id}`}> View Entries </Link>
-               
-                </button> 
+                <a className="btn btn-primary" href={`/projects/${id}`}> View Entries  </a> 
                 
                 <button onClick={handleToggle} className="btn btn-primary"> {toggle == false? "Edit":"Close"} </button>
-                <a href="#" onClick={confirmDelete} className="btn btn-primary">Delete </a>
+
+                <button onClick={confirmDelete} className="btn btn-primary"> Delete </button>
 
                 {toggle == false? "" : <EditProjectForm id={id} project={project} edited={edited} setEdited={setEdited}/>}
             </div>

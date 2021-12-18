@@ -1,20 +1,16 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+
+function EditEntryForm({entries, id, edited, setEdited}){
 
 
-function NewEntryForm({toggle, setToggle, edited, setEdited}){
-
-   
-    let navigate = useNavigate()
     const [currentEntry, setCurrentEntry] = useState({});
-    const {project_id} = useParams()
+    
     const [formData, setFormData] = useState({
        
-        title: "title",
-        details: "details",
-        image: "image",
-        project_id:`${project_id}`
+        title: "",
+        details: "",
+        image: "",
+        project_id:`${entries.project_id}`
       
 
     });
@@ -26,20 +22,19 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
       };
       const handleSubmit = (event) => {
         event.preventDefault();
-        fetch("/entries", {
-          method: "POST",
+        fetch(`/entries/${id}`, {
+          method: "PATCH",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         }).then((res) => {
             if (res.ok) {
-              res.json().then((entry) => {
-                setCurrentEntry(entry);
+              res.json().then((entries) => {
+                setCurrentEntry(entries);
+                setEdited(!edited)
               })
-              .then(() => navigate(`/projects/${project_id}`))
-              .then(() => setToggle(!toggle))
-              .then(() => setEdited(!edited))
+            
             } else {
               res.json().then((errors) => {
                 console.error(errors);
@@ -49,10 +44,7 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
         
         }
 
-        
-        function navigateBack(){
-            navigate(`/projects/${project_id}`)
-          }
+  
 
     return(
         <>
@@ -72,13 +64,11 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
 
     <div className ="formbuttondiv">
     <button type="submit" className="btn btn-primary">Submit</button>
-    <button className="btn btn-primary" onClick={ ()=> setToggle(!toggle)}> Back </button>
     </div>
  </form>   
         </>
     )
-
 }
 
 
-export default NewEntryForm
+export default EditEntryForm

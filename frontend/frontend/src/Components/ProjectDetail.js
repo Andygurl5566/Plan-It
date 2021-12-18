@@ -28,7 +28,7 @@ function ProjectDetail(){
         fetch(`/projects/${project_id}`)
             .then((r) => r.json())
             .then((project) => {
-                // console.log(users)
+                
                 setEntries(project.entries)                
             })
     }, [edited])
@@ -36,18 +36,24 @@ function ProjectDetail(){
 
     return(
         <>
-        <h1>your Entries</h1>
-        <button onClick = {handleToggle} class= "redirect_btn">  Add Entry </button>
-        <button class= "redirect_btn"> <Link class="redirect" to="/projects"> Back </Link></button>
+        <div className="pageheader">
+
+            <h1>your Entries</h1>
+            <button onClick = {handleToggle} className="btn btn-primary">  Add Entry </button>
+            <a  className="btn btn-primary" href="/projects"> Back </a>
+
+        </div>
 
         {toggle == true? <NewEntryForm toggle={toggle} setToggle={setToggle} edited={edited} setEdited={setEdited}/> : ""}
 
-        <div id="projectCardsDiv">
-        {console.log(entryList)}
+        <div id="CardsDiv">
+        
         {entryList.map((entries) => {
             return (
-                <div  >
+                <div>
+                   
                     <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries}/>
+                
                 </div>
             )})
             }

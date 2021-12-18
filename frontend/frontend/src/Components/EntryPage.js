@@ -42,8 +42,6 @@ function EntryPage({currentUser}){
                     <EntryCard 
                     entries={entries} 
                     onDeleteEntry={handleDeleteEntry}
-                    edited={edited}
-                    setEdited ={setEdited}
                     />
                 </div>
             )})
