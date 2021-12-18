@@ -7,10 +7,11 @@ function EntryPage({currentUser}){
 
     const [edited, setEdited] = useState(true)
     const [entryList, setEntries] = useState([])
+    let navigate = useNavigate()
 
-    // function navigateToProjectForm(){
-    //     navigate("/new_entry")
-    // }
+    function navigateToEntryForm(){
+        navigate("/new_entry")
+    }
 
     useEffect(() => {
         fetch('/entries')
@@ -32,7 +33,7 @@ function EntryPage({currentUser}){
         <>
         <div className="pageheader">
             <h1 className="pagetitle">{currentUser.name}'s Entries </h1>
-            <button className="btn btn-primary">New Entry</button>
+            <button className="btn btn-primary" onClick={navigateToEntryForm}>New Entry</button>
         </div>
         <div id= "CardsDiv">
         {entryList.map((entries) => {

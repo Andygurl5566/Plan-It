@@ -49,21 +49,21 @@ const Signup= () => {
 <>
 <h1> Signup</h1>
     <form onSubmit={handleSubmit}>
-      <div class="form-group">
+      <div className="form-group">
         <label for="exampleInputEmail1">Username</label>
-        <input type="text" name="username" value={formData.username} onChange={handleChange} class="form-control"  placeholder="Enter Username"/>
+        <input type="text" name="username" value={formData.username} onChange={handleChange} className="form-control"  placeholder="Enter Username"/>
       
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="text" name="password" value={formData.password} onChange={handleChange} class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+        <input type="text" name="password" value={formData.password} onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
       </div>
 
-      <div class="form-check">
+      <div className="form-check">
       
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <Link class="btn btn-primary" to="/"> Back</Link> 
+      <button type="submit" className="btn btn-primary">Submit</button>
+      <Link className="btn btn-primary" to="/"> Back</Link> 
     </form>
 </>
 )

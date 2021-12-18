@@ -12,9 +12,9 @@ import Landing from './Components/Landing';
 import EntryPage from './Components/EntryPage';
 import NewProjectForm from './Components/NewProjectForm';
 import EditProjectForm from './Components/EditProjectForm';
-
-
-
+import NewEntryForm from './Components/NewEntryForm';
+import ProjectDetail from './Components/ProjectDetail';
+import EntryDetail from './Components/EntryDetail';
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -58,6 +58,10 @@ function App() {
       <Route path = "/entries" element={<EntryPage currentUser={currentUser} />}/>
       <Route path = "/new_project" element={<NewProjectForm />}/>
       <Route path = "/project/edit" element={<EditProjectForm />}/>
+      <Route path = "/new_entry" element={<NewEntryForm/>}/>
+
+      <Route path = "/projects/:project_id" element={<ProjectDetail />}/>
+      <Route path = "/entries/:entry_id" element={<EntryDetail />}/>
 
 
     </Routes>

@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
         end
     
         def show
-            project = current_user.project.find_by(id: params[:id])
+            project = current_user.projects.find_by(id: params[:id])
             if project 
                 render json: project
             else 

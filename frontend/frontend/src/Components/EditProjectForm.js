@@ -63,13 +63,13 @@ function EditProjectForm({id, project, edited, setEdited}){
             <div className='newforms'>
               <div className="form-group">
               <label>Project Name</label>
-              <input type="text" class="form-control" name="title" id="title" onChange={handleChange}  placeholder="Project Name"/>
+              <input type="text" className="form-control" name="title" id="title" onChange={handleChange}  placeholder="Project Name"/>
               
               <label>Description</label>
-              <input type="text" class="form-control" name="description" id="title" onChange={handleChange}  placeholder="Optional Description"/>
+              <input type="text" className="form-control" name="description" id="title" onChange={handleChange}  placeholder="Optional Description"/>
 
               <label>Image</label>
-              <input type="text" class="form-control" name="image" id="image" onChange={handleChange}  placeholder="Image"/>
+              <input type="text" className="form-control" name="image" id="image" onChange={handleChange}  placeholder="Image"/>
               {/* Will make this a file upload with active storage? */}
 
               {/* <button onClick={handleToggle}>More Options</button>

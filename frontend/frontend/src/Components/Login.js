@@ -59,19 +59,19 @@ const Login= ({setCurrentUser}) => {
 
     <form onSubmit={handleSubmit}>
 
-    <div class="form-group">
+    <div className="form-group">
         {/* <label for="exampleInputEmail1">TEST USER AVATAR</label>
         <input type="file" name="profile" onChange={handleChange} class="form-control"  placeholder="Upload image"/>
       <div class="form-group">
     </div> */}
 
         <label for="exampleInputEmail1">Username</label>
-        <input type="text" name="username" value={formData.username} onChange={handleChange} class="form-control"  placeholder="Enter Username"/>
+        <input type="text" name="username" value={formData.username} onChange={handleChange} className="form-control"  placeholder="Enter Username"/>
       
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="text" name="password" value={formData.password} onChange={handleChange} class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+        <input type="text" name="password" value={formData.password} onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
       </div>
       <div className="form-check">
       

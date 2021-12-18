@@ -4,18 +4,18 @@ import { Link } from "react-router-dom";
 function NavBar(){
     return(
         <>
-       <ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
+       <ul className="nav justify-content-center">
+  <li className="nav-item">
+    <a className="nav-link active" href="/">Home</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/profile">Profile</a>
+  <li className="nav-item">
+    <a className="nav-link" href="/profile">Profile</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/projects">Projects</a>
+  <li className="nav-item">
+    <a className="nav-link" href="/projects">Projects</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/entries">Entries</a>
+  <li className="nav-item">
+    <a className="nav-link" href="/entries">Entries</a>
   </li>
 </ul>
         

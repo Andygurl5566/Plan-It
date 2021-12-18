@@ -5,7 +5,7 @@ class EntriesController < ApplicationController
     end
 
     def show
-        entry = current_user.Entry.find_by(id: params[:id])
+        entry = current_user.entries.find_by(id: params[:id])
         if entry 
             render json: entry
         else 
@@ -14,9 +14,7 @@ class EntriesController < ApplicationController
     end
 
     def create
-        entry = Entry.new(entry_params)
-        entry.user = @current_user
-        entry.save
+        entry = Entry.create(entry_params)
         if entry.valid? 
             render json: entry, status: :created
         else 
@@ -49,7 +47,7 @@ class EntriesController < ApplicationController
     private
 
     def entry_params
-        params.permit(:name, :location)
+        params.permit(:title, :details, :image, :project_id)
 
     end
 
