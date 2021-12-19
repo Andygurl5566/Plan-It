@@ -25,7 +25,9 @@ code {
 
 .card-body {
   border-radius: 10px;
-  background-color: rgb(223, 230, 231);
+  background-color: rgb(243, 243, 243);
+  /* background-color: rgb(223, 230, 231); */
+  /* color: rgb(48, 47, 47); */
   color: rgb(48, 47, 47);
   letter-spacing: 2px;
 }
@@ -80,7 +82,16 @@ code {
 
 .bioheader{
   text-align: center;
-  padding:70px;
+  padding:70px;  
+}
+
+.bioheader p{
+  font-size: 25px;
+}
+
+.biotitle{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
 }
 
 .profileImage{
@@ -90,10 +101,44 @@ code {
 
 .profileDiv{
   padding: 20px;
+  text-align: center;
+  
+line-height: normal;
+vertical-align: middle;
+  
+}
+
+.biodiv{
+  background-color: rgb(243, 239, 239);
+  width: 300px;
+  text-align: center;
+  display: inline-block;
+line-height: normal;
+vertical-align: middle;
+padding:20px;
+border-radius: 10px;
 }
 
 .profilebtn{
   margin:5px;
+  display: inline-block;
+  width: 130px;
+height: 60px;
+margin:10px;
+border-radius: 10px;
+color:rgb(37, 37, 37);
+background-color: rgb(255, 255, 255);
+letter-spacing: 2px;
+}
+.profilebtn:hover{
+  background-color:white;
+  color:black;
+  letter-spacing: 2px;
+}
+
+
+.profilebuttondiv{
+margin-top:20px;
 }
 
 .navdiv{
@@ -209,6 +254,34 @@ letter-spacing: 2px;
   letter-spacing: 2px;
 }
 
+.askdiv{
+  float:right;
+  text-align: center;
+  margin:20px;
+  margin-right: 60px;
+}
+
+.askPlan{
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  font-size: 40px;
+  background-image: ;
+  margin: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  
+}
+
+.response{
+  width: 150px;
+  background-color: rgb(226, 226, 226);
+  padding: 10px;
+  border-radius: 10px;
+}
 
 
 

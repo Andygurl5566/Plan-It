@@ -76,7 +76,7 @@ const Login= ({setCurrentUser}) => {
       </div>
       <div className="form-special">
         <label for="exampleInputPassword1">Password</label>
-        <input type="text" name="password" value={formData.password} onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+        <input type="password" name="password" value={formData.password} onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
       </div>
       <div className="form-check">
       

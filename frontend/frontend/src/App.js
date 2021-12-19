@@ -16,6 +16,7 @@ import NewEntryForm from './Components/NewEntryForm';
 import ProjectDetail from './Components/ProjectDetail';
 import EntryDetail from './Components/EntryDetail';
 import EditEntryForm from './Components/EditEntryForm';
+import ProjectGenerator from './Components/ProjectGenerator';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
   return (
     <>
     <NavBar/>
+    
     <Outlet/>
 
     <Routes>
@@ -70,6 +72,8 @@ function App() {
       <Route path = "/projects/:project_id" element={<ProjectDetail />}/>
       <Route path = "/entries/:entry_id" element={<EntryDetail />}/>
       {/* <Route path = "*" element={< Error/>}/> */}
+
+      <Route path ="/generate" element={<ProjectGenerator/>}/>
      
     </Routes>
 

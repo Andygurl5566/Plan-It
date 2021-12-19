@@ -27,16 +27,21 @@ const handleLogout = () => {
     return (
        <>
       <div className="bioheader">
-      <h1>Welcome {currentUser.username}</h1> 
-       <h3>Another day, another project!</h3>
+      <h1 className="biotitle">Welcome {currentUser.username}!</h1> 
+       <p>Another day, another project</p>
        
 
       <div className = "profileDiv">
        <img className="profileImage" src="https://thispersondoesnotexist.com/image" />
       </div>
-
-       <button className="btn btn-primary" onClick={navigateToProjects}>My Projects</button>     
-       <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
+        <p></p>
+      <div className="biodiv">
+        <p>Here is a blurb about my awesome life.</p>
+      </div>
+      <div className="profilebuttondiv">
+       <button className="profilebtn" onClick={navigateToProjects}>My Projects</button>     
+       <button className="profilebtn" onClick={handleLogout}>Logout</button>
+       </div>
        </div>
        </>
     )
