@@ -69,6 +69,7 @@ function App() {
 
       <Route path = "/projects/:project_id" element={<ProjectDetail />}/>
       <Route path = "/entries/:entry_id" element={<EntryDetail />}/>
+      {/* <Route path = "*" element={< Error/>}/> */}
      
     </Routes>
 

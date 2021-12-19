@@ -63,7 +63,7 @@ function EditProjectForm({id, project, edited, setEdited}){
             <div className='newforms'>
               <div className="form-group">
               <label>Project Name</label>
-              <input type="text" className="form-control" name="title" id="title" onChange={handleChange}  placeholder="Project Name"/>
+              <input type="text" className="form-control" name="title" id="title" onChange={handleChange} value={formData.title} placeholder="Project Name"/>
               
               <label>Description</label>
               <input type="text" className="form-control" name="description" id="title" onChange={handleChange}  placeholder="Optional Description"/>

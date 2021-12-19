@@ -47,7 +47,8 @@ const Signup= () => {
 
     return ( 
 <>
-<h1> Signup</h1>
+
+<h1 className="formTitle"> Signup</h1>
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <label for="exampleInputEmail1">Username</label>
@@ -62,8 +63,10 @@ const Signup= () => {
       <div className="form-check">
       
       </div>
+      <div className="formButton">
       <button type="submit" className="btn btn-primary">Submit</button>
-      <Link className="btn btn-primary" to="/"> Back</Link> 
+      <Link className="btn btn-primary" to="/"> Back</Link>
+      </div>
     </form>
 </>
 )

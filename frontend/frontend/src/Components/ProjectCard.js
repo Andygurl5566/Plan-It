@@ -6,6 +6,8 @@ function ProjectCard({project, onDeleteProject, edited, setEdited}){
     const {id} = project
     const [toggle, setToggle] = useState(false);
 
+    
+
 
     function handleToggle(){
     

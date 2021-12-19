@@ -50,8 +50,14 @@ const Login= ({setCurrentUser}) => {
   }
 
     return ( 
-<>
-    <h1>Login</h1>
+      <>
+
+  <h1 className="formTitle">Login</h1>
+
+  <div className="formdiv">
+
+
+    
     
     {/* <h2>Counter redux test {countReducer} </h2>  
     <button onClick={()=> dispatch(increment())}>Test Redux</button>
@@ -76,10 +82,13 @@ const Login= ({setCurrentUser}) => {
       <div className="form-check">
       
       </div>
+      <div className="formButton">
       <button className="btn btn-primary" type="submit">Submit</button> 
       
       <Link className="btn btn-primary" to="/"> Back</Link> 
+    </div>
     </form>
+</div>
 </>
 )}
 export default Login

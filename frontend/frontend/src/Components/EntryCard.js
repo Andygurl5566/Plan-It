@@ -38,6 +38,8 @@ function EntryCard({entries, edited, setEdited, onDeleteEntry, handleDeleteEntry
             <img className="card-img-top" src={entries.image} alt="Card image cap"/>
 
             <h5 className="card-title">{entries.title}</h5>
+
+            
             {/* 🔴🟠🟡🟢🔵🟣🟤⚫⚪ */}
 
             <p className="card-text">{entries.details}.</p>

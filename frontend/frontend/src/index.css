@@ -20,7 +20,6 @@ code {
   padding-right: 10%;
   padding-left: 15%;
 
-
 }
 
 .card-title{
@@ -31,4 +30,87 @@ code {
   margin: 15px;
   padding:10px;
   padding-left: 15%
+}
+
+.bioheader{
+  text-align: center;
+  padding:70px;
+}
+
+.profileImage{
+  width: 200px;
+  border-radius: 50%;
+}
+
+.profileDiv{
+  padding: 20px;
+}
+
+.profilebtn{
+  margin:5px;
+}
+
+.navdiv{
+  height:80px;
+  background-color:rgba(201, 193, 193, 0.808);
+  text-decoration: none;
+}
+
+.navdiv a{
+text-decoration: none;
+color: white;
+margin:20px;
+font-size: larger;
+
+}
+
+.landingImage{
+  width: 800px;
+  float:left;
+  margin-right: 60px;
+  margin-left: -40px;
+  margin-top:90px
+}
+
+.logo{
+  width: 100px
+}
+
+.header{
+  font-family: 'Alice', serif;
+}
+.subheader{
+  padding-top: 470px;
+}
+.buttondiv{
+  margin-top: 20px;
+}
+
+.btn btn-dark{
+  width:200px;
+  
+}
+
+.form-group{
+  margin-left: 815px;
+  width: 500px;
+ 
+  
+  
+}
+
+.formdiv{
+ padding-top:30px;
+  display: block;
+   
+ 
+}
+
+.formTitle{
+  padding-top:50px;
+  text-align: center;
+}
+
+.formButton{
+  text-align: center;
 }

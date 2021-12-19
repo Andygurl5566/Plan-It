@@ -38,7 +38,7 @@ function ProjectDetail(){
         <>
         <div className="pageheader">
 
-            <h1>your Entries</h1>
+            <h1>Entries</h1>
             <button onClick = {handleToggle} className="btn btn-primary">  Add Entry </button>
             <a  className="btn btn-primary" href="/projects"> Back </a>
 
