@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 //SIGNUP FUNCTIONALITY
 
-const Signup= () => {
+const Signup= ({setCurrentUser}) => {
   
-  const [currentUser, setCurrentUser] = useState({});
+  let navigate = useNavigate()
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -34,7 +35,8 @@ const Signup= () => {
       if (res.ok) {
         res.json().then((user) => {
           setCurrentUser(user);
-        });
+        })
+        .then(() => navigate("/profile"))
       } else {
         res.json().then((errors) => {
           console.error(errors);

@@ -56,7 +56,7 @@ function App() {
       <Route path = "/" element={<Landing />}/>
       <Route path = "/login" element={<Login setCurrentUser={setCurrentUser}/> }/>
       <Route path = "/profile" element={<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
-      <Route path = "/signup" element={<Signup />}/>
+      <Route path = "/signup" element={<Signup setCurrentUser={setCurrentUser} />}/>
 
       <Route path = "/projects" element={<ProjectsPage currentUser={currentUser} />}/>
       <Route path = "/entries" element={<EntryPage currentUser={currentUser} />}/>
