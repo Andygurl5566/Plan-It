@@ -7,6 +7,8 @@ function EntryPage({currentUser}){
 
     const [edited, setEdited] = useState(true)
     const [entryList, setEntries] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
+
     let navigate = useNavigate()
 
     function navigateToEntryForm(){
@@ -34,9 +36,18 @@ function EntryPage({currentUser}){
         <div className="pageheader">
             <h1 className="pagetitle">{currentUser.name}'s Entries </h1>
             <button className="btn btn-primary" onClick={navigateToEntryForm}>New Entry</button>
+            <div>
+            <input type="text" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+            </div>
         </div>
         <div id= "CardsDiv">
-        {entryList.map((entries) => {
+        {entryList.filter((entries)=>{
+            if (searchTerm == "") {
+                return entries
+            } else if (entries.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                return entries
+            }
+        }).map((entries) => {
             return (
                 <div id="EntryCards">
                     <EntryCard 

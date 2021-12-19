@@ -65,7 +65,7 @@ const Login= ({setCurrentUser}) => {
 
     <form onSubmit={handleSubmit}>
 
-    <div className="form-group">
+    <div className="form-special">
         {/* <label for="exampleInputEmail1">TEST USER AVATAR</label>
         <input type="file" name="profile" onChange={handleChange} class="form-control"  placeholder="Upload image"/>
       <div class="form-group">
@@ -75,7 +75,7 @@ const Login= ({setCurrentUser}) => {
         <input type="text" name="username" value={formData.username} onChange={handleChange} className="form-control"  placeholder="Enter Username"/>
       
       </div>
-      <div className="form-group">
+      <div className="form-special">
         <label for="exampleInputPassword1">Password</label>
         <input type="text" name="password" value={formData.password} onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
       </div>

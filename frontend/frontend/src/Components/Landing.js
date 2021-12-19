@@ -22,7 +22,7 @@ function Landing(){
 
         <div className="subheader">
            <h1 class="header">Plan It</h1>
-            <h3>Organize your universe one task at a time</h3>
+            <h3>Organize your universe one project at a time.</h3>
 
             <div className="buttondiv">    
                 <button class="btn btn-dark" onClick={navigateToLogin}>Login</button>
