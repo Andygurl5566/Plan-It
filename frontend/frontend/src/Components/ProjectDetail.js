@@ -5,11 +5,13 @@ import EntryCard from "./EntryCard"
 import NewEntryForm from "./NewEntryForm"
 
 
+
 function ProjectDetail(){
     const [edited, setEdited] = useState(true)
     const [entryList, setEntries] = useState([])
     const {project_id} = useParams()
     const [toggle, setToggle] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("")
 
     function handleToggle(){
     
@@ -41,6 +43,8 @@ function ProjectDetail(){
             <h1>Entries</h1>
             <button onClick = {handleToggle} className="btn btn-primary">  Add Entry </button>
             <a  className="btn btn-primary" href="/projects"> Back </a>
+            <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
+            <input class ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
 
         </div>
 
@@ -48,9 +52,15 @@ function ProjectDetail(){
 
         <div id="CardsDiv">
         
-        {entryList.map((entries) => {
+        {entryList.filter((entries)=>{
+            if (searchTerm == "") {
+                return entries
+            } else if (entries.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                return entries
+            }
+        }).map((entries) => {
             return (
-                <div>
+                <div id="EntryCards">
                    
                     <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries}/>
                 

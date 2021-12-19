@@ -54,7 +54,7 @@ function App() {
     <Routes>
 
       <Route path = "/" element={<Landing />}/>
-      <Route path = "/login" element={<Login />}/>
+      <Route path = "/login" element={<Login setCurrentUser={setCurrentUser}/> }/>
       <Route path = "/profile" element={<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
       <Route path = "/signup" element={<Signup />}/>
 

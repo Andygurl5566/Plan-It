@@ -32,6 +32,7 @@ const Login= ({setCurrentUser}) => {
       body: JSON.stringify(formData),
     })
     .then((res) => {
+
       console.log(res)
       if (res.ok) {
         res.json().then((user) => {
@@ -39,7 +40,7 @@ const Login= ({setCurrentUser}) => {
           console.log(user.name)
           
         })
-        .then(() => navigate("/projects"))
+        .then(() => navigate("/profile"))
       } else {
         res.json().then((errors) => {
           console.error(errors);
@@ -56,8 +57,6 @@ const Login= ({setCurrentUser}) => {
 
   <div className="formdiv">
 
-
-    
     
     {/* <h2>Counter redux test {countReducer} </h2>  
     <button onClick={()=> dispatch(increment())}>Test Redux</button>

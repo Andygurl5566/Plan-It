@@ -41,6 +41,7 @@ function ProjectCard({project, onDeleteProject, edited, setEdited}){
         <div className = "card" style={{ width: '25rem' }}>
 
             <div className = "card-body">
+            {/* <button onClick={confirmDelete} className="deletebtn"> X </button> */}
 
                 <img className="card-img-top" src={project.image} alt="Card image cap"/>
 

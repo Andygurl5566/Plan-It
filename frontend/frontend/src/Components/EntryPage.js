@@ -34,11 +34,12 @@ function EntryPage({currentUser}){
     return(
         <>
         <div className="pageheader">
-            <h1 className="pagetitle">{currentUser.name}'s Entries </h1>
-            <button className="btn btn-primary" onClick={navigateToEntryForm}>New Entry</button>
-            <div>
-            <input type="text" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>
-            </div>
+           
+            <h1 className="pagetitle">All Entries </h1>
+            <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
+
+            <input type="text" class ="searchbar" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+            
         </div>
         <div id= "CardsDiv">
         {entryList.filter((entries)=>{

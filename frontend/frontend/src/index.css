@@ -19,17 +19,63 @@ code {
   grid-auto-rows: minmax(3rem, auto);
   padding-right: 10%;
   padding-left: 15%;
+ 
 
 }
 
+.card-body {
+  border-radius: 10px;
+  background-color: rgb(223, 230, 231);
+  color: rgb(48, 47, 47);
+  letter-spacing: 2px;
+}
+
+
+.cardpagetitle{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .card-title{
   margin: 10px;
+}
+
+.binding{
+  display: inline-block;
+}
+
+.searchbar{
+  margin-left: 15px;
+ float: right;
+  height: 40px;
+  width:230px;
+  color: black;
+  border-radius: 8px;
+  position: fixed;
+  
+}
+
+.searchicon{
+  width: 30px;
+  margin-left: 1065px;
+}
+
+.deletebtn{
+  margin-bottom: 10px;
+  float:right;
+  text-decoration: none;
+  background-color: white;
+  height: 20px;
+  font-size: x-small;
 }
 
 .pageheader{
   margin: 15px;
   padding:10px;
-  padding-left: 15%
+  padding-left: 15%;
+  display: inline-block;
 }
 
 .bioheader{
@@ -52,24 +98,38 @@ code {
 
 .navdiv{
   height:80px;
-  background-color:rgba(201, 193, 193, 0.808);
+  background-color:rgba(2, 2, 2, 0.808);
   text-decoration: none;
 }
 
 .navdiv a{
 text-decoration: none;
-color: white;
+color: rgb(255, 255, 255);
 margin:20px;
 font-size: larger;
+font-family: Georgia, 'Times New Roman', Times, serif;
+letter-spacing: 3px;
+}
+.navdiv:hover{
+  color: rgb(124, 124, 124);
+  text-decoration: none;
+}
 
+.landingpageheader{
+ 
+  padding-top:30px;
+  text-align: center;
+ 
 }
 
 .landingImage{
-  width: 800px;
-  float:left;
+  width: 700px;
+  /* float:left;
   margin-right: 60px;
-  margin-left: -40px;
-  margin-top:90px
+  margin-left: -40px; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo{
@@ -78,12 +138,33 @@ font-size: larger;
 
 .header{
   font-family: 'Alice', serif;
+  font-size: 100px;
 }
 .subheader{
-  padding-top: 470px;
+ 
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif
 }
 .buttondiv{
   margin-top: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 23px;
+}
+
+.loginbtn{
+width: 150px;
+height: 70px;
+margin:10px;
+border-radius: 10px;
+color:azure;
+background-color: black;
+letter-spacing: 2px;
+}
+.loginbtn:hover{
+  background-color:white;
+  color:black;
+  letter-spacing: 2px;
+
 }
 
 .btn btn-dark{
@@ -92,9 +173,13 @@ font-size: larger;
 }
 
 .form-special{
-  margin-left: 815px;
-  width: 500px;
- 
+  /* margin-left: 815px;
+  width: 500px; */
+  display: block;
+  width: 500px; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   
   
 }
@@ -102,15 +187,29 @@ font-size: larger;
 .formdiv{
  padding-top:30px;
   display: block;
+ 
    
  
 }
 
 .formTitle{
-  padding-top:50px;
+  padding-top:70px;
   text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 2px;
 }
 
 .formButton{
   text-align: center;
 }
+
+.formbtn{
+  background-color:white;
+  color:black;
+  letter-spacing: 2px;
+}
+
+
+
+
+

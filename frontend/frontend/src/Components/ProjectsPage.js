@@ -35,11 +35,15 @@ function ProjectsPage({currentUser}){
 
     return(
         <>
+        <h1 className="cardpagetitle"> {currentUser.name}'s Projects </h1>
         <div className="pageheader">
-            <h1> {currentUser.name}'s Projects </h1>
+           
+            <div className="binding">
             <button onClick={navigateToProjectForm} className="btn btn-primary">New Project</button>
-            <div>
-            <input type="text" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+            <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
+           <input class ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+           </div>
+        <div>
             </div>
         </div>
 

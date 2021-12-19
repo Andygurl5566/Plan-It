@@ -15,18 +15,19 @@ function Landing(){
 
     return(
         <>
-        <div className="pageheader"> 
+        <div className="landingpageheader"> 
+        <h1 class="header">-PLAN IT-</h1>
+        
         <img className="landingImage" src="https://opendoodles.s3-us-west-1.amazonaws.com/meditating.png" />
-            {/* <img className="logo" src="http://cdn.onlinewebfonts.com/svg/img_535375.png" /> */}
         </div> 
 
         <div className="subheader">
-           <h1 class="header">Plan It</h1>
-            <h3>Organize your universe one project at a time.</h3>
+           
+            <h3>Organizing your universe one project at a time.</h3>
 
             <div className="buttondiv">    
-                <button class="btn btn-dark" onClick={navigateToLogin}>Login</button>
-                <button class="btn btn-dark" onClick={navigateToSignup}>Signup</button>
+                <button class="loginbtn" onClick={navigateToLogin}>Login</button>
+                <button class="loginbtn" onClick={navigateToSignup}>Signup</button>
             </div>  
         </div>
         </>
