@@ -9,9 +9,9 @@ function EditProjectForm({id, project, edited, setEdited}){
 
    
     const [formData, setFormData] = useState({
-        title: "",
-        image: "",
-        description:"",
+        title: `${project.title}`,
+        image: `${project.image}`,
+        description:`${project.description}`,
         user_id: `${project.user_id}`
       
     });
@@ -19,7 +19,9 @@ function EditProjectForm({id, project, edited, setEdited}){
         setFormData({
           ...formData,
           [e.target.name]: e.target.value,
+         
         });
+        console.log(project.title)
       };
       const handleSubmit = (event) => {
         event.preventDefault();
@@ -66,10 +68,10 @@ function EditProjectForm({id, project, edited, setEdited}){
               <input type="text" className="form-control" name="title" id="title" onChange={handleChange} value={formData.title} placeholder="Project Name"/>
               
               <label>Description</label>
-              <input type="text" className="form-control" name="description" id="title" onChange={handleChange}  placeholder="Optional Description"/>
+              <input type="text" className="form-control" name="description" id="description" onChange={handleChange} value={formData.description} placeholder="Optional Description"/>
 
               <label>Image</label>
-              <input type="text" className="form-control" name="image" id="image" onChange={handleChange}  placeholder="Image"/>
+              <input type="text" className="form-control" name="image" id="image" onChange={handleChange}  value={formData.image} placeholder="Image"/>
               {/* Will make this a file upload with active storage? */}
 
               {/* <button onClick={handleToggle}>More Options</button>

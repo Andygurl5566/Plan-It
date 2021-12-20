@@ -7,9 +7,9 @@ function EditEntryForm({entries, id, edited, setEdited}){
     
     const [formData, setFormData] = useState({
        
-        title: "",
-        details: "",
-        image: "",
+        title: `${entries.title}`,
+        details: `${entries.details}`,
+        image: `${entries.image}`,
         project_id:`${entries.project_id}`
       
 
@@ -51,15 +51,15 @@ function EditEntryForm({entries, id, edited, setEdited}){
         <form onSubmit={handleSubmit}>
     <div className="form-group">
         <label for="title">Entry Title</label>
-        <input type="text" className="form-control" id ="title" name="title"  onChange={handleChange} />
+        <input type="text" className="form-control" id ="title" name="title"  value={formData.title} onChange={handleChange} />
     </div>
     <div className="form-group">
         <label for="details">Details</label>
-        <input type="text" className="form-control" id="details" name="details"  onChange={handleChange} />
+        <input type="text" className="form-control" id="details" name="details"  value={formData.details}  onChange={handleChange} />
     </div>
     <div className="form-group">
         <label for="image">Image</label>
-        <input type="text" className="form-control" id="image" name="image"  onChange={handleChange} />
+        <input type="text" className="form-control" id="image" name="image"   value={formData.image} onChange={handleChange} />
     </div>
 
     <div className ="formbuttondiv">

@@ -37,7 +37,7 @@ const handleLogout = () => {
       </div>
         <p></p>
       <div className="biodiv">
-        <p>Here is a blurb about my awesome life.</p>
+        <p>{currentUser.bio}</p>
       </div>
       <div className="profilebuttondiv">
        <button className="profilebtn" onClick={navigateToProjects}>My Projects</button>     

@@ -23,6 +23,7 @@ function ProjectsPage({currentUser}){
             .then((projects) => {  
 
                 setProjects(projects)
+                console.log(projectList)
               
             })
     }, [edited])
@@ -42,10 +43,14 @@ function ProjectsPage({currentUser}){
             <div className="binding">
             <button onClick={navigateToProjectForm} className="btn btn-primary">New Project</button>
             <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
-           <input class ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+           <input className ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+           <select className ="filter">
+               {projectList.map((project)=>{
+                   return(
+                   <option value="option 1">{project.title}</option>)
+               })}
+           </select>
            </div>
-        <div>
-            </div>
         </div>
 
         <div id= "CardsDiv">
