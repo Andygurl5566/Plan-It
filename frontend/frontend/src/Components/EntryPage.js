@@ -42,6 +42,9 @@ function EntryPage({currentUser}){
             <input type="text" class ="searchbar" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>
             
         </div>
+        <div className="promptdiv">
+            {entryList == "" ? <div className="addprompt"><h1 className="prompttitle">Oops! Doesn't look like you have any entries yet.</h1></div>: ""}
+        </div>
 
         <div>
         </div>
