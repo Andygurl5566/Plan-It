@@ -1,6 +1,5 @@
 import EditProjectForm from "./EditProjectForm";
 import React, { useState } from "react";
-import {Link} from "react-router-dom"
 
 function ProjectCard({project, onDeleteProject, edited, setEdited}){
     const {id} = project

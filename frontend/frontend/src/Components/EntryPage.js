@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react"
 import EntryCard from "./EntryCard"
 import { useNavigate } from "react-router-dom";
-import AddPrompt from "./AddPrompt";
+
 
 
 function EntryPage({currentUser}){

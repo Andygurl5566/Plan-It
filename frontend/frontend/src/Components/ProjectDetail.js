@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react"
 import {useParams} from "react-router-dom"
-import {Link} from 'react-router-dom'
 import EntryCard from "./EntryCard"
 import NewEntryForm from "./NewEntryForm"
 import AddPrompt from "./AddPrompt"

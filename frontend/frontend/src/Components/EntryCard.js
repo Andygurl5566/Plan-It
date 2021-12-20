@@ -25,17 +25,19 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
             console.log(res)
           if (res.ok) {
             onDeleteEntries(entries);
+
+            
           }
         });
       }
-
+console.log(entries)
 
     return (
         <div className = "card" style={{ width: '25rem' }}>
 
         <div className = "card-body">
 
-            <img className="card-img-top" src={entries.image} alt="Card image cap"/>
+            {entries.image == "image" ? "" : <img className="card-img-top" src={entries.image} alt="Card image cap"/>}
 
             <h5 className="card-title">{entries.title}</h5>
 

@@ -53,7 +53,7 @@ function App() {
     fetch('/projects')
         .then((r) => r.json())
         .then((projects) => {
-            // console.log(Gardens)
+          
             setProjects(projects)
             console.log(projects)
         })
