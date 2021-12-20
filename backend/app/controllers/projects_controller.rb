@@ -51,7 +51,7 @@ class ProjectsController < ApplicationController
         private
     
         def project_params
-            params.permit(:title, :image, :description)
+            params.permit(:title, :image, :description, :tag)
     
         end
     

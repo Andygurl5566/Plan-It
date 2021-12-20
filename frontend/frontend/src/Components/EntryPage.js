@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react"
 import EntryCard from "./EntryCard"
 import { useNavigate } from "react-router-dom";
+import AddPrompt from "./AddPrompt";
 
 
 function EntryPage({currentUser}){
@@ -40,6 +41,9 @@ function EntryPage({currentUser}){
 
             <input type="text" class ="searchbar" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>
             
+        </div>
+
+        <div>
         </div>
         <div id= "CardsDiv">
         {entryList.filter((entries)=>{

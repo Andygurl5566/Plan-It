@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react"
 import ProjectCard from "./ProjectCard"
 import { useNavigate } from "react-router-dom";
-import ProjectGenerator from "./ProjectGenerator";
+import AddPromptProject from "./AddPromptProject";
 
 
 
@@ -10,6 +10,7 @@ function ProjectsPage({currentUser}){
     const [edited, setEdited] = useState(true)
     const [projectList, setProjects] = useState([])
     const [searchTerm, setSearchTerm] = useState("")
+    const [searchtag, setSearchTag] = useState("")
 
     let navigate = useNavigate()
 
@@ -23,7 +24,7 @@ function ProjectsPage({currentUser}){
             .then((projects) => {  
 
                 setProjects(projects)
-                console.log(projectList)
+               
               
             })
     }, [edited])
@@ -34,6 +35,16 @@ function ProjectsPage({currentUser}){
         );
       }
 
+      const onlyUnique = (array) => (
+          array.filter((currentValue, index, arr) =>(
+              arr.indexOf(currentValue) == index
+          ))
+      )
+
+     console.log(projectList) 
+        
+      
+    //   console.log(onlyUnique(project.tag))
 
     return(
         <>
@@ -45,12 +56,17 @@ function ProjectsPage({currentUser}){
             <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
            <input className ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
            <select className ="filter">
+            
                {projectList.map((project)=>{
                    return(
-                   <option value="option 1">{project.title}</option>)
+                   <option value="">{project.title}</option>)
                })}
-           </select>
-           </div>
+           </select>  
+        </div>
+        </div>
+
+        <div className="promptdiv">
+            {projectList == "" ? <AddPromptProject  navigateToProjectForm={navigateToProjectForm}/>: ""}
         </div>
 
         <div id= "CardsDiv">
@@ -58,6 +74,8 @@ function ProjectsPage({currentUser}){
                 if (searchTerm == "") {
                     return project
                 } else if (project.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                    return project
+                }else if (project.title.includes(searchtag)){
                     return project
                 }
 
@@ -75,7 +93,7 @@ function ProjectsPage({currentUser}){
             }
             
         </div>
-            {/* <ProjectGenerator/> */}
+          
         </>
     )
 }

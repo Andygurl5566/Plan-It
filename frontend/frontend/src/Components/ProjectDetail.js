@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom"
 import {Link} from 'react-router-dom'
 import EntryCard from "./EntryCard"
 import NewEntryForm from "./NewEntryForm"
+import AddPrompt from "./AddPrompt"
 
 
 
@@ -31,7 +32,8 @@ function ProjectDetail(){
             .then((r) => r.json())
             .then((project) => {
                 
-                setEntries(project.entries)                
+                setEntries(project.entries) 
+                console.log(entryList)               
             })
     }, [edited])
 
@@ -49,6 +51,10 @@ function ProjectDetail(){
         </div>
 
         {toggle == true? <NewEntryForm toggle={toggle} setToggle={setToggle} edited={edited} setEdited={setEdited}/> : ""}
+
+        <div className="promptdiv">
+            {entryList == "" ? <AddPrompt/>: ""}
+        </div>
 
         <div id="CardsDiv">
         

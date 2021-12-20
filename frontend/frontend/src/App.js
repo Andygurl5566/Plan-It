@@ -17,6 +17,7 @@ import ProjectDetail from './Components/ProjectDetail';
 import EntryDetail from './Components/EntryDetail';
 import EditEntryForm from './Components/EditEntryForm';
 import ProjectGenerator from './Components/ProjectGenerator';
+import AddPrompt from './Components/AddPrompt';
 
 
 function App() {
@@ -74,7 +75,7 @@ function App() {
       {/* <Route path = "*" element={< Error/>}/> */}
 
       <Route path ="/generate" element={<ProjectGenerator/>}/>
-     
+      <Route path ="/addprompt" element={<AddPrompt/>}/>
     </Routes>
 
     </>

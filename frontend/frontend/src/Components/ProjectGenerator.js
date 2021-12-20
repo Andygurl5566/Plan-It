@@ -21,7 +21,7 @@ function getIdea(){
         <button className ="askPlan" onClick={getIdea}>?</button>
         <p>Need a project idea? </p> 
         {/* <p>Click Here</p> */}
-       {idea == idea ? "": 
+      
         <div className="response"> 
             <p>{idea.activity}
                  <div>
@@ -29,7 +29,7 @@ function getIdea(){
                 </div> 
             </p>
          </div>  
-        } 
+        
        
         </div>
     )

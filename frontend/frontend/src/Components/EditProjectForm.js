@@ -12,6 +12,7 @@ function EditProjectForm({id, project, edited, setEdited}){
         title: `${project.title}`,
         image: `${project.image}`,
         description:`${project.description}`,
+        tag:`${project.tag}`,
         user_id: `${project.user_id}`
       
     });
@@ -72,6 +73,10 @@ function EditProjectForm({id, project, edited, setEdited}){
 
               <label>Image</label>
               <input type="text" className="form-control" name="image" id="image" onChange={handleChange}  value={formData.image} placeholder="Image"/>
+             
+              <label>Tag</label>
+              <input type="text" className="form-control" name="tag" id="tag" onChange={handleChange}  value={formData.tag} placeholder="Tag"/>
+
               {/* Will make this a file upload with active storage? */}
 
               {/* <button onClick={handleToggle}>More Options</button>
