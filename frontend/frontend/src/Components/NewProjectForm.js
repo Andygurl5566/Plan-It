@@ -59,9 +59,10 @@ function NewProjectForm({project}){
 
 
     return(
-        <>
+        <> 
+        <h1 className='formTitle'> New Project</h1>
         <form onSubmit={handleSubmit}>
-            <div className='newforms'>
+            <div className='newprojectform'>
               <div className="form-group">
               <label>Project Name</label>
               <input type="text" className="form-control" name="title" id="title" onChange={handleChange} value={formData.title}  placeholder="Project Name"/>
@@ -88,8 +89,8 @@ function NewProjectForm({project}){
 
 
                   <div className ="formbuttondiv">
-                      <button type = "submit" className="btn btn-primary"> Submit </button>
-                      <a href="#" onClick={navigateBack} className="btn btn-primary"> Close </a>
+                      <button type = "submit" className="formbtn"> Submit </button>
+                      <button  onClick={navigateBack} className="formbtn"> Close </button>
                   </div>
               </div>
             </div>

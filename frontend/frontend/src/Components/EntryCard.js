@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import EditEntryForm from "./EditEntryForm";
 
-function EntryCard({entries, edited, setEdited, onDeleteEntry, handleDeleteEntry}){
+function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEntry}){
     const {id} = entries
     const [toggle, setToggle] = useState(false);
 
@@ -24,7 +24,7 @@ function EntryCard({entries, edited, setEdited, onDeleteEntry, handleDeleteEntry
         }).then((res) => {
             console.log(res)
           if (res.ok) {
-            onDeleteEntry(entries);
+            onDeleteEntries(entries);
           }
         });
       }
@@ -53,7 +53,7 @@ function EntryCard({entries, edited, setEdited, onDeleteEntry, handleDeleteEntry
             {toggle == false? "" : <EditEntryForm 
                 edited={edited}
                 setEdited={setEdited}
-                onDeleteEntry={onDeleteEntry}
+                onDeleteEntry={onDeleteEntries}
                 handleDeleteEntry={handleDeleteEntry}
                 entries ={entries} 
                 id={id}/> }

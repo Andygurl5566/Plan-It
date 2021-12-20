@@ -4,18 +4,9 @@ function ProjectGenerator(){
 
     const [idea, setIdea] = useState({})
 
-//     useEffect(() => {
-//     fetch(`https://www.boredapi.com/api/
-//     activity?type=diy`)
-//     .then((idea) => {
-//     setIdea(idea)
-//     console.log(idea)
-// })
-// }, [])
-
 
 function getIdea(){
-    fetch(`http://www.boredapi.com/api/activity?type=diy`)
+    fetch(`http://www.boredapi.com/api/activity?`)
     .then((r) => r.json())
     .then((idea) => {
         setIdea(idea)
@@ -28,10 +19,18 @@ function getIdea(){
     return(
         <div className="askdiv">
         <button className ="askPlan" onClick={getIdea}>?</button>
-        <p>Need a project idea? </p> <p>Click Here</p>
-        <div className="response">
-        <p>{idea.activity}</p>
-        </div>
+        <p>Need a project idea? </p> 
+        {/* <p>Click Here</p> */}
+       {idea == idea ? "": 
+        <div className="response"> 
+            <p>{idea.activity}
+                 <div>
+                    <button className="closeaskdivbtn">x</button>
+                </div> 
+            </p>
+         </div>  
+        } 
+       
         </div>
     )
 }

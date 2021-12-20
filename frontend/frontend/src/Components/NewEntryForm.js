@@ -57,22 +57,22 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
     return(
         <>
         <form onSubmit={handleSubmit}>
-    <div className="form-group">
+    <div className="entryform">
         <label for="title">Entry Title</label>
         <input type="text" className="form-control" id ="title" name="title"  onChange={handleChange} />
     </div>
-    <div className="form-group">
+    <div className="entryform">
         <label for="details">Details</label>
         <input type="text" className="form-control" id="details" name="details"  onChange={handleChange} />
     </div>
-    <div className="form-group">
+    <div className="entryform">
         <label for="image">Image</label>
         <input type="text" className="form-control" id="image" name="image"  onChange={handleChange} />
     </div>
 
-    <div className ="formbuttondiv">
-    <button type="submit" className="btn btn-primary">Submit</button>
-    <button className="btn btn-primary" onClick={ ()=> setToggle(!toggle)}> Back </button>
+    <div className ="formButton2">
+    <button type="submit" className="formbtn">Submit</button>
+    <button className="formbtn" onClick={ ()=> setToggle(!toggle)}> Back </button>
     </div>
  </form>   
         </>

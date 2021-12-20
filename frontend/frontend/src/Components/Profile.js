@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import ProjectGenerator from "./ProjectGenerator";
 
 
 function Profile({currentUser, setCurrentUser}){
@@ -43,6 +44,7 @@ const handleLogout = () => {
        <button className="profilebtn" onClick={handleLogout}>Logout</button>
        </div>
        </div>
+       {/* <ProjectGenerator/> */}
        </>
     )
 }
