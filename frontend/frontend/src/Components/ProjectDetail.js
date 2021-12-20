@@ -62,7 +62,7 @@ function ProjectDetail(){
             return (
                 <div id="EntryCards">
                    
-                    <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries}/>
+                    <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries} />
                 
                 </div>
             )})

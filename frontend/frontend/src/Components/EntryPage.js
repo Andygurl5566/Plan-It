@@ -23,7 +23,7 @@ function EntryPage({currentUser}){
                 setEntries(entries)
                 console.log(entries)
             })
-    }, [])
+    }, [edited])
 
     function handleDeleteEntry(deletedEntry) {
         setEntries((entries) =>
@@ -53,7 +53,9 @@ function EntryPage({currentUser}){
                 <div id="EntryCards">
                     <EntryCard 
                     entries={entries} 
-                    onDeleteEntry={handleDeleteEntry}
+                    onDeleteEntries={handleDeleteEntry}
+                    edited={edited}
+                    setEdited={setEdited}
                     />
                 </div>
             )})
