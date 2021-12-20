@@ -20,6 +20,17 @@ import ProjectGenerator from './Components/ProjectGenerator';
 import AddPrompt from './Components/AddPrompt';
 
 
+
+
+function Page404(){
+return( 
+<h2 className='prompttitle'> 404 - Nothing to see here</h2>)
+ 
+}
+
+
+
+
 function App() {
 
   const [currentUser, setCurrentUser] = useState({});
@@ -76,6 +87,7 @@ function App() {
 
       <Route path ="/generate" element={<ProjectGenerator/>}/>
       <Route path ="/addprompt" element={<AddPrompt/>}/>
+      <Route path ="*" component={Page404}/>
     </Routes>
 
     </>

@@ -3,7 +3,6 @@ class EntriesController < ApplicationController
         entry = current_user.entries
         render json: entry.order(created_at: :desc)
         
-        
     end
 
     def show

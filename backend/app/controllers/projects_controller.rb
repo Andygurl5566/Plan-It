@@ -4,7 +4,6 @@ class ProjectsController < ApplicationController
         def index
             project = current_user.projects
             render json: project.order(created_at: :desc)
-            
         end
     
         def show
