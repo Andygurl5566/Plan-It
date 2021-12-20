@@ -75,8 +75,6 @@ function ProjectsPage({currentUser}){
                     return project
                 } else if (project.title.toLowerCase().includes(searchTerm.toLowerCase())){
                     return project
-                }else if (project.title.includes(searchtag)){
-                    return project
                 }
 
             }).map((project) => {

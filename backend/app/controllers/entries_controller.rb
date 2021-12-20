@@ -2,6 +2,8 @@ class EntriesController < ApplicationController
     def index
         entry = current_user.entries
         render json: entry.order(created_at: :desc)
+        
+        
     end
 
     def show
@@ -55,6 +57,11 @@ class EntriesController < ApplicationController
         permitted = current_user.admin? 
         render json: "Accessibility is not permitted", status: :forbidden unless permitted
       end
+
+      
+    def keeporder
+        :updated_at == :created_at
+    end
       
 end
 
