@@ -55,7 +55,7 @@ function ProjectsPage({currentUser}){
             <button onClick={navigateToProjectForm} className="btn btn-primary">New Project</button>
             <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
            <input className ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
-           <select className ="filter">
+           <div></div><select className ="filter">
             
                {projectList.map((project)=>{
                    return(

@@ -42,7 +42,8 @@ function ProjectCard({project, onDeleteProject, edited, setEdited}){
             <div className = "card-body">
             {/* <button onClick={confirmDelete} className="deletebtn"> X </button> */}
 
-                <img className="card-img-top" src={project.image} alt="Card image cap"/>
+            {project.image == "" ? "" : <img className="card-img-top" src={project.image} alt="Card image cap"/>}
+
 
                 <h5 className="card-title">{project.title}</h5>
                 {/* 🔴🟠🟡🟢🔵🟣🟤⚫⚪ */}

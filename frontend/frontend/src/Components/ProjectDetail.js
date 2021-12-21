@@ -12,6 +12,7 @@ function ProjectDetail(){
     const {project_id} = useParams()
     const [toggle, setToggle] = useState(false);
     const [searchTerm, setSearchTerm] = useState("")
+    
 
     function handleToggle(){
     
