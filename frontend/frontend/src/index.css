@@ -20,10 +20,54 @@ code {
   padding-right: 10%;
   padding-left: 15%;
  
+}
+
+#CardsDiv2 { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  grid-auto-rows: minmax(3rem, auto);
+  padding-right: 10%;
+  padding-left: 15%;
+  width: 300px;
+  float:left; /* add this */
+  /* border: 1px solid red; */
+  
+ 
+
+}
+
+#CardsDiv3 { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  grid-auto-rows: minmax(3rem, auto);
+  padding-right: 10%;
+  padding-left: 15%;
+  width: 300px;
+  float:left;
+
+}
+
+#CardsDiv4 { 
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  grid-auto-rows: minmax(3rem, auto);
+  padding-right: 10%;
+  padding-left: 15%;
+  width: 300px;
+  float:left; /* add this */
+  /* border: 1px solid red;
+  border: 1px solid green; */
+  /* overflow: hidden; if you don't want #second to wrap below #first */
+ 
 
 }
 
 .card-body {
+ 
   border-radius: 15px;
   background-color: rgb(243, 243, 243);
   /* background-color: rgb(223, 230, 231); */
@@ -31,6 +75,32 @@ code {
   color: rgb(48, 47, 47);
   letter-spacing: 2px;
 }
+
+.subtitle{
+text-align:left;
+padding-bottom: 10px;
+position: relative;
+justify-content: space-evenly;
+display:flex;
+margin-left: 1.5rem;
+}
+.manualadjust{
+  margin-right: 4.2rem;
+}
+.manualadjust1{
+  margin-left: 3rem;
+}
+
+.manualadjust2{
+  margin-left: 2rem;
+}
+/* 
+.subtitlediv span{
+ margin: 250px;
+ position: relative;
+
+  } */
+  
 
 
 .cardpagetitle{
@@ -44,7 +114,7 @@ code {
   margin: 10px;
 }
 .card-text{
-  margin: 10px;
+  margin: 10px
 }
 
 .binding{

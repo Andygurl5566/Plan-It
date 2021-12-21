@@ -4,6 +4,7 @@ import EntryCard from "./EntryCard"
 import NewEntryForm from "./NewEntryForm"
 import AddPrompt from "./AddPrompt"
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd"
+import Subtitles from "./Subtitles"
 
 
 
@@ -64,7 +65,6 @@ function ProjectDetail(){
        
     // }
 
-
     function handleOnDragEnd(result){
 
        console.log(result)
@@ -78,8 +78,8 @@ function ProjectDetail(){
     }
 
 
-    return(
- <>
+ return(
+  <>
        
         <div className="pageheader">
 
@@ -96,41 +96,114 @@ function ProjectDetail(){
         <div className="promptdiv">
             {entryList == "" ? <AddPrompt/>: ""}
         </div>
+            {entryList == "" ? "" : <Subtitles/> }
+       <div>
 
-        <div id="CardsDiv">
-        <DragDropContext onDragEnd={handleOnDragEnd}>
+   
+        <div id="CardsDiv2">
+
+            <DragDropContext onDragEnd={handleOnDragEnd}>
             <Droppable droppableId="cardId">
                 {(provided)=>(
-            <div className="cardsul" {...provided.droppableProps} ref={provided.innerRef}>
-                {position.filter((entries)=>{
-                    if (searchTerm == "") {
-                        return entries
-                    } else if (entries.title.toLowerCase().includes(searchTerm.toLowerCase())){
-                        return entries
-                    }
-                }).map((entries, index) => {
-                    console.log(index)
-                    
-                return (
-                        <Draggable key={entries.id} draggableId={`${entries.id}`} index={index}>
-                            {(provided)=>(
-                            <div {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps} id="EntryCards">
-                        
-                            <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries} />
-                        
-                        </div>
-                        )}
-                        </Draggable>
-                    )})
-                    }
-                    {provided.placeholder}
-            </div>
+                    <div className="cards2" {...provided.droppableProps} ref={provided.innerRef}>
+                        {position.filter((entries)=>{
+                            if (searchTerm == "") {
+                                return entries
+                            } else if (entries.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                                return entries
+                            }
+                        }).map((entries, index) => {
+                            console.log(index)
+                            
+                        return (
+                                <Draggable key={entries.id} draggableId={`${entries.id}`} index={index}>
+                                    {(provided)=>(
+                                        <div {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps} id="EntryCards">
+                                
+                                        <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries} />
+                                
+                                        </div>
+                                    )}
+                                </Draggable>
+                            )})
+                        }
+                        {provided.placeholder}
+                    </div>
                 )}
             </Droppable>
-        </DragDropContext>
+            </DragDropContext>
         </div>
-        </>
-    )
+        </div>
+
+
+
+        <div id="CardsDiv3">
+            <DragDropContext onDragEnd={handleOnDragEnd}>
+            <Droppable droppableId="cardId">
+                {(provided)=>(
+                    <div className="cards2" {...provided.droppableProps} ref={provided.innerRef}>
+                        {position.filter((entries)=>{
+                            if (searchTerm == "") {
+                                return entries
+                            } else if (entries.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                                return entries
+                            }
+                        }).map((entries, index) => {
+                            console.log(index)
+                            
+                        return (
+                                <Draggable key={entries.id} draggableId={`${entries.id}`} index={index}>
+                                    {(provided)=>(
+                                        <div {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps} id="EntryCards">
+                                
+                                        <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries} />
+                                
+                                        </div>
+                                    )}
+                                </Draggable>
+                            )})
+                        }
+                        {provided.placeholder}
+                    </div>
+                )}
+            </Droppable>
+            </DragDropContext>
+        </div>
+        
+        <div id="CardsDiv3">
+            <DragDropContext onDragEnd={handleOnDragEnd}>
+            <Droppable droppableId="cardId">
+                {(provided)=>(
+                    <div className="cards2" {...provided.droppableProps} ref={provided.innerRef}>
+                        {position.filter((entries)=>{
+                            if (searchTerm == "") {
+                                return entries
+                            } else if (entries.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                                return entries
+                            }
+                        }).map((entries, index) => {
+                            console.log(index)
+                            
+                        return (
+                                <Draggable key={entries.id} draggableId={`${entries.id}`} index={index}>
+                                    {(provided)=>(
+                                        <div {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps} id="EntryCards">
+                                
+                                        <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries} />
+                                
+                                        </div>
+                                    )}
+                                </Draggable>
+                            )})
+                        }
+                        {provided.placeholder}
+                    </div>
+                )}
+            </Droppable>
+            </DragDropContext>
+        </div>
+  </>
+ )
 }
 
 
