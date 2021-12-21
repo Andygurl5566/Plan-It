@@ -59,7 +59,7 @@ function ProjectsPage({currentUser}){
             
                {projectList.map((project)=>{
                    return(
-                   <option value="">{project.title}</option>)
+                   <option value="">{project.tag}</option>)
                })}
            </select>  
         </div>

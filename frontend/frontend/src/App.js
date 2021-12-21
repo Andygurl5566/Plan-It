@@ -2,7 +2,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Outlet, Link, Route, Routes } from 'react-router-dom'
 import React, { useState,useEffect } from "react";
-import { Container } from 'react-bootstrap';
 import Login from './Components/Login';
 import Profile from './Components/Profile';
 import NavBar from './Components/NavBar';
@@ -32,6 +31,7 @@ return(
 
 
 function App() {
+  
 
   const [currentUser, setCurrentUser] = useState({});
   const [projectList, setProjects] = useState([])
@@ -62,7 +62,6 @@ function App() {
   return (
     <>
     <NavBar/>
-    
     <Outlet/>
 
     <Routes>
@@ -87,6 +86,8 @@ function App() {
 
       <Route path ="/generate" element={<ProjectGenerator/>}/>
       <Route path ="/addprompt" element={<AddPrompt/>}/>
+
+
       <Route path ="*" component={Page404}/>
     </Routes>
 

@@ -24,7 +24,7 @@ code {
 }
 
 .card-body {
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: rgb(243, 243, 243);
   /* background-color: rgb(223, 230, 231); */
   /* color: rgb(48, 47, 47); */
@@ -41,6 +41,9 @@ code {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .card-title{
+  margin: 10px;
+}
+.card-text{
   margin: 10px;
 }
 
@@ -301,7 +304,7 @@ letter-spacing: 2px;
   background-color: rgb(71, 71, 71);
   color: white;
   font-size: 30px;
-  background-image: ;
+  /* background-image: ; */
   margin: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 
@@ -335,8 +338,6 @@ letter-spacing: 2px;
   height: 70px;
   width: 70px;
 }
-
-
 
 
 

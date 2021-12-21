@@ -25,6 +25,7 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
             console.log(res)
           if (res.ok) {
             onDeleteEntries(entries);
+            setEdited(entries)
 
             
           }
