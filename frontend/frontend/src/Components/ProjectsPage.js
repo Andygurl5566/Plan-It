@@ -13,23 +13,23 @@ function ProjectsPage({currentUser}){
     const [searchTerm, setSearchTerm] = useState("")
     const [menuItem, setMenuItem] = useState(projectList)
     const [buttons, setButtons] = useState([])
-    
-
-      const allCategories = ["All", ...new Set(projectList.map(project => project.tag))]
-      console.log(allCategories)
+     let navigate = useNavigate()
+    const allCategories = ["All", ...new Set(projectList.map(project => project.tag))]
+    console.log(allCategories)
 
 
       const filter =(button) =>{
 
         if(button === "All"){
-            setMenuItem(allCategories)
+            setProjects(projectList)
+           
         }
-          const filterdData = projectList.filter(projectList.tag === button)
+          const filterdData = projectList.filter(project => project.tag === button)
           setMenuItem(filterdData)
       }
+ console.log(menuItem)
 
-
-    let navigate = useNavigate()
+   
 
     function navigateToProjectForm(){
         navigate("/new_project")
