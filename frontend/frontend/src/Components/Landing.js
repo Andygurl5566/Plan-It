@@ -1,4 +1,5 @@
 import {useNavigate} from "react-router-dom"
+import ProjectGenerator from "./ProjectGenerator"
 
 function Landing(){
 
@@ -30,6 +31,7 @@ function Landing(){
                 <button class="loginbtn" onClick={navigateToSignup}>Signup</button>
             </div>  
         </div>
+       
         </>
     )
 }

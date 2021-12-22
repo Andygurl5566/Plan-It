@@ -1,7 +1,7 @@
 import {useNavigate} from 'react-router-dom'
 import React, { useState } from "react";
 
-function NewProjectForm({project}){
+function NewProjectForm(){
 
     let navigate = useNavigate()
     const [currentProject, setCurrentProject] = useState({});
@@ -11,7 +11,8 @@ function NewProjectForm({project}){
     const [formData, setFormData] = useState({
         title: "",
         image: "",
-        description:""
+        description:"",
+        tag:"None"
         
         
 

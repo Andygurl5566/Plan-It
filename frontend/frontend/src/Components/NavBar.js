@@ -1,7 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import ProjectGenerator from './ProjectGenerator';
+
+
 
 
 function NavBar(){
+  
+  const [overlay, setoverlay] = useState(false)
+
+  function handleOverlay(){
+    setoverlay(!overlay)
+    console.log(overlay)
+  
+  }
     return(
         <>
           <nav class="navdiv">
@@ -18,8 +30,14 @@ function NavBar(){
                 <li className="nav-item">
                   <a className="nav-link" href="/entries">Entries</a>
               </li>
+              <li className="nav-item">
+                  <a className="nav-link" onClick={handleOverlay}>Ideas</a>
+              </li>
+
             </ul>
         </nav>    
+
+        {overlay==false? "": <ProjectGenerator/>}
         </>
     )
 }

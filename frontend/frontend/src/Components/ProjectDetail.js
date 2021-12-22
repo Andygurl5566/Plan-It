@@ -14,8 +14,8 @@ function ProjectDetail(){
     const {project_id} = useParams()
     const [toggle, setToggle] = useState(false);
     const [searchTerm, setSearchTerm] = useState("")
-    // const [sortcards, setSortcards] = useState("asc")
     const [position, updatePosition] = useState(entryList)
+    const [viewmode, setviewmode] = useState(true)
     
 
     function handleToggle(){
@@ -24,21 +24,27 @@ function ProjectDetail(){
         console.log(toggle)
     }
 
+    function handleViewMode(){
+    
+        setviewmode(!viewmode)
+        console.log(viewmode)
+    }
+
+
     function onDeleteEntries(deletedEntries) {
         setEntries((entries) =>
           entries.filter((entries) => entries.id !== deletedEntries.id)
         );
       }
 
+
     useEffect(() => {
     
         fetch(`/projects/${project_id}`)
             .then((r) => r.json())
             .then((project) => {
-                
                 setEntries(project.entries)
-                
-                              
+                                  
             })
     }, [edited])
 
@@ -55,15 +61,7 @@ function ProjectDetail(){
             })
     }, [edited])
 
-    // if (sortcards.sort == "asc"){
-    //     entryList.title.sort((a,b)=>{
-    //        console.log(entryList.title)
-    //        const diif = a.title -b.title
-    //        return
-           
-    //     })
-       
-    // }
+    
 
     function handleOnDragEnd(result){
 
@@ -72,8 +70,7 @@ function ProjectDetail(){
         const items = Array.from(position)
         const [reorderedItem] = items.splice(result.source.index, 1)
         items.splice(result.destination.index, 0, reorderedItem)
-        updatePosition(items)
-      
+        updatePosition(items)   
 
     }
 
@@ -99,8 +96,7 @@ function ProjectDetail(){
             {entryList == "" ? "" : <Subtitles/> }
        <div>
 
-   
-        <div id="CardsDiv2">
+   <div id="CardsDiv2">
 
             <DragDropContext onDragEnd={handleOnDragEnd}>
             <Droppable droppableId="cardId">
@@ -116,28 +112,28 @@ function ProjectDetail(){
                             console.log(index)
                             
                         return (
-                                <Draggable key={entries.id} draggableId={`${entries.id}`} index={index}>
-                                    {(provided)=>(
-                                        <div {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps} id="EntryCards">
+                            <Draggable key={entries.id} draggableId={`${entries.id}`} index={index}>
+                                {(provided)=>(
+                                    <div {...provided.draggableProps} ref={provided.innerRef} {...provided.dragHandleProps} id="EntryCards">
                                 
                                         <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries} />
                                 
-                                        </div>
-                                    )}
-                                </Draggable>
-                            )})
+                                     </div>
+                                )}
+                            </Draggable>
+                        )})
                         }
                         {provided.placeholder}
                     </div>
                 )}
             </Droppable>
             </DragDropContext>
-        </div>
-        </div>
+            </div>
+            </div>
 
 
 
-        <div id="CardsDiv3">
+            <div id="CardsDiv3">
             <DragDropContext onDragEnd={handleOnDragEnd}>
             <Droppable droppableId="cardId">
                 {(provided)=>(
@@ -202,6 +198,7 @@ function ProjectDetail(){
             </Droppable>
             </DragDropContext>
         </div>
+
   </>
  )
 }

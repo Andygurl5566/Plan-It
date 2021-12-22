@@ -25,7 +25,7 @@ function getIdea(){
         <div className="response"> 
             <p>{idea.activity}
                  <div>
-                    <button className="closeaskdivbtn">x</button>
+                    {/* <button className="closeaskdivbtn">awesome!</button> */}
                 </div> 
             </p>
          </div>  

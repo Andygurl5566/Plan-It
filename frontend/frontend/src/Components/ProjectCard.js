@@ -31,7 +31,7 @@ function ProjectCard({project, onDeleteProject, edited, setEdited}){
           if (res.ok) {
             onDeleteProject(project);
           }
-        });
+        }).then(setEdited(project))
       }
 
 

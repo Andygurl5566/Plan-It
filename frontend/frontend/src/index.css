@@ -241,7 +241,7 @@ letter-spacing: 3px;
 }
 
 .landingImage{
-  width: 700px;
+  width: 600px;
   /* float:left;
   margin-right: 60px;
   margin-left: -40px; */
@@ -362,12 +362,12 @@ letter-spacing: 2px;
   border-radius: 20px;
   position:fixed;
   right: 260px;
-  bottom:20px;
+  bottom:60px;
 
 }
 
 .askPlan{
-
+display:absolute;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -382,7 +382,7 @@ letter-spacing: 2px;
 }
 
 .response{
-  width: 150px;
+  width: 180px;
   background-color: rgb(226, 226, 226);
   padding: 10px;
   border-radius: 10px;

@@ -2,6 +2,7 @@ import {useEffect, useState} from "react"
 import ProjectCard from "./ProjectCard"
 import { useNavigate } from "react-router-dom";
 import AddPromptProject from "./AddPromptProject";
+import ProjectGenerator from "./ProjectGenerator"
 
 
 
@@ -127,7 +128,7 @@ function ProjectsPage({currentUser}){
             }
             
         </div>
-          
+         
         </>
     )
 }
