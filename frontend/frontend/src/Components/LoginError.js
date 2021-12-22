@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import ProjectGenerator from "./ProjectGenerator";
 
 
-const Login= ({setCurrentUser}) => {
+const LoginError= ({setCurrentUser}) => {
 
   const countReducer = useSelector(state => state.countReducer)
   const dispatch = useDispatch()
@@ -55,7 +54,7 @@ const Login= ({setCurrentUser}) => {
       <>
 
   <h1 className="formTitle">Login</h1>
-
+<p className="errorcode">Username or Password doesn't exist - Please try again</p>
   <div className="formdiv">
 
     
@@ -92,4 +91,4 @@ const Login= ({setCurrentUser}) => {
 
 </>
 )}
-export default Login
+export default LoginError

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import ProjectGenerator from "./ProjectGenerator";
+
 
 
 function Profile({currentUser, setCurrentUser}){

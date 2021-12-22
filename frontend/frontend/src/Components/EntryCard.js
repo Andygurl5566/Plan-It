@@ -47,7 +47,7 @@ console.log(entries)
 
             <p className="card-text">{entries.details}.</p>
             
-            <a href="#" className="btn btn-primary">Details</a>
+            {/* <a href="#" className="btn btn-primary">Details</a> */}
            
             <button onClick={handleToggle} className="btn btn-primary">{toggle==false? "Edit":"Close"}</button>
             
@@ -59,7 +59,7 @@ console.log(entries)
                 onDeleteEntry={onDeleteEntries}
                 handleDeleteEntry={handleDeleteEntry}
                 entries ={entries} 
-                id={id}/> }
+                id={id} setToggle={setToggle} />  }
 
         </div>
     </div>

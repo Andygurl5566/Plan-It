@@ -1,7 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function EditEntryForm({entries, id, edited, setEdited}){
+function EditEntryForm({entries, id, edited, setEdited, setToggle}){
 
+let navigate = useNavigate()
+
+function navigateToProjects(){
+  navigate(`/projects/${id}`)
+}
 
     const [currentEntry, setCurrentEntry] = useState({});
     
@@ -34,6 +40,7 @@ function EditEntryForm({entries, id, edited, setEdited}){
                 setCurrentEntry(entries);
                 setEdited(!edited)
               })
+              .then(setToggle(false))
             
             } else {
               res.json().then((errors) => {

@@ -17,7 +17,7 @@ import EntryDetail from './Components/EntryDetail';
 import EditEntryForm from './Components/EditEntryForm';
 import ProjectGenerator from './Components/ProjectGenerator';
 import AddPrompt from './Components/AddPrompt';
-
+import LoginError from './Components/LoginError';
 
 
 
@@ -86,6 +86,7 @@ function App() {
 
       <Route path ="/generate" element={<ProjectGenerator/>}/>
       <Route path ="/addprompt" element={<AddPrompt/>}/>
+      <Route path ="/login/error" element={<LoginError setCurrentUser={setCurrentUser}/>}/>
 
 
       <Route path ="*" component={Page404}/>

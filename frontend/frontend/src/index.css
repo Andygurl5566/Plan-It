@@ -94,14 +94,8 @@ margin-left: 1.5rem;
 .manualadjust2{
   margin-left: 2rem;
 }
-/* 
-.subtitlediv span{
- margin: 250px;
- position: relative;
 
-  } */
   
-
 
 .cardpagetitle{
   text-align: center;
@@ -134,7 +128,7 @@ margin-left: 1.5rem;
 
 .searchicon{
   width: 30px;
-  margin-left: 845px;
+  margin-left: 1005px;
 }
 
 .deletebtn{
@@ -239,9 +233,16 @@ letter-spacing: 3px;
   text-align: center;
  
 }
-
+.errorcode{
+ 
+  padding-top:30px;
+  text-align: center;
+  color: rgb(194, 30, 30);
+  font-weight: 500;
+ 
+}
 .landingImage{
-  width: 600px;
+  width: 700px;
   /* float:left;
   margin-right: 60px;
   margin-left: -40px; */
@@ -353,39 +354,69 @@ letter-spacing: 2px;
 }
 
 .askdiv{
-  float:left;
+  position:absolute;
+  top: 0;
   text-align: center;
   margin:20px;
-  margin-right: 60px;
+  z-index: 1000;
+ 
   /* background-color: rgb(218, 213, 218); */
   padding: 20px;
   border-radius: 20px;
-  position:fixed;
-  right: 260px;
-  bottom:60px;
+ 
+  top: 29%;
+  left: 84%;
+  /* bottom:60px; */
+  background-color: rgb(240, 240, 240);
+  width: 300px;
+  text-align: center;
+  
 
 }
 
 .askPlan{
-display:absolute;
+
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  text-align: center;
   background-color: rgb(71, 71, 71);
   color: white;
   font-size: 30px;
   /* background-image: ; */
   margin: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
 
+.askdivbuttons{
+ font-weight: bolder;
+
+}
+
+.closeaskdivbtn:hover{
+
+  background-color: rgb(255, 255, 255);
+ 
+ }
+
+.closeaskdivbtn{
+  height:39px;
+  font-size: 20px;
+  margin-top: 30px;
+  margin:10px;
+  border-radius: 10px;
   
 }
 
 .response{
-  width: 180px;
+  width: 262px;
   background-color: rgb(226, 226, 226);
   padding: 10px;
   border-radius: 10px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 15px;
 }
 
 .addprompt{

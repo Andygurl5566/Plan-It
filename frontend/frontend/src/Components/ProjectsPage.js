@@ -15,7 +15,7 @@ function ProjectsPage({currentUser}){
     const [menuItem, setMenuItem] = useState(projectList)
    
 
-     let navigate = useNavigate()
+    let navigate = useNavigate()
     const allCategories = ["All", ...new Set(projectList.map(project => project.tag))]
     console.log(projectList)
     console.log(menuItem)
@@ -44,6 +44,7 @@ function ProjectsPage({currentUser}){
             .then((projects) => {  
                 setProjects(projects)
                 console.log(projects)
+               
             })
     }, [edited])
 
@@ -53,12 +54,13 @@ function ProjectsPage({currentUser}){
         setProjects((projects) => projects.filter((projects) => projects.id !== deletedProject.id)
         );
       }
+      
 
      
 
     return(
         <>
-        <h1 className="cardpagetitle"> {currentUser.name}'s Projects </h1>
+        <h1 className="cardpagetitle"> {currentUser.name == null? " My Projects": `${currentUser.name}'s Projects`} </h1>
         <div className="pageheader">
             <div className="binding">
                 <button onClick={navigateToProjectForm} className="btn btn-primary">New Project</button>
@@ -95,7 +97,10 @@ function ProjectsPage({currentUser}){
                         project={project}
                         onDeleteProject={handleDeleteProject}  
                         edited = {edited}
-                        setEdited={setEdited}                 
+                        setEdited={setEdited}
+                        setMenuItem={setMenuItem} 
+                        menuItem={menuItem} 
+                        allCategories={allCategories}               
                         />
                     </div>
                 )})
