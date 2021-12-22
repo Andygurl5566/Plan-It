@@ -5,12 +5,29 @@ import AddPromptProject from "./AddPromptProject";
 
 
 
+
 function ProjectsPage({currentUser}){
 
     const [edited, setEdited] = useState(true)
     const [projectList, setProjects] = useState([])
     const [searchTerm, setSearchTerm] = useState("")
-    const [searchtag, setSearchTag] = useState("")
+    const [menuItem, setMenuItem] = useState(projectList)
+    const [buttons, setButtons] = useState([])
+    
+
+      const allCategories = ["All", ...new Set(projectList.map(project => project.tag))]
+      console.log(allCategories)
+
+
+      const filter =(button) =>{
+
+        if(button === "All"){
+            setMenuItem(allCategories)
+        }
+          const filterdData = projectList.filter(projectList.tag === button)
+          setMenuItem(filterdData)
+      }
+
 
     let navigate = useNavigate()
 
@@ -29,22 +46,17 @@ function ProjectsPage({currentUser}){
             })
     }, [edited])
 
+    console.log(projectList)
+
+    
+
     function handleDeleteProject(deletedProject) {
         setProjects((projects) =>
           projects.filter((projects) => projects.id !== deletedProject.id)
         );
       }
 
-      const onlyUnique = (array) => (
-          array.filter((currentValue, index, arr) =>(
-              arr.indexOf(currentValue) == index
-          ))
-      )
-
-     console.log(projectList) 
-        
-      
-    //   console.log(onlyUnique(project.tag))
+     
 
     return(
         <>
@@ -55,13 +67,18 @@ function ProjectsPage({currentUser}){
             <button onClick={navigateToProjectForm} className="btn btn-primary">New Project</button>
             <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
            <input className ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
-           <div></div><select className ="filter">
-            
-               {projectList.map((project)=>{
-                   return(
-                   <option value="">{project.tag}</option>)
-               })}
-           </select>  
+           <div>
+        </div>
+       
+
+       {
+           allCategories.map((cat, i)=>{
+               return <button type="button" onClick={()=> filter(cat)}>{cat}</button>
+           })
+       }
+
+ 
+              
         </div>
         </div>
 

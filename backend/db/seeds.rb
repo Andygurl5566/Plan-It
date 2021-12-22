@@ -19,13 +19,13 @@ nia.avatar.attach(
     content_type: "application/png"
 )
 
-project1 = Project.create(title:"Glassblowing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
-project3 = Project.create(title:"Workouts", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
-project4 = Project.create(title:"Robotics", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
-project5 = Project.create(title:"Baking", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
-project6 = Project.create(title:"3D Printing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"fine-arts", start_date:"N/A", due_date:"N/A")
+project1 = Project.create(title:"Glassblowing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"Hobby", start_date:"N/A", due_date:"N/A")
+project3 = Project.create(title:"Workouts", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"Hobby", start_date:"N/A", due_date:"N/A")
+project4 = Project.create(title:"Robotics", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"Work", start_date:"N/A", due_date:"N/A")
+project5 = Project.create(title:"Baking", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"School", start_date:"N/A", due_date:"N/A")
+project6 = Project.create(title:"3D Printing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"Personal", start_date:"N/A", due_date:"N/A")
 
-project2 = Project.create(title:"Tiny Home Remodel",user_id: ben.id, image:"http://images.huffingtonpost.com/2016-08-09-1470757977-4233983-image6.jpg", tag:"renovation", start_date:"12/15/21", due_date:"TBD")
+project2 = Project.create(title:"Tiny Home Remodel",user_id: ben.id, image:"http://images.huffingtonpost.com/2016-08-09-1470757977-4233983-image6.jpg", tag:"Other", start_date:"12/15/21", due_date:"TBD")
 
 
 entry1 = Entry.create(title:" Make  glass pumpkin", date: "thursday ", details:"gegaga ", start_date: " ageg", due_date: "ageg ", tag: "ageg ", project_id: project1.id, image:"https://bloximages.newyork1.vip.townnews.com/tulsaworld.com/content/tncms/assets/v3/editorial/b/64/b64cb7ac-dd47-5f18-88a9-741dd927a931/5b9c0add30ba2.image.jpg")

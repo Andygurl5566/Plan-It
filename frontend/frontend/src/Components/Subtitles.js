@@ -15,4 +15,4 @@ function Subtitles(){
     )
 }
 
-export default Subtitles 
+export default Subtitles  

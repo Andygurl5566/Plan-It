@@ -3,7 +3,8 @@ class ProjectsController < ApplicationController
     
         def index
             project = current_user.projects
-            render json: project.order(created_at: :desc)
+            render json: project
+            # .order(created_at: :desc)
         end
     
         def show
@@ -58,7 +59,7 @@ class ProjectsController < ApplicationController
         def is_authorized
             permitted = current_user.admin? 
             render json: "Accessibility is not permitted", status: :forbidden unless permitted
-          end
+        end
           
     end
     
