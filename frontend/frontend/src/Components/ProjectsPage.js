@@ -12,25 +12,24 @@ function ProjectsPage({currentUser}){
     const [projectList, setProjects] = useState([])
     const [searchTerm, setSearchTerm] = useState("")
     const [menuItem, setMenuItem] = useState(projectList)
-    const [buttons, setButtons] = useState([])
-    const [newProjects, setNewProjects] = useState([])
+   
 
      let navigate = useNavigate()
     const allCategories = ["All", ...new Set(projectList.map(project => project.tag))]
-    console.log(allCategories)
+    console.log(projectList)
+    console.log(menuItem)
 
 
-      const filter =(button) =>{
+      const filter = (button) =>{
 
         if(button === "All"){
-            setMenuItem(projectList)
-            console.log(allCategories)
-           
+        setMenuItem(projectList)
+        return
         }
-          const filterdData = projectList.filter(project => project.tag === button)
-          setMenuItem(filterdData)
-      }
- console.log(menuItem)
+        const filterdData = projectList.filter(project => project.tag === button)
+        setMenuItem(filterdData)
+    }
+ 
 
    
 
@@ -42,34 +41,15 @@ function ProjectsPage({currentUser}){
         fetch('/projects')
             .then((r) => r.json())
             .then((projects) => {  
-
-                setNewProjects(newProjects)
-               
-              
-            })
-    }, [edited])
-
-
-
-
-    useEffect(() => {
-        fetch('/projects')
-            .then((r) => r.json())
-            .then((projects) => {  
-
                 setProjects(projects)
-               
-              
+                console.log(projects)
             })
     }, [edited])
 
-    console.log(projectList)
 
-    
 
     function handleDeleteProject(deletedProject) {
-        setProjects((projects) =>
-          projects.filter((projects) => projects.id !== deletedProject.id)
+        setProjects((projects) => projects.filter((projects) => projects.id !== deletedProject.id)
         );
       }
 
@@ -79,23 +59,18 @@ function ProjectsPage({currentUser}){
         <>
         <h1 className="cardpagetitle"> {currentUser.name}'s Projects </h1>
         <div className="pageheader">
-           
             <div className="binding">
-            <button onClick={navigateToProjectForm} className="btn btn-primary">New Project</button>
-            <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
-           <input className ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+                <button onClick={navigateToProjectForm} className="btn btn-primary">New Project</button>
+                <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
+                <input className ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
            <div>
         </div>
        
 
-       {
-           allCategories.map((cat, i)=>{
+       { allCategories.map((cat, i)=>{
                return <button type="button" onClick={()=> filter(cat)}>{cat}</button>
            })
-       }
-
- 
-              
+        }     
         </div>
         </div>
 
@@ -110,6 +85,7 @@ function ProjectsPage({currentUser}){
                 } else if (project.title.toLowerCase().includes(searchTerm.toLowerCase())){
                     return project
                 }
+                
 
             }).map((project) => {
                 return (
@@ -122,6 +98,32 @@ function ProjectsPage({currentUser}){
                         />
                     </div>
                 )})
+            }
+            
+        </div>
+
+            <div id="CardsDiv">
+{/* Refactor code below */}
+
+        {menuItem == 0 ?  projectList.filter((project)=>{
+                if (searchTerm == "") {
+                    return project
+                } else if (project.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                    return project
+                }
+                
+
+            }).map((project) => {
+                return (
+                    <div id="ProjectCards">
+                        <ProjectCard  
+                        project={project}
+                        onDeleteProject={handleDeleteProject}  
+                        edited = {edited}
+                        setEdited={setEdited}                 
+                        />
+                    </div>
+                )}) : ""
             }
             
         </div>
