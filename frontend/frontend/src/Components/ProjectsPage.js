@@ -13,6 +13,8 @@ function ProjectsPage({currentUser}){
     const [searchTerm, setSearchTerm] = useState("")
     const [menuItem, setMenuItem] = useState(projectList)
     const [buttons, setButtons] = useState([])
+    const [newProjects, setNewProjects] = useState([])
+
      let navigate = useNavigate()
     const allCategories = ["All", ...new Set(projectList.map(project => project.tag))]
     console.log(allCategories)
@@ -21,7 +23,8 @@ function ProjectsPage({currentUser}){
       const filter =(button) =>{
 
         if(button === "All"){
-            setProjects(projectList)
+            setMenuItem(projectList)
+            console.log(allCategories)
            
         }
           const filterdData = projectList.filter(project => project.tag === button)
@@ -34,6 +37,20 @@ function ProjectsPage({currentUser}){
     function navigateToProjectForm(){
         navigate("/new_project")
     }
+
+    useEffect(() => {
+        fetch('/projects')
+            .then((r) => r.json())
+            .then((projects) => {  
+
+                setNewProjects(newProjects)
+               
+              
+            })
+    }, [edited])
+
+
+
 
     useEffect(() => {
         fetch('/projects')
@@ -87,7 +104,7 @@ function ProjectsPage({currentUser}){
         </div>
 
         <div id= "CardsDiv">
-            {projectList.filter((project)=>{
+            {menuItem.filter((project)=>{
                 if (searchTerm == "") {
                     return project
                 } else if (project.title.toLowerCase().includes(searchTerm.toLowerCase())){
@@ -98,7 +115,7 @@ function ProjectsPage({currentUser}){
                 return (
                     <div id="ProjectCards">
                         <ProjectCard  
-                         project={project}
+                        project={project}
                         onDeleteProject={handleDeleteProject}  
                         edited = {edited}
                         setEdited={setEdited}                 
