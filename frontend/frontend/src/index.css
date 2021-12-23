@@ -13,12 +13,14 @@ code {
 }
 
 #CardsDiv { 
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.5rem;
   grid-auto-rows: minmax(3rem, auto);
   padding-right: 10%;
   padding-left: 15%;
+
  
 }
 
@@ -65,6 +67,13 @@ code {
  
 
 }
+.card{
+ 
+  /* max-height: 400px; */
+  /* min-width: 300px; */
+ 
+}
+
 
 .card-body {
  
@@ -74,6 +83,7 @@ code {
   /* color: rgb(48, 47, 47); */
   color: rgb(48, 47, 47);
   letter-spacing: 2px;
+ 
 }
 
 .subtitle{
@@ -96,7 +106,6 @@ margin-left: 1.5rem;
 }
 
   
-
 .cardpagetitle{
   text-align: center;
   margin-top: 40px;
@@ -374,6 +383,40 @@ letter-spacing: 2px;
 
 }
 
+.pointer {
+	height: 40px;
+	width: 40px;
+	background:rgb(240, 240, 240);
+	margin: 0 auto;
+	transform: rotate(45deg);
+	border-radius: 0 0 12px 0;
+	margin-top: -22px;
+	position: absolute;
+  right:400px;
+	z-index: 1000;
+  top: 100%;
+  right: 15%;
+	left: calc(0.5vw - 59px);
+}
+
+
+/* .pointer {
+	height: 40px;
+	width: 40px;
+	background:rgb(240, 240, 240);
+	margin: 0 auto;
+	transform: rotate(45deg);
+	border-radius: 0 0 12px 0;
+	margin-top: -22px;
+	position: absolute;
+  right:400px;
+	z-index: 1000;
+  top: 50%;
+  right: -80%;
+	left: calc(0.5vw - 59px);
+} */
+
+
 .askPlan{
 
   width: 60px;
@@ -411,7 +454,7 @@ letter-spacing: 2px;
 
 .response{
   width: 262px;
-  background-color: rgb(226, 226, 226);
+  /* background-color: rgb(226, 226, 226); */
   padding: 10px;
   border-radius: 10px;
   text-align: center;

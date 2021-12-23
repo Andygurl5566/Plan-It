@@ -28,12 +28,12 @@ const handleLogout = () => {
     return (
        <>
       <div className="bioheader">
-      <h1 className="biotitle">Welcome {currentUser.username}!</h1> 
+      <h1 className="biotitle">Welcome {currentUser.name}!</h1> 
        <p>Another day, another project</p>
        
 
       <div className = "profileDiv">
-       <img className="profileImage" src="https://thispersondoesnotexist.com/image" />
+       <img className="profileImage" src={"https://thispersondoesnotexist.com/image"} />
       </div>
         <p></p>
       <div className="biodiv">

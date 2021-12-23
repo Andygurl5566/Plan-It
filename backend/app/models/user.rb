@@ -6,4 +6,8 @@ class User < ApplicationRecord
     has_many :projects
     has_many :entries, through: :projects
 
+    # validates :password, uniqueness: true
+    validates :username, uniqueness: true
+
+
 end
