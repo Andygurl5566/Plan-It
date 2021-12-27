@@ -55,7 +55,7 @@ function App() {
         .then((projects) => {
           
             setProjects(projects)
-            console.log(projects)
+            // console.log(projects)
         })
 }, [edited])
 

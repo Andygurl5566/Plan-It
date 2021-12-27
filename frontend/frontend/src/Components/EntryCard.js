@@ -8,7 +8,7 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
     function handleToggle(){
     
         setToggle(!toggle)
-        console.log(toggle)
+      
     }
 
     function confirmDelete(){
@@ -31,7 +31,7 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
           }
         });
       }
-console.log(entries)
+
 
     return (
         <div className = "card" style={{ width: '25rem' }}>
