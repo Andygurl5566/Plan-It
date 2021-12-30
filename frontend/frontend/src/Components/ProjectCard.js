@@ -1,18 +1,12 @@
 import EditProjectForm from "./EditProjectForm";
 import React, { useState } from "react";
 
-function ProjectCard({project, onDeleteProject, edited, setEdited, setMenuItem,allCategories}){
+function ProjectCard({project, onDeleteProject, edited, setEdited, setMenuItem}){
     const {id} = project
     const [toggle, setToggle] = useState(false);
-    const [update, setupdate] = useState(false);
 
     
-    function handleUpdate(){
-    
-      setupdate(!update)
-    
 
-  }
     
     function handleToggle(){
     
@@ -48,7 +42,6 @@ function ProjectCard({project, onDeleteProject, edited, setEdited, setMenuItem,a
         <div className = "card" style={{ width: '25rem' }}>
 
             <div className = "card-body">
-            {/* <button onClick={confirmDelete} className="deletebtn"> X </button> */}
 
             {project.image == "" ? "" : <img className="card-img-top" src={project.image} alt="Card image cap"/>}
 

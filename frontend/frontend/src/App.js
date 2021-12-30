@@ -19,7 +19,7 @@ import ProjectGenerator from './Components/ProjectGenerator';
 import AddPrompt from './Components/AddPrompt';
 import LoginError from './Components/LoginError';
 import FlexProjectDetail from './Components/FlexProjectDetail';
-
+import CalendarFeature from './Components/CalendarFeature';
 
 function Page404(){
 return( 
@@ -88,6 +88,7 @@ function App() {
       <Route path ="/addprompt" element={<AddPrompt/>}/>
       <Route path ="/login/error" element={<LoginError setCurrentUser={setCurrentUser}/>}/>
       <Route path ="/flex/:project_id" element={<FlexProjectDetail/>}/>
+      <Route path ="/calendar" element={<CalendarFeature/>}/>
 
 
       <Route path ="*" component={Page404}/>

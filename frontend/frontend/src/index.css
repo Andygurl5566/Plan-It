@@ -362,6 +362,13 @@ letter-spacing: 2px;
   letter-spacing: 2px;
 }
 
+.overlay{
+  background-color: rgba(10, 10, 9, 0.555);
+  width:100%;
+  height:190%;
+  z-index: 900;
+  position: absolute;
+}
 .askdiv{
   position:absolute;
   top: 0;
@@ -373,12 +380,13 @@ letter-spacing: 2px;
   padding: 20px;
   border-radius: 20px;
  
-  top: 29%;
-  left: 84%;
+  top: 35%;
+  left: 80%;
   /* bottom:60px; */
   background-color: rgb(240, 240, 240);
   width: 300px;
   text-align: center;
+  position: fixed;
   
 
 }
@@ -483,5 +491,24 @@ letter-spacing: 2px;
   width: 70px;
 }
 
+.calander-div{
+  
+  padding-top: 20px;
+  display: inline-block;
+  width:260px;
+
+  margin:20px;
+
+}
+
+.calander-div2{
+  vertical-align:top;
+  width:260px;
+ 
+  padding-top: 20px;
+  display: inline-block;
+  margin:20px;
+
+}
 
 

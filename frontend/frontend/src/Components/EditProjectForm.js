@@ -77,6 +77,8 @@ function EditProjectForm({id, project, edited, setEdited}){
               <label>Tag</label>
               <input type="text" className="form-control" name="tag" id="tag" onChange={handleChange}  value={formData.tag} placeholder="Tag"/>
 
+              
+
               {/* Will make this a file upload with active storage? */}
 
               {/* <button onClick={handleToggle}>More Options</button>

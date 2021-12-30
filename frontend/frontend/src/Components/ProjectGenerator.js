@@ -22,6 +22,7 @@ function ProjectGenerator(){
 
 
     return(
+        <div className="overlay">
         <div className="askdiv">
             <div >
                 <button className ="askPlan" onClick={getIdea}>?</button>
@@ -30,6 +31,7 @@ function ProjectGenerator(){
             </div>
                 <div class="pointer">     
             </div>
+        </div>
         </div>
     )
 }
