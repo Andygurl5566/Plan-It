@@ -12,7 +12,11 @@ class UsersController < ApplicationController
   end
 
   def show
-      render json: @current_user , include: :projects
+      # render json: @current_user , include: :projects
+      user = @current_user
+      avatar = rails_blob_path(@current_user.avatar)
+      render json: {user:user, avatar: avatar}, include: :projects
+      
   end
 
   private

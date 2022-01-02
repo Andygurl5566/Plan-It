@@ -19,6 +19,12 @@ nia.avatar.attach(
     content_type: "application/png"
 )
 
+ben.avatar.attach(
+    io: File.open("./public/avatars/image.jpg"),
+    filename: "image.jpg",
+    content_type: "application/png"
+)
+
 project1 = Project.create(title:"Glassblowing", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"Hobby", start_date:"N/A", due_date:"N/A")
 project3 = Project.create(title:"Workouts", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"Hobby", start_date:"N/A", due_date:"N/A")
 project4 = Project.create(title:"Robotics", user_id: nia.id, image:"https://www.sinacastudios.org/wp-content/uploads/2016/08/glassblowing2-copy.jpg", tag:"Work", start_date:"N/A", due_date:"N/A")

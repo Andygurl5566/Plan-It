@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import ProjectGenerator from "./ProjectGenerator";
 
 
-const Login= ({setCurrentUser}) => {
+const Login= ({setCurrentUser,currentUser, currentAvatar, setCurrentAvatar}) => {
 
   const countReducer = useSelector(state => state.countReducer)
   const dispatch = useDispatch()
@@ -15,6 +15,7 @@ const Login= ({setCurrentUser}) => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
+    // avatar: `${currentUser.avatar}`
   });
 
   const handleChange = (e) => {
@@ -29,6 +30,7 @@ const Login= ({setCurrentUser}) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Accept": "application/json"
       },
       body: JSON.stringify(formData),
     })
@@ -38,9 +40,11 @@ const Login= ({setCurrentUser}) => {
       if (res.ok) {
         res.json().then((user) => {
           setCurrentUser(user)
-          console.log(user.name)
+          // setCurrentAvatar(user.avatar)
+          console.log(user)
           
         })
+        
         .then(() => navigate("/profile"))
       } else {
         res.json().then((errors) => {

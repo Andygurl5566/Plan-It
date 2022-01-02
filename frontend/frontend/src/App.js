@@ -19,6 +19,7 @@ import ProjectGenerator from './Components/ProjectGenerator';
 import AddPrompt from './Components/AddPrompt';
 import LoginError from './Components/LoginError';
 import FlexProjectDetail from './Components/FlexProjectDetail';
+import UserForm from './Components/UserForm';
 
 
 function Page404(){
@@ -34,6 +35,7 @@ function App() {
   
 
   const [currentUser, setCurrentUser] = useState({});
+  const [currentAvatar, setCurrentAvatar] = useState({});
   const [projectList, setProjects] = useState([])
   const [edited, setEdited] = useState(true)
 
@@ -67,8 +69,8 @@ function App() {
     <Routes>
 
       <Route path = "/" element={<Landing />}/>
-      <Route path = "/login" element={<Login setCurrentUser={setCurrentUser}/> }/>
-      <Route path = "/profile" element={<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
+      <Route path = "/login" element={<Login setCurrentUser={setCurrentUser} currentAvatar={currentAvatar} setCurrentAvatar={setCurrentAvatar} currentUser={currentUser}/> }/>
+      <Route path = "/profile" element={<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}currentAvatar={currentAvatar}/>}/>
       <Route path = "/signup" element={<Signup setCurrentUser={setCurrentUser} />}/>
 
       <Route path = "/projects" element={<ProjectsPage currentUser={currentUser} />}/>
@@ -88,6 +90,7 @@ function App() {
       <Route path ="/addprompt" element={<AddPrompt/>}/>
       <Route path ="/login/error" element={<LoginError setCurrentUser={setCurrentUser}/>}/>
       <Route path ="/flex/:project_id" element={<FlexProjectDetail/>}/>
+      <Route path ="/user-form" element={<UserForm/>}/>
 
 
       <Route path ="*" component={Page404}/>

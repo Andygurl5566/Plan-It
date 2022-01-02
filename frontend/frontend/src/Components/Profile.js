@@ -2,8 +2,10 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function Profile({currentUser, setCurrentUser}){
-console.log(currentUser)
+function Profile({currentUser, setCurrentUser, currentAvatar}){
+console.log(currentUser.user.bio)
+// console.log(currentUser.avatar)
+// console.log(currentAvatar)
 let navigate = useNavigate()
 
 function navigateToProjects(){
@@ -28,16 +30,18 @@ const handleLogout = () => {
     return (
        <>
       <div className="bioheader">
-      <h1 className="biotitle">Welcome {currentUser.name}!</h1> 
+      <h1 className="biotitle">Welcome {currentUser.user.name}!</h1> 
        <p>Another day, another project</p>
        
 
       <div className = "profileDiv">
-       <img className="profileImage" src={"https://thispersondoesnotexist.com/image"} />
+       <img className="profileImage" src={currentUser.avatar} 
+      //  src={"https://thispersondoesnotexist.com/image"}
+       />
       </div>
         <p></p>
       <div className="biodiv">
-        <p>{currentUser.bio}</p>
+        <p>{currentUser.user.bio}</p>
       </div>
       <div className="profilebuttondiv">
        <button className="profilebtn" onClick={navigateToProjects}>My Projects</button>     
