@@ -49,9 +49,9 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
             
             {/* <a href="#" className="btn btn-primary">Details</a> */}
            
-            <button onClick={handleToggle} className="btn btn-primary">{toggle==false? "Edit":"Close"}</button>
+            <button onClick={handleToggle} className="general-button2">{toggle==false? "Edit":"Close"}</button>
             
-            <button onClick={confirmDelete} className="btn btn-primary"> Delete </button>
+            <button onClick={confirmDelete} className="general-button2"> Delete </button>
 
             {toggle == false? "" : <EditEntryForm 
                 edited={edited}

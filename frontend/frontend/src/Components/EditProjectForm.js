@@ -96,7 +96,7 @@ function EditProjectForm({id, project, edited, setEdited}){
 
 
                   <div className ="formbuttondiv">
-                      <button type = "submit" className="btn btn-primary"> Submit </button>
+                      <button type = "submit" className="edit-button"> Submit </button>
                      
                   </div>
               </div>

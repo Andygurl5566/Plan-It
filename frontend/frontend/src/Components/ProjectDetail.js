@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-import {useParams} from "react-router-dom"
+import {useParams, useNavigate} from "react-router-dom"
 import EntryCard from "./EntryCard"
 import NewEntryForm from "./NewEntryForm"
 import AddPrompt from "./AddPrompt"
@@ -13,7 +13,11 @@ function ProjectDetail(){
     const [toggle, setToggle] = useState(false);
     const [searchTerm, setSearchTerm] = useState("")
     const [viewmode, setviewmode] = useState(true)
+    let navigate = useNavigate()
     
+    function handleNavigate(){
+      navigate(`/projects`)
+    }
 
     function handleToggle(){
     
@@ -50,8 +54,8 @@ function ProjectDetail(){
         <>
         <div className="pageheader">
             <h1>Entries</h1>
-            <button onClick = {handleToggle} className="btn btn-primary">  Add Entry </button>
-            <a  className="btn btn-primary" href="/projects"> Back </a>
+            <button onClick = {handleToggle} className="general-button">  Add Entry </button>
+            <button  className="general-button" onClick={handleNavigate}> Back </button>
             <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
             <input class ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
         </div>

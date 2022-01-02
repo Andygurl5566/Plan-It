@@ -70,7 +70,7 @@ function navigateToProjects(){
     </div>
 
     <div className ="formbuttondiv">
-    <button type="submit" className="btn btn-primary">Submit</button>
+    <button type="submit" className="general-button2">Submit</button>
     </div>
  </form>   
         </>

@@ -1,12 +1,16 @@
 import EditProjectForm from "./EditProjectForm";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function ProjectCard({project, onDeleteProject, edited, setEdited, setMenuItem}){
     const {id} = project
     const [toggle, setToggle] = useState(false);
-
+    let navigate = useNavigate()
     
-
+    function handleNavigate(){
+      navigate(`/projects/${id}`)
+    }
     
     function handleToggle(){
     
@@ -51,11 +55,11 @@ function ProjectCard({project, onDeleteProject, edited, setEdited, setMenuItem})
 
                 <p class="card-text">{project.description == "null" || null? "" : project.description }</p>
                 
-                <a className="btn btn-primary" href={`/projects/${id}` == "null" || null? "" : `/projects/${id}`}> View Entries  </a> 
+                <button className="general-button2" onClick= {handleNavigate == "null" || null? "" : handleNavigate}> View Entries  </button> 
                 
-                <button onClick={handleToggle} className="btn btn-primary"> {toggle == false? "Edit":"Close"} </button>
+                <button className="general-button2" onClick={handleToggle} > {toggle == false? "Edit":"Close"} </button>
 
-                <button onClick={confirmDelete} className="btn btn-primary"> Delete </button>
+                <button className="general-button2" onClick={confirmDelete} > Delete </button>
 
                 {toggle == false? "" : <EditProjectForm id={id} project={project} edited={edited} setEdited={setEdited}/>}
             </div>

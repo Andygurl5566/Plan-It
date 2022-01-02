@@ -63,7 +63,7 @@ function ProjectsPage({currentUser}){
         <h1 className="cardpagetitle"> {currentUser.name == null? " My Projects": `${currentUser.name}'s Projects`} </h1>
         <div className="pageheader">
             <div className="binding">
-                <button onClick={navigateToProjectForm} className="btn btn-primary">New Project</button>
+                <button onClick={navigateToProjectForm} className="general-button-special">New Project</button>
                 <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
                 <input className ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
            <div>
@@ -71,7 +71,7 @@ function ProjectsPage({currentUser}){
        
 
        { allCategories.map((cat, i)=>{
-               return <button type="button" onClick={()=> filter(cat)}>{cat}</button>
+               return <button className="general-button" type="button" onClick={()=> filter(cat)}>{cat}</button>
            })
         }     
         </div>

@@ -20,6 +20,8 @@ code {
   grid-auto-rows: minmax(3rem, auto);
   padding-right: 10%;
   padding-left: 15%;
+  
+ 
 
  
 }
@@ -34,6 +36,7 @@ code {
   width: 300px;
   float:left; /* add this */
   /* border: 1px solid red; */
+  
   
  
 
@@ -71,6 +74,7 @@ code {
  
   /* max-height: 400px; */
   /* min-width: 300px; */
+  
  
 }
 
@@ -78,13 +82,22 @@ code {
 .card-body {
  
   border-radius: 15px;
-  background-color: rgb(243, 243, 243);
-  /* background-color: rgb(223, 230, 231); */
+  /* background-color: rgb(243, 243, 243); */
+  background-color: rgb(236, 241, 241);
   /* color: rgb(48, 47, 47); */
   color: rgb(48, 47, 47);
   letter-spacing: 2px;
- 
+outline: none; 
+
 }
+
+.card-img-top {
+  height: 290px;
+  width: 366px;
+  display: center;
+  object-fit: cover;
+  object-position: center;
+} 
 
 .subtitle{
 text-align:left;
@@ -126,18 +139,24 @@ margin-left: 1.5rem;
 
 .searchbar{
   margin-left: 15px;
- float: right;
-  height: 40px;
-  width:230px;
+ /* float: right; */
+  height: 43px;
+  width:300px;
   color: black;
   border-radius: 8px;
   position: relative;
+  outline: none;
+  box-shadow: 5px;
+  border: none;
+  background-color: rgb(223, 223, 223);
+  padding: 20px;
+  font-size: 20px;
   
 }
 
 .searchicon{
   width: 30px;
-  margin-left: 1005px;
+  margin-left: 750px;
 }
 
 .deletebtn{
@@ -219,7 +238,7 @@ margin-top:20px;
 
 .navdiv{
   height:80px;
-  background-color:rgba(2, 2, 2, 0.808);
+  background-color:rgba(0, 0, 0, 0.808);
   text-decoration: none;
 }
 
@@ -251,7 +270,7 @@ letter-spacing: 3px;
  
 }
 .landingImage{
-  width: 700px;
+  width: 550px;
   /* float:left;
   margin-right: 60px;
   margin-left: -40px; */
@@ -509,6 +528,73 @@ letter-spacing: 2px;
   display: inline-block;
   margin:20px;
 
+}
+
+.general-button-special{
+  outline:none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-top:10px;
+  font-size: 20px;
+  /* background: linear-gradient(rgb(27, 25, 25), rgb(255, 255, 255)); */
+  outline: none;
+  box-shadow: 5px;
+  border: none;
+  background-color: #afb3bb;
+  color: rgb(255, 255, 255);
+
+}
+
+.general-button{
+  outline:none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-top:10px;
+  font-size: 20px;
+  /* background: linear-gradient(rgb(27, 25, 25), rgb(255, 255, 255)); */
+  outline: none;
+  box-shadow: 5px;
+  border: none;
+  background-color: rgb(188, 219, 240);
+
+}
+
+
+/* card buttons below */
+.general-button2{
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 3px;
+  background-color: rgb(199, 209, 216);
+  outline: none;
+  box-shadow: 5px;
+  border: none;
+  font-size: 18px;
+  
+ 
+}
+
+.edit-button{
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+  background-color: rgb(205, 206, 214);
+ 
 }
 
 
