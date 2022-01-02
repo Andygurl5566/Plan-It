@@ -5,7 +5,7 @@ import ProjectGenerator from './ProjectGenerator';
 
 
 
-function NavBar(){
+function NavBar({handleLogout, currentUser}){
   
   const [overlay, setoverlay] = useState(false)
 
@@ -33,6 +33,11 @@ function NavBar(){
               <li className="nav-item">
                   <a className="nav-link" onClick={handleOverlay}>Ideas</a>
               </li>
+
+              <li className="nav-item">
+                  {currentUser.message == "Please Log In" ? "" : <a className="nav-link" onClick={handleLogout}>Logout</a>}
+              </li>
+
 
             </ul>
         </nav>    

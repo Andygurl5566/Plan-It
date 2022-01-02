@@ -20,6 +20,7 @@ import AddPrompt from './Components/AddPrompt';
 import LoginError from './Components/LoginError';
 import FlexProjectDetail from './Components/FlexProjectDetail';
 import CalendarFeature from './Components/CalendarFeature';
+import { useNavigate } from "react-router-dom";
 
 function Page404(){
 return( 
@@ -36,6 +37,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [projectList, setProjects] = useState([])
   const [edited, setEdited] = useState(true)
+  let navigate = useNavigate()
 
   // const [currentAvatar, setCurrentAvatar] = useState({});
 
@@ -59,16 +61,29 @@ function App() {
         })
 }, [edited])
 
+const handleLogout = () => {
+  fetch('/logout', {method: "DELETE"})
+  .then(() => navigate("/"))
+  .then(res => { 
+      console.log(res);
+        if (res.ok) {
+          setCurrentUser(null)
+          console.log('you logged out');
+        }
+      })
+      
+}
+
   return (
     <>
-    <NavBar/>
+    <NavBar handleLogout={handleLogout} currentUser={currentUser}/>
     <Outlet/>
 
     <Routes>
 
       <Route path = "/" element={<Landing />}/>
       <Route path = "/login" element={<Login setCurrentUser={setCurrentUser}/> }/>
-      <Route path = "/profile" element={<Profile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
+      <Route path = "/profile" element={<Profile currentUser={currentUser} handleLogout ={handleLogout} setCurrentUser={setCurrentUser}/>}/>
       <Route path = "/signup" element={<Signup setCurrentUser={setCurrentUser} />}/>
 
       <Route path = "/projects" element={<ProjectsPage currentUser={currentUser} />}/>

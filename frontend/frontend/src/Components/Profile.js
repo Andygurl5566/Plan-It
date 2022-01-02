@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function Profile({currentUser, setCurrentUser}){
+function Profile({currentUser, setCurrentUser, handleLogout}){
 console.log(currentUser)
 let navigate = useNavigate()
 
@@ -10,18 +10,18 @@ function navigateToProjects(){
   navigate("/projects")
 }
 
-const handleLogout = () => {
-    fetch('/logout', {method: "DELETE"})
-    .then(() => navigate("/"))
-    .then(res => { 
-        console.log(res);
-          if (res.ok) {
-            setCurrentUser(null)
-            console.log('you logged out');
-          }
-        })
+// const handleLogout = () => {
+//     fetch('/logout', {method: "DELETE"})
+//     .then(() => navigate("/"))
+//     .then(res => { 
+//         console.log(res);
+//           if (res.ok) {
+//             setCurrentUser(null)
+//             console.log('you logged out');
+//           }
+//         })
         
-  }
+  // }
 
 
 
