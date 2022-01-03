@@ -1,11 +1,11 @@
 import {Link, useNavigate} from 'react-router-dom'
 import React, { useState } from "react";
 
-function EditProjectForm({id, project, edited, setEdited}){
+function EditProjectForm({id, project, edited, setEdited, setToggle}){
 
    
     const [currentProject, setCurrentProject] = useState({});
-    const [toggle, setToggle] = useState(false);
+   
 
    
     const [formData, setFormData] = useState({
@@ -41,6 +41,7 @@ function EditProjectForm({id, project, edited, setEdited}){
                   setCurrentProject(project)
                   setEdited(!edited)
                 })
+                .then(setToggle(false))
                 
               } else {
                 res.json().then((errors) => {
@@ -50,11 +51,11 @@ function EditProjectForm({id, project, edited, setEdited}){
             });
           
           }
-        function handleToggle(){
+        // function handleToggle(){
             
-            setToggle(!toggle)
-            console.log(toggle)
-        }
+        //     setToggle(!toggle)
+        //     console.log(toggle)
+        // }
 
        
 
@@ -77,6 +78,8 @@ function EditProjectForm({id, project, edited, setEdited}){
               <label>Tag</label>
               <input type="text" className="form-control" name="tag" id="tag" onChange={handleChange}  value={formData.tag} placeholder="Tag"/>
 
+              
+
               {/* Will make this a file upload with active storage? */}
 
               {/* <button onClick={handleToggle}>More Options</button>
@@ -94,7 +97,7 @@ function EditProjectForm({id, project, edited, setEdited}){
 
 
                   <div className ="formbuttondiv">
-                      <button type = "submit" className="btn btn-primary"> Submit </button>
+                      <button type = "submit" className="edit-button"> Submit </button>
                      
                   </div>
               </div>

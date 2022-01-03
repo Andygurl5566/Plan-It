@@ -37,18 +37,19 @@ function EntryPage({currentUser}){
         <div className="pageheader">
            
             <h1 className="pagetitle">All Entries </h1>
-            <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
+            <img className ="searchiconentries" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
 
-            <input type="text" class ="searchbar" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+            <input type="text" class ="searchbarentries" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>
             
         </div>
+        
         <div className="promptdiv">
             {entryList == "" ? <div className="addprompt"><h1 className="prompttitle">Oops! Doesn't look like you have any entries yet.</h1></div>: ""}
         </div>
 
         <div>
         </div>
-        <div id= "CardsDiv">
+        <div id= "CardsDivEntries">
         {entryList.filter((entries)=>{
             if (searchTerm == "") {
                 return entries

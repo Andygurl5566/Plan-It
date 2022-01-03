@@ -16,6 +16,7 @@ function navigateToProjects(){
         title: `${entries.title}`,
         details: `${entries.details}`,
         image: `${entries.image}`,
+        tag: `${entries.tag}`,
         project_id:`${entries.project_id}`
       
 
@@ -41,6 +42,7 @@ function navigateToProjects(){
                 setEdited(!edited)
               })
               .then(setToggle(false))
+              
             
             } else {
               res.json().then((errors) => {
@@ -65,12 +67,18 @@ function navigateToProjects(){
         <input type="text" className="form-control" id="details" name="details"  value={formData.details}  onChange={handleChange} />
     </div>
     <div className="form-group">
+        <label for="image">Tag</label>
+        <input type="text" className="form-control" id="tag" name="tag"   value={formData.tag} onChange={handleChange} />
+    </div>
+    <div className="form-group">
         <label for="image">Image</label>
         <input type="text" className="form-control" id="image" name="image"   value={formData.image} onChange={handleChange} />
     </div>
 
+
+
     <div className ="formbuttondiv">
-    <button type="submit" className="btn btn-primary">Submit</button>
+    <button type="submit" className="general-button2">Submit</button>
     </div>
  </form>   
         </>

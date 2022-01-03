@@ -99,7 +99,8 @@ function FlexProjectDetail(){
    <div id="CardsDiv2">
 
             <DragDropContext onDragEnd={handleOnDragEnd}>
-            <Droppable droppableId="cardId">
+           
+                <Droppable droppableId="cardId">
                 {(provided)=>(
                     <div className="cards2" {...provided.droppableProps} ref={provided.innerRef}>
                         {position.filter((entries)=>{
@@ -109,7 +110,7 @@ function FlexProjectDetail(){
                                 return entries
                             }
                         }).map((entries, index) => {
-                            console.log(index)
+                            // console.log(index)
                             
                         return (
                             <Draggable key={entries.id} draggableId={`${entries.id}`} index={index}>
@@ -126,14 +127,15 @@ function FlexProjectDetail(){
                         {provided.placeholder}
                     </div>
                 )}
-            </Droppable>
+                </Droppable>
+              
             </DragDropContext>
             </div>
             </div>
 
 
 
-            <div id="CardsDiv3">
+            {/* <div id="CardsDiv3">
             <DragDropContext onDragEnd={handleOnDragEnd}>
             <Droppable droppableId="cardId">
                 {(provided)=>(
@@ -197,7 +199,7 @@ function FlexProjectDetail(){
                 )}
             </Droppable>
             </DragDropContext>
-        </div>
+        </div> */}
 
   </>
  )

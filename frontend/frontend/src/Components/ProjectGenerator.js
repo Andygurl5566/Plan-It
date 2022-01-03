@@ -1,10 +1,12 @@
-import {useEffect, useState} from "react"
+import { useState} from "react"
 import Response from "./Response"
 
-function ProjectGenerator(){
+function ProjectGenerator({setOpen, open, handleOverlay}){
+   
+    console.log(open)
 
     const [idea, setIdea] = useState({})
-    const [open, setOpen] = useState(false)
+   
 
 
   function getIdea(){
@@ -22,14 +24,25 @@ function ProjectGenerator(){
 
 
     return(
+        <div className="overlay">
         <div className="askdiv">
             <div >
                 <button className ="askPlan" onClick={getIdea}>?</button>
-                {open == true ? " ":<p>Need a project idea? <p>  Click the question mark above</p></p>}      
-                {open == false ? "": <Response idea={idea} setIdea={setIdea} getIdea={getIdea} />}
+                {/* {open == true ? "" : <p> Need a project idea? <p>  Click the question mark above </p></p>}       */}
+                {open == false ? "" : <Response idea={idea} 
+                setIdea={setIdea}
+                 getIdea={getIdea} 
+                 handleOverlay = {handleOverlay}
+                 setOpen={setOpen}
+                />}
             </div>
-                <div class="pointer">     
-            </div>
+                {/* <div class="pointer">     
+            </div> */}
+
+         
+        </div>  
+        {/* <img className="askdiv-img" src="https://i.imgur.com/9GeXFq9.png" /> */}
+
         </div>
     )
 }

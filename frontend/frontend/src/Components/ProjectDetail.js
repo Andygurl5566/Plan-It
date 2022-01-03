@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-import {useParams} from "react-router-dom"
+import {useParams, useNavigate} from "react-router-dom"
 import EntryCard from "./EntryCard"
 import NewEntryForm from "./NewEntryForm"
 import AddPrompt from "./AddPrompt"
@@ -13,7 +13,27 @@ function ProjectDetail(){
     const [toggle, setToggle] = useState(false);
     const [searchTerm, setSearchTerm] = useState("")
     const [viewmode, setviewmode] = useState(true)
-    
+    const [menuItem, setMenuItem] = useState(entryList)
+
+    let navigate = useNavigate()
+
+    const allCategories = ["All", ...new Set(entryList.map(entry => entry.tag))]
+    console.log(entryList)
+    console.log(menuItem)
+
+    const filter = (button) =>{
+
+        if(button === "All"){
+        setMenuItem(entryList)
+        return
+        }
+        const filterdData = entryList.filter(entry => entry.tag === button)
+        setMenuItem(filterdData)
+    }
+ 
+    function handleNavigate(){
+      navigate(`/projects`)
+    }
 
     function handleToggle(){
     
@@ -45,23 +65,70 @@ function ProjectDetail(){
             })
     }, [edited])
 
+
+    function handleDeleteEntry(deletedEntry) {
+        setEntries((entries) => entries.filter((entries) => entries.id !== deletedEntry.id)
+        );
+      }
+
     
     return(
         <>
         <div className="pageheader">
             <h1>Entries</h1>
-            <button onClick = {handleToggle} className="btn btn-primary">  Add Entry </button>
-            <a  className="btn btn-primary" href="/projects"> Back </a>
-            <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
-            <input class ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+            <button onClick = {handleToggle} className="general-button-special">  Add Entry </button>
+            <button  className="general-button-special" onClick={handleNavigate}> Back </button>
+           
+           
+             
+            <img className ="searchiconentries2" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
+            <input class ="searchbarentries2" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+        
+        <div>
+            { allCategories.map((cat, i)=>{
+               return <button className="general-button" type="button" onClick={()=> filter(cat)}>{cat}</button>
+           })
+            }     
+           </div>
         </div>
+
+        
+
             {toggle == true? <NewEntryForm toggle={toggle} setToggle={setToggle} edited={edited} setEdited={setEdited}/> : ""}
         <div className="promptdiv">
             {entryList == "" ? <AddPrompt/>: ""}
         </div>
         <div id="CardsDiv">
         
-        {entryList.filter((entries)=>{
+        {menuItem.filter((entries)=>{
+            if (searchTerm == "") {
+                return entries
+            } else if (entries.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                return entries
+            }
+        }).map((entries) => {
+            return (
+                <div id="EntryCards">
+                   
+                    <EntryCard edited={edited} setEdited={setEdited}
+                     entries={entries}
+                      onDeleteEntries={handleDeleteEntry} 
+                      edited = {edited}
+                      setEdited={setEdited}
+                      setMenuItem={setMenuItem} 
+                      menuItem={menuItem} 
+                      allCategories={allCategories}  />
+                        
+                </div>
+            )}) 
+            }
+        </div>
+
+{/* Refactor code below */}
+
+        <div id="CardsDiv">
+        
+        {menuItem == 0 ? entryList.filter((entries)=>{
             if (searchTerm == "") {
                 return entries
             } else if (entries.title.toLowerCase().includes(searchTerm.toLowerCase())){
@@ -74,7 +141,7 @@ function ProjectDetail(){
                     <EntryCard edited={edited} setEdited={setEdited} entries={entries} onDeleteEntries={onDeleteEntries} />
                 
                 </div>
-            )})
+            )}) : ""
             }
         </div>
         </>

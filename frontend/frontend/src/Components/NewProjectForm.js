@@ -1,5 +1,6 @@
 import {useNavigate} from 'react-router-dom'
 import React, { useState } from "react";
+import CalendarFeature from './CalendarFeature';
 
 function NewProjectForm(){
 
@@ -47,11 +48,7 @@ function NewProjectForm(){
         
         }
 
-        function handleToggle(){
-            
-            setToggle(!toggle)
-            console.log(toggle)
-        }
+      
 
         function navigateBack(){
           navigate("/projects")
@@ -73,6 +70,11 @@ function NewProjectForm(){
 
               <label>Image</label>
               <input type="text" className="form-control" name="image" id="image" onChange={handleChange} value={formData.image} placeholder="Image"/>
+
+{/* 
+      <CalendarFeature/> */}
+
+
               {/* Will make this a file upload with active storage? */}
 
               {/* <button onClick={handleToggle}>More Options</button>
