@@ -81,8 +81,8 @@ function ProjectDetail(){
            
            
              
-            <img className ="searchicon" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
-            <input class ="searchbar" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
+            <img className ="searchiconentries2" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
+            <input class ="searchbarentries2" type="text" placeholder=" Search Projects . . ." onChange={event=> {setSearchTerm(event.target.value)}}></input>
         
         <div>
             { allCategories.map((cat, i)=>{

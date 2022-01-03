@@ -10,7 +10,7 @@
 User.destroy_all
 
 
-nia = User.create(name: "Issa Rae", password: "12345ABC!", username:"test", bio: "Crafty mc crafterson crafting it up.", image: "https://kdaniellesmedia.com/wp-content/uploads/2018/10/Issa-Rae-to-Star-In-The-New-Rom-Com-American-Princess.jpg")
+nia = User.create(name: "Issa Rae", password: "12345ABC!", username:"test", bio: "Crafty mc crafterson crafting it up.", image: "https://i.imgur.com/sYPhGOM.jpg")
 ben = User.create(name: "Eddy", password: "54321ABC!", username:"test2", bio: "I like pina-coladas and getting caught in the rain", image: "https://i.imgur.com/5RnsuiY.jpg")
 
 nia.avatar.attach(
