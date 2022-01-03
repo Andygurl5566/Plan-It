@@ -191,8 +191,13 @@ margin-left: 1.5rem;
 }
 
 .profileImage{
-  width: 200px;
+  width: 270px;
   border-radius: 50%;
+  display: center;
+  object-fit: cover;
+  object-position: center;
+  
+ 
 }
 
 .profileDiv{
@@ -206,7 +211,7 @@ vertical-align: middle;
 
 .biodiv{
   background-color: rgb(243, 239, 239);
-  width: 300px;
+  width: 500px;
   text-align: center;
   display: inline-block;
 line-height: normal;
@@ -227,8 +232,9 @@ background-color: rgb(255, 255, 255);
 letter-spacing: 2px;
 }
 .profilebtn:hover{
-  background-color:white;
-  color:black;
+  background-color:rgb(34, 32, 32);
+  color:rgb(255, 254, 254);
+  font-weight: bolder;
   letter-spacing: 2px;
 }
 
@@ -271,7 +277,7 @@ letter-spacing: 3px;
  
 }
 .landingImage{
-  width: 550px;
+  width: 750px;
   /* float:left;
   margin-right: 60px;
   margin-left: -40px; */
