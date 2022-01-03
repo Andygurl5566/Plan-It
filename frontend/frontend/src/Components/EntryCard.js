@@ -34,6 +34,11 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
        console.log(entries)
 
 
+       function addEvent(){
+
+       }
+
+
     return (
         <div className = "card" style={{ width: '25rem' }}>
 
@@ -54,6 +59,8 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
             
             <button onClick={confirmDelete} className="general-button2"> Delete </button>
 
+            <button onClick={addEvent} className="general-button2"> Add To Calander</button>
+
             {toggle == false? "" : <EditEntryForm 
                 edited={edited}
                 setEdited={setEdited}
@@ -61,6 +68,9 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
                 handleDeleteEntry={handleDeleteEntry}
                 entries ={entries} 
                 id={id} setToggle={setToggle} />  }
+
+            {/* {1 == 1? "" : <AddEventForm 
+                />  }     */}
 
         </div>
     </div>
