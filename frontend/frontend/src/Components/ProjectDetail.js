@@ -117,7 +117,8 @@ function ProjectDetail(){
                       setEdited={setEdited}
                       setMenuItem={setMenuItem} 
                       menuItem={menuItem} 
-                      allCategories={allCategories}  />
+                      allCategories={allCategories} 
+                      />
                         
                 </div>
             )}) 

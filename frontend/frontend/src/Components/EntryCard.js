@@ -9,7 +9,7 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
     const [toggle, setToggle] = useState(false);
    
   const gapi = window.gapi
-  const CLIENT_ID = process.env.CLIENT_ID
+  const CLIENT_ID = "227745994117-ib0imbkhlnl5vnulgn4aghqhjkih9nut.apps.googleusercontent.com"
   const API_KEY = process.env.API_KEY
 
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
