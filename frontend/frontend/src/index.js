@@ -10,6 +10,7 @@ import allReducer from "./reducers&actions"
 import {Provider} from "react-redux"
 
 
+
 //Redux Setup
 
 let store = createStore(allReducer)
