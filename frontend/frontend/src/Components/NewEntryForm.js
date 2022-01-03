@@ -11,9 +11,9 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
     const {project_id} = useParams()
     const [formData, setFormData] = useState({
        
-        title: "title",
-        details: "details",
-        image: "image",
+        title: "Entry",
+        details: "",
+        image: "",
         project_id:`${project_id}`,
         tag:"None"
       

@@ -36,12 +36,12 @@ function ProjectGenerator({setOpen, open, handleOverlay}){
                  setOpen={setOpen}
                 />}
             </div>
-                <div class="pointer">     
-            </div>
+                {/* <div class="pointer">     
+            </div> */}
 
          
         </div>  
-        <img className="askdiv-img" src="https://opendoodles.s3-us-west-1.amazonaws.com/meditating.png" />
+        {/* <img className="askdiv-img" src="https://i.imgur.com/9GeXFq9.png" /> */}
 
         </div>
     )

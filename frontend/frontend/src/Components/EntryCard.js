@@ -31,7 +31,7 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
 
             
           }
-       
+       console.log(entries)
 
 
     return (
@@ -39,14 +39,14 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
 
         <div className = "card-body">
 
-            {entries.image == "image" ? "" : <img className="card-img-top" src={entries.image} alt="Card image cap"/>}
+            {entries.image == "" || null  ? "" : <img className="card-img-top" src={entries.image} alt="Card image cap"/>}
 
             <h5 className="card-title">{entries.title}</h5>
 
             
             {/* 🔴🟠🟡🟢🔵🟣🟤⚫⚪ */}
 
-            <p className="card-text">{entries.details}.</p>
+            <p className="card-text">{entries.details}</p>
             
             {/* <a href="#" className="btn btn-primary">Details</a> */}
            

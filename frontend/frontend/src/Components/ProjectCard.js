@@ -61,7 +61,7 @@ function ProjectCard({project, onDeleteProject, edited, setEdited, setMenuItem})
 
                 <button className="general-button2" onClick={confirmDelete} > Delete </button>
 
-                {toggle == false? "" : <EditProjectForm id={id} project={project} edited={edited} setEdited={setEdited}/>}
+                {toggle == false? "" : <EditProjectForm id={id} project={project} edited={edited} setEdited={setEdited} setToggle={setToggle}/>}
             </div>
         </div>
     )

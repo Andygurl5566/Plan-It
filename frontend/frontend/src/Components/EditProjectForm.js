@@ -1,11 +1,11 @@
 import {Link, useNavigate} from 'react-router-dom'
 import React, { useState } from "react";
 
-function EditProjectForm({id, project, edited, setEdited}){
+function EditProjectForm({id, project, edited, setEdited, setToggle}){
 
    
     const [currentProject, setCurrentProject] = useState({});
-    const [toggle, setToggle] = useState(false);
+   
 
    
     const [formData, setFormData] = useState({
@@ -41,6 +41,7 @@ function EditProjectForm({id, project, edited, setEdited}){
                   setCurrentProject(project)
                   setEdited(!edited)
                 })
+                .then(setToggle(false))
                 
               } else {
                 res.json().then((errors) => {
@@ -50,11 +51,11 @@ function EditProjectForm({id, project, edited, setEdited}){
             });
           
           }
-        function handleToggle(){
+        // function handleToggle(){
             
-            setToggle(!toggle)
-            console.log(toggle)
-        }
+        //     setToggle(!toggle)
+        //     console.log(toggle)
+        // }
 
        
 

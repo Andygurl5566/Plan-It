@@ -479,8 +479,8 @@ letter-spacing: 2px;
   padding: 20px;
   border-radius: 20px;
  
-  top: 10%;
-  left: 33%;
+  top: 20%;
+  left: 37%;
   /* height:; */
   /* bottom:60px; */
   background-color: rgb(202, 219, 240);
@@ -567,9 +567,9 @@ letter-spacing: 2px;
 
 .askdiv-img{
   position: fixed;
-  top: 50%;
-  right: 40%;
-  width: 900px;
+  top: 55%;
+  right: 50%;
+  width: 250px;
   
 }
 

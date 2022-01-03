@@ -71,8 +71,8 @@ function NewProjectForm(){
               <label>Image</label>
               <input type="text" className="form-control" name="image" id="image" onChange={handleChange} value={formData.image} placeholder="Image"/>
 
-
-      <CalendarFeature/>
+{/* 
+      <CalendarFeature/> */}
 
 
               {/* Will make this a file upload with active storage? */}
