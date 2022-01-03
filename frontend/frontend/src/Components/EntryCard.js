@@ -53,10 +53,7 @@ console.log(`${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
         'recurrence': [
           'RRULE:FREQ=DAILY;COUNT=2'
         ],
-        // 'attendees': [
-        //   {'email': 'lpage@example.com'},
-        //   {'email': 'sbrin@example.com'}
-        // ],
+       
         'reminders': {
           'useDefault': false,
           'overrides': [
