@@ -14,7 +14,8 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
         title: "title",
         details: "details",
         image: "image",
-        project_id:`${project_id}`
+        project_id:`${project_id}`,
+        tag:"None"
       
 
     });

@@ -107,6 +107,7 @@ function ProjectsPage({currentUser}){
             }
             
         </div>
+        
 
             <div id="CardsDiv">
 {/* Refactor code below */}

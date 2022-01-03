@@ -48,7 +48,7 @@ class EntriesController < ApplicationController
     private
 
     def entry_params
-        params.permit(:title, :details, :image, :project_id)
+        params.permit(:title, :details, :image, :project_id, :tag)
 
     end
 
