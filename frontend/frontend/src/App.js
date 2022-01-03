@@ -22,6 +22,9 @@ import FlexProjectDetail from './Components/FlexProjectDetail';
 import CalendarFeature from './Components/CalendarFeature';
 import { useNavigate } from "react-router-dom";
 
+
+
+
 function Page404(){
 return( 
 <h2 className='prompttitle'> 404 - Nothing to see here</h2>)
@@ -37,6 +40,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
   const [projectList, setProjects] = useState([])
   const [edited, setEdited] = useState(true)
+  const [open, setOpen] = useState(false)
   let navigate = useNavigate()
 
   // const [currentAvatar, setCurrentAvatar] = useState({});
@@ -74,9 +78,21 @@ const handleLogout = () => {
       
 }
 
+const [overlay, setoverlay] = useState(false)
+
+  function handleOverlay(){
+    setoverlay(!overlay)
+    console.log(overlay)
+  }
+
+
   return (
     <>
-    <NavBar handleLogout={handleLogout} currentUser={currentUser}/>
+    <NavBar handleLogout={handleLogout} 
+    currentUser={currentUser} 
+    handleOverlay={handleOverlay}
+    setoverlay={setoverlay}
+    overlay={overlay}/>
     <Outlet/>
 
     <Routes>
@@ -99,7 +115,10 @@ const handleLogout = () => {
       <Route path = "/entries/:entry_id" element={<EntryDetail />}/>
       {/* <Route path = "*" element={< Error/>}/> */}
 
-      <Route path ="/generate" element={<ProjectGenerator/>}/>
+      <Route path ="/generate" element={<ProjectGenerator setOpen={setOpen} open={open} 
+      
+  
+    />}/>
       <Route path ="/addprompt" element={<AddPrompt/>}/>
       <Route path ="/login/error" element={<LoginError setCurrentUser={setCurrentUser}/>}/>
       <Route path ="/flex/:project_id" element={<FlexProjectDetail/>}/>

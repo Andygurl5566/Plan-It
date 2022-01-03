@@ -5,15 +5,11 @@ import ProjectGenerator from './ProjectGenerator';
 
 
 
-function NavBar({handleLogout, currentUser}){
+function NavBar({handleLogout, currentUser, handleOverlay, overlay, setoverlay}){
   
-  const [overlay, setoverlay] = useState(false)
-
-  function handleOverlay(){
-    setoverlay(!overlay)
-    console.log(overlay)
   
-  }
+  
+  
     return(
         <>
           <nav class="navdiv">
@@ -42,7 +38,9 @@ function NavBar({handleLogout, currentUser}){
             </ul>
         </nav>    
 
-        {overlay==false? "": <ProjectGenerator/>}
+        {overlay == false? "": <ProjectGenerator handleOverlay={handleOverlay}
+    setoverlay={setoverlay}
+    overlay={overlay}/>}
         </>
     )
 }
