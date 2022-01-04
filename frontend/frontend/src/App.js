@@ -20,6 +20,7 @@ import AddPrompt from './Components/AddPrompt';
 import LoginError from './Components/LoginError';
 import FlexProjectDetail from './Components/FlexProjectDetail';
 import CalendarFeature from './Components/CalendarFeature';
+import EditProfile from './Components/EditProfile';
 import { useNavigate } from "react-router-dom";
 
 
@@ -123,6 +124,7 @@ const [overlay, setoverlay] = useState(false)
       <Route path ="/login/error" element={<LoginError setCurrentUser={setCurrentUser}/>}/>
       <Route path ="/flex/:project_id" element={<FlexProjectDetail/>}/>
       <Route path ="/calendar" element={<CalendarFeature/>}/>
+      <Route path ="/edit-profile" element={<EditProfile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
    
 
 

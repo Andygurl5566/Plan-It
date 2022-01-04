@@ -1,4 +1,3 @@
-import {Link, useNavigate} from 'react-router-dom'
 import React, { useState } from "react";
 
 function EditProjectForm({id, project, edited, setEdited, setToggle}){
@@ -51,14 +50,7 @@ function EditProjectForm({id, project, edited, setEdited, setToggle}){
             });
           
           }
-        // function handleToggle(){
-            
-        //     setToggle(!toggle)
-        //     console.log(toggle)
-        // }
-
        
-
 
 
     return(

@@ -33,6 +33,7 @@ function ProjectCard({project, onDeleteProject, edited, setEdited, setMenuItem})
         }).then((res) => {
             console.log(res)
           if (res.ok) {
+            setToggle(false)
             onDeleteProject(project);
           }
         }).then(setEdited(project))
