@@ -22,11 +22,11 @@ const [date, setDate] = useState(new Date())
         title: `${entries.title}`,
         details: `${entries.details}`,
         image: `${entries.image}`,
-        tag: `${entries.tag}`,
+        tag: `${entries.tag == "" ? "None" : entries.tag}`,
         project_id:`${entries.project_id}`,
-        // due_month: `${entries.due_month}`,
+        
         due_date: `${entries.due_date}`,
-        // due_year: `${entries.due_year}`,
+        
       
 
     });
@@ -109,7 +109,7 @@ const [date, setDate] = useState(new Date())
 
     <div className="form-group">
         <label for="image">Tag</label>
-        <input type="text" className="form-control" id="tag" name="tag"   value={formData.tag} onChange={handleChange} />
+        <input type="text" className="form-control" id="tag" name="tag"   value={formData.tag} onChange={handleChange} placeholder="None" />
     </div>
 
 

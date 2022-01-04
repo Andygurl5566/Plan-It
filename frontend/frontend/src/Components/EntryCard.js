@@ -144,7 +144,13 @@ console.log(entries.due_date)
 
             
           }
+
+          //Date Conversion
+          console.log (new Date(entries.due_date.slice(0,10).toString()))
+          let date = new Date(entries.due_date.slice(0,10).toString())
+          let formattedDate = date.toString().slice(4,16)
       
+     
 
 
     return (
@@ -160,6 +166,8 @@ console.log(entries.due_date)
             {/* 🔴🟠🟡🟢🔵🟣🟤⚫⚪ */}
 
             <p className="card-text">{entries.details}</p>
+            
+            {entries.due_date == "" ? "" : <p className="card-text"> Due : {formattedDate}</p>}
             
             {/* <a href="#" className="btn btn-primary">Details</a> */}
            
