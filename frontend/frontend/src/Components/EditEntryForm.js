@@ -1,27 +1,21 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CalendarFeature from "./CalendarFeature";
+import 'react-calendar/dist/Calendar.css';
+import Calendar from "react-calendar";
 
-function EditEntryForm({entries, id, edited, setEdited, setToggle, test1, setTest1, setYear, setMonth, setDay}){
 
-  console.log(test1)
 
-  const onChange2 =()=>{
-     setYear(`${entries.due_date}`)
-  }
- 
-  console.log(test1)
+function EditEntryForm({entries, id, edited, setEdited, setToggle}){
 
+  
 let navigate = useNavigate()
 
-function navigateToProjects(){
-  navigate(`/projects/${id}`)
-}
+const [date, setDate] = useState(new Date())
 
     const [currentEntry, setCurrentEntry] = useState({});
     const [duedate, setduedate] = useState({})
     console.log(duedate)
-    
     
     const [formData, setFormData] = useState({
        
@@ -30,16 +24,37 @@ function navigateToProjects(){
         image: `${entries.image}`,
         tag: `${entries.tag}`,
         project_id:`${entries.project_id}`,
-        due_month: `${entries.due_month}`,
+        // due_month: `${entries.due_month}`,
         due_date: `${entries.due_date}`,
-        due_year: `${entries.due_year}`,
+        // due_year: `${entries.due_year}`,
       
 
     });
+
+    console.log(formData)
+
+
+    const onChange2 = date => {
+      let newDate = date.toISOString().slice(0,16)
+      setDate(date)
+      console.log(date)
+      console.log(date.toString().slice(0,16))
+      console.log(date.toISOString().slice(0,16))
+      
+  
+  }
+
+    function navigateToProjects(){
+      navigate(`/projects/${id}`)
+    } 
+    
+    
+
     const handleChange = (e) => {
         setFormData({
           ...formData,
           [e.target.name]: e.target.value,
+               
         });
       };
       const handleSubmit = (event) => {
@@ -55,6 +70,7 @@ function navigateToProjects(){
               res.json().then((entries) => {
                 setCurrentEntry(entries);
                 setEdited(!edited)
+                
               })
               .then(setToggle(false))
               
@@ -82,40 +98,26 @@ function navigateToProjects(){
         <input type="text" className="form-control" id="details" name="details"  value={formData.details}  onChange={handleChange} />
     </div>
     <div className="form-group">
-        <label for="image">Tag</label>
-        <input type="text" className="form-control" id="tag" name="tag"   value={formData.tag} onChange={handleChange} />
-    </div>
-    <div className="form-group">
         <label for="image">Image</label>
         <input type="text" className="form-control" id="image" name="image"   value={formData.image} onChange={handleChange} />
     </div>
     <div className="form-group">   
-    
-    
-     <div className="form-group">
-      {/* <CalendarFeature setduedate={setduedate}/> */}
-        <label for="image">Due Month</label>
-        <input type="text" className="form-control" id="due_month" name="due_month" value={formData.due_month} onChange={handleChange} placeholder=""/>
-    </div>
-
-      {/* <CalendarFeature setduedate={setduedate}/> */}
+     
         <label for="image">Due Date</label>
-        <input type="text" className="form-control" id="due_date" name="due_date" value={formData.due_date} onChange={handleChange} placeholder=""/>
+        <input type="datetime-local" className="form-control" id="due_date" name="due_date" value={formData.due_date} onChange={handleChange} />
     </div>
 
     <div className="form-group">
-      {/* <CalendarFeature setduedate={setduedate}/> */}
-        <label for="image">Due Year</label>
-        <input type="text" className="form-control" id="due_year" name="due_year" value={formData.due_year} onChange={handleChange} placeholder=""/>
+        <label for="image">Tag</label>
+        <input type="text" className="form-control" id="tag" name="tag"   value={formData.tag} onChange={handleChange} />
     </div>
-
 
 
     <div className ="formbuttondiv">
     <button type="submit" className="general-button2">Submit</button>
     </div>
  </form>   
- {/* <button onClick={change}>test</button> */}
+ 
         </>
     )
 }

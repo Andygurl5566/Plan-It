@@ -6,8 +6,6 @@ class CreateEntries < ActiveRecord::Migration[6.1]
       t.string :date #format?
       t.string :details
       t.string :due_date
-      t.string :due_month
-      t.string :due_year
       t.string :tag
       t.string :image
 

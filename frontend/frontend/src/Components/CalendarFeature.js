@@ -3,26 +3,17 @@ import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 
 
-function CalendarFeature({setduedate}){
+function CalendarFeature(){
 const [date, setDate] = useState(new Date())
-const [endDate, setEndDate] = useState(new Date())
+
 
 const onChange = date => {
     setDate(date)
-    console.log(date)
+    console.log(date.toString().slice(0,16))
+    console.log(date.toISOString().slice(0,16))
     
 
 }
-
-// //winner winner chiken dinner
-// const d = new Date(2017,1,1);
-// console.log(d.toISOString().slice(0,16))
-
-// //converts to correct format
-// function formatDate(year, monthNum, day){
-//     const date = new Date(year,monthNum,day);
-//     return (date.toISOString().slice(0,16))
-// }
 
     
     return(
@@ -36,7 +27,7 @@ const onChange = date => {
              value={date}
              calanderType="ISO 8601" 
              />
-             {date.toString()}
+             {date.toString().slice(0,16)}
              </div>
 
         

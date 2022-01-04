@@ -29,9 +29,9 @@ project6 = Project.create(title:"Wedding Stuff <3", user_id: issa.id, image:"htt
 project2 = Project.create(title:"Tiny Home Remodel",user_id: eddy.id, image:"http://images.huffingtonpost.com/2016-08-09-1470757977-4233983-image6.jpg", tag:"Other", due_date:"")
 
 
-entry1 = Entry.create(title:" Girls's Night In", date: " ", details:"This Friday!", due_year: "2022", due_date: "15", due_month:"3", tag: "Friday ", project_id: project1.id, image:"https://compote.slate.com/images/1ab7ebca-14df-43b6-b373-c4397e69c3ea.jpg?width=840")
+entry1 = Entry.create(title:" Girls's Night In", date: " ", details:"This Friday!", due_date: "2022-01-07T02:12", tag: "Friday ", project_id: project1.id, image:"https://compote.slate.com/images/1ab7ebca-14df-43b6-b373-c4397e69c3ea.jpg?width=840")
 
-entry2 = Entry.create(title:"Mic Night", date: " ", details:"At Lulu's Coffee Hub", due_year: "2022", due_date: "7", due_month:"6", tag: "Saturday",  project_id: project1.id, image: "https://mediafeed.org/wp-content/uploads/2020/09/iStock-1155922952.original-9.jpg")
+entry2 = Entry.create(title:"Mic Night", date: " ", details:"At Lulu's Coffee Hub", due_date: "2022-02-18T02:12", tag: "Saturday",  project_id: project1.id, image: "https://mediafeed.org/wp-content/uploads/2020/09/iStock-1155922952.original-9.jpg")
 
-entry3 = Entry.create(title:"Contact contractor ", date: " ", details:"ASAP", due_year: "2022", due_date: "14", due_month:"3", tag: "Remodel",  project_id: project2.id, image: "http://tinyhouseblog.com/wp-content/uploads/2016/09/CedarMountain-tinyhouse-NewFrontier12.jpg")
+entry3 = Entry.create(title:"Contact contractor ", date: " ", details:"ASAP", due_date: "2022-01-03T02:12", tag: "Remodel",  project_id: project2.id, image: "http://tinyhouseblog.com/wp-content/uploads/2016/09/CedarMountain-tinyhouse-NewFrontier12.jpg")
 

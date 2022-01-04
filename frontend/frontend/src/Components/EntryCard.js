@@ -46,27 +46,19 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
 
 // date format = `2020-06-28T09:00:00-00:00`
 
-// let year = yearstate
-// let month = monthstate
-// let day = daystate
 
-let year = 2020
-let month = 1
-let day = 10
-
-console.log(year)
 
 //winner winner chicken dinner
-const d = new Date(2017,1,1);
-console.log(d.toISOString().slice(0,19))
+// const d = new Date(2017,1,1);
+// console.log(d.toISOString().slice(0,19))
 
 //converts to correct format
-function formatDate(year, monthNum, day){
-    const date = new Date(year,monthNum,day);
-    return (date.toISOString().slice(0,19))
-}
+// function formatDate(year, monthNum, day){
+//     const date = new Date(year,monthNum,day);
+//     return (date.toISOString().slice(0,19))
+// }
 
-console.log(formatDate(entries.due_year, entries.due_month, entries.due_date))
+console.log(entries.due_date)
 
 
     gapi.auth2.getAuthInstance().signIn()
@@ -77,11 +69,11 @@ console.log(formatDate(entries.due_year, entries.due_month, entries.due_date))
         // 'location': '800 Howard St., San Francisco, CA 94103',
         'description': `${entries.details}`,
         'start': {
-          'dateTime': `${formatDate(entries.due_year, entries.due_month, entries.due_date)}`,
+          'dateTime': `${entries.due_date}:00`,
           'timeZone':`${Intl.DateTimeFormat().resolvedOptions().timeZone}`
         },
         'end': {
-          'dateTime': `${formatDate(entries.due_year, entries.due_month, entries.due_date)}`,
+          'dateTime': `${entries.due_date}:00`,
           'timeZone':`${Intl.DateTimeFormat().resolvedOptions().timeZone}`
         },
         'recurrence': [
@@ -175,7 +167,7 @@ console.log(formatDate(entries.due_year, entries.due_month, entries.due_date))
             
             <button onClick={confirmDelete} className="general-button2"> Delete </button>
 
-            <button onClick={addEvent} className="general-button2"> Add To Calander</button>
+            {entries.due_date == null || "" ? "" : <button onClick={addEvent} className="general-button2"> Add To Calander</button>}
 
             {toggle == false? "" : <EditEntryForm 
                 edited={edited}
