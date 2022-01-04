@@ -63,7 +63,7 @@ function NewProjectForm(){
             <div className='newprojectform'>
               <div className="form-group">
               <label>Project Name</label>
-              <input type="text" className="form-control" name="title" id="title" onChange={handleChange} value={formData.title}  placeholder="Project Name"/>
+              <input type="text" required className="form-control" name="title" id="title" onChange={handleChange} value={formData.title}  placeholder="Project Name"/>
               
               <label>Description</label>
               <input type="text" className="form-control" name="description" id="description" onChange={handleChange} value={formData.description} placeholder="Optional Description"/>

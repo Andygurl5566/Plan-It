@@ -91,7 +91,7 @@ const [date, setDate] = useState(new Date())
         <form onSubmit={handleSubmit}>
     <div className="form-group">
         <label for="title">Entry Title</label>
-        <input type="text" className="form-control" id ="title" name="title"  value={formData.title} onChange={handleChange} />
+        <input type="text" required className="form-control" id ="title" name="title"  value={formData.title} onChange={handleChange} />
     </div>
     <div className="form-group">
         <label for="details">Details</label>
