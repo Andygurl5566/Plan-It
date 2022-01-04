@@ -14,6 +14,7 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
         title: "Entry",
         details: "",
         image: "",
+        due_date:"",
         project_id:`${project_id}`,
         tag:"None"
       
@@ -70,6 +71,11 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
         <label for="image">Image</label>
         <input type="text" className="form-control" id="image" name="image"  onChange={handleChange} />
     </div>
+    <div className="entryform">
+        <label for="due_date">Due Date (Optional) </label>
+        <input type="datetime-local" className="form-control" id="due_date" name="due_date"  onChange={handleChange} />
+    </div>
+
 
     <div className ="formButton2">
     <button type="submit" className="formbtn">Submit</button>

@@ -167,7 +167,7 @@ console.log(entries.due_date)
             
             <button onClick={confirmDelete} className="general-button2"> Delete </button>
 
-            {entries.due_date == null || "" ? "" : <button onClick={addEvent} className="general-button2"> Add To Calander</button>}
+            {entries.due_date ==  "" ? "" : <button onClick={addEvent} className="general-button2"> Add To Calander</button>}
 
             {toggle == false? "" : <EditEntryForm 
                 edited={edited}
