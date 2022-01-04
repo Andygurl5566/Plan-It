@@ -36,7 +36,7 @@ function EntryPage({currentUser}){
         <>
         <div className="pageheader">
            
-            <h1 className="pagetitle">All Entries </h1>
+            <h1 className="projecttitle">All Entries </h1>
             <img className ="searchiconentries" src="http://cdn.onlinewebfonts.com/svg/img_330258.png"/>
 
             <input type="text" class ="searchbarentries" placeholder="Search..." onChange={event=> {setSearchTerm(event.target.value)}}></input>

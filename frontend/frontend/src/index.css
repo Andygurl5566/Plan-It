@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.projecttitle{
+margin-top:45px ;
+  top:100px;
+}
+
 #CardsDiv { 
   
   display: grid;
@@ -43,9 +48,7 @@ code {
   padding-right: 10%;
   padding-left: 15%;
   width: 300px;
-  float:left; /* add this */
-  /* border: 1px solid red; */
-  
+  float:left;
   
  
 
@@ -72,10 +75,7 @@ code {
   padding-right: 10%;
   padding-left: 15%;
   width: 300px;
-  float:left; /* add this */
-  /* border: 1px solid red;
-  border: 1px solid green; */
-  /* overflow: hidden; if you don't want #second to wrap below #first */
+  float:left; 
  
 
 }
@@ -163,6 +163,7 @@ margin-left: 1.5rem;
   font-size: 20px;
   position:absolute;
   margin-left: 1008px;
+  top:224px;
   
 }
 
@@ -191,12 +192,14 @@ margin-left: 1.5rem;
   font-size: 20px;
   position:absolute;
   margin-left: 1150px;
+  top:152px;
+  
   
 }
 
 .searchiconentries{
   width: 30px;
-  top:168px;
+  top:158px;
   margin-left: 1099px;
   position: absolute;
 }
@@ -219,12 +222,13 @@ margin-left: 1.5rem;
   font-size: 20px;
   position:absolute;
   margin-left: 970px;
+  top:164px;
   
 }
 
 .searchiconentries2{
   width: 30px;
-  top:168px;
+  top:171px;
   margin-left: 920px;
   position: absolute;
 }

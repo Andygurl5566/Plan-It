@@ -14,6 +14,7 @@ function ProjectDetail(){
     const [searchTerm, setSearchTerm] = useState("")
     const [viewmode, setviewmode] = useState(true)
     const [menuItem, setMenuItem] = useState(entryList)
+    const [projectTitle, setProjectTitle] = useState([])
 
     let navigate = useNavigate()
 
@@ -61,9 +62,11 @@ function ProjectDetail(){
             .then((project) => {
                 
                 setEntries(project.entries) 
-                console.log(entryList)               
+                console.log(projectTitle)
+                setProjectTitle(project.title)               
             })
     }, [edited])
+
 
 
     function handleDeleteEntry(deletedEntry) {
@@ -75,7 +78,7 @@ function ProjectDetail(){
     return(
         <>
         <div className="pageheader">
-            <h1>Entries</h1>
+            <h1 className="projecttitle">{projectTitle} </h1>
             <button onClick = {handleToggle} className="general-button-special">  Add Entry </button>
             <button  className="general-button-special" onClick={handleNavigate}> Back </button>
            
@@ -109,7 +112,6 @@ function ProjectDetail(){
         }).map((entries) => {
             return (
                 <div id="EntryCards">
-                   
                     <EntryCard edited={edited} setEdited={setEdited}
                      entries={entries}
                       onDeleteEntries={handleDeleteEntry} 
