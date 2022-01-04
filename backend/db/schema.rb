@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 2021_12_15_234127) do
     t.string "title"
     t.string "date"
     t.string "details"
-    t.string "start_date"
     t.string "due_date"
     t.string "tag"
     t.string "image"

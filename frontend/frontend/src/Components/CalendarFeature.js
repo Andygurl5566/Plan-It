@@ -5,43 +5,32 @@ import 'react-calendar/dist/Calendar.css';
 
 function CalendarFeature(){
 const [date, setDate] = useState(new Date())
-const [endDate, setEndDate] = useState(new Date())
+
 
 const onChange = date => {
     setDate(date)
-    console.log(date)
+    console.log(date.toString().slice(0,16))
+    console.log(date.toISOString().slice(0,16))
+    
+
 }
 
-const onChange2 = endDate => {
-    setEndDate(endDate)
-    console.log(endDate)
-}
-
- 
     
     return(
         <>
        
-        <div className="calander-div">
-        <h5>Start Date</h5>
+        <div >
+        <h5>Due Date</h5>
             <Calendar className="calendar" 
             onChange={onChange}
-             value={date} 
+            
+             value={date}
+             calanderType="ISO 8601" 
              />
-             {date.toString()}
+             {date.toString().slice(0,16)}
              </div>
 
-             <div className="calander-div2">
-             <h5>End Date</h5>
-             <Calendar className="calendar" 
-            onChange={onChange2}
-             value={endDate} 
-             />
-
-             {endDate.toString()}
-
-             
-        </div>
+        
 
         </>
     )

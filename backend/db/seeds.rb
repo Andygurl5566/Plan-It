@@ -26,12 +26,12 @@ project5 = Project.create(title:"Film Season Finale for HBO", user_id: issa.id, 
 project6 = Project.create(title:"VACATION!", user_id: issa.id, image:"https://media.cntraveler.com/photos/589df60a9b67416638b3bf66/master/w_1200,c_limit/luxury-retreats-cr-courtesy.jpg?mbid=social_retweet", tag:"Personal", start_date:"N/A", due_date:"N/A")
 project6 = Project.create(title:"Wedding Stuff <3", user_id: issa.id, image:"https://imagesvc.meredithcorp.io/v3/mm/image?url=https:%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2021%2F07%2F26%2Fissa-rae-wedding-5.jpg", tag:"Personal", start_date:"N/A", due_date:"N/A")
 
-project2 = Project.create(title:"Tiny Home Remodel",user_id: eddy.id, image:"http://images.huffingtonpost.com/2016-08-09-1470757977-4233983-image6.jpg", tag:"Other", start_date:"12/15/21", due_date:"TBD")
+project2 = Project.create(title:"Tiny Home Remodel",user_id: eddy.id, image:"http://images.huffingtonpost.com/2016-08-09-1470757977-4233983-image6.jpg", tag:"Other", due_date:"")
 
 
-entry1 = Entry.create(title:" Girls's Night In", date: " ", details:"This Friday!", start_date: "", due_date: " ", tag: "Friday ", project_id: project1.id, image:"https://compote.slate.com/images/1ab7ebca-14df-43b6-b373-c4397e69c3ea.jpg?width=840")
+entry1 = Entry.create(title:" Girls's Night In", date: " ", details:"This Friday!", due_date: "2022-01-07T02:12", tag: "Friday ", project_id: project1.id, image:"https://compote.slate.com/images/1ab7ebca-14df-43b6-b373-c4397e69c3ea.jpg?width=840")
 
-entry2 = Entry.create(title:"Mic Night", date: " ", details:"At Lulu's Coffee Hub", start_date: " ", due_date: " ", tag: "Saturday",  project_id: project1.id, image: "https://mediafeed.org/wp-content/uploads/2020/09/iStock-1155922952.original-9.jpg")
+entry2 = Entry.create(title:"Mic Night", date: " ", details:"At Lulu's Coffee Hub", due_date: "2022-02-18T02:12", tag: "Saturday",  project_id: project1.id, image: "https://mediafeed.org/wp-content/uploads/2020/09/iStock-1155922952.original-9.jpg")
 
-entry3 = Entry.create(title:"Contact contractor ", date: " ", details:"ASAP", start_date: " ", due_date: " ", tag: "Remodel",  project_id: project2.id, image: "http://tinyhouseblog.com/wp-content/uploads/2016/09/CedarMountain-tinyhouse-NewFrontier12.jpg")
+entry3 = Entry.create(title:"Contact contractor ", date: " ", details:"ASAP", due_date: "2022-01-03T02:12", tag: "Remodel",  project_id: project2.id, image: "http://tinyhouseblog.com/wp-content/uploads/2016/09/CedarMountain-tinyhouse-NewFrontier12.jpg")
 

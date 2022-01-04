@@ -6,7 +6,7 @@ function ProjectGenerator({setOpen, open, handleOverlay}){
     console.log(open)
 
     const [idea, setIdea] = useState({})
-   
+    const [count, setcount] = useState(0)
 
 
   function getIdea(){
@@ -19,8 +19,13 @@ function ProjectGenerator({setOpen, open, handleOverlay}){
 
     function handleOpen(){
         setOpen(true)
+        setcount(+1)
+       
     }
-               
+
+   
+    
+    
 
 
     return(
@@ -29,6 +34,7 @@ function ProjectGenerator({setOpen, open, handleOverlay}){
             <div >
                 <button className ="askPlan" onClick={getIdea}>?</button>
                 {/* {open == true ? "" : <p> Need a project idea? <p>  Click the question mark above </p></p>}       */}
+                <h5>Here's an Idea:</h5>
                 {open == false ? "" : <Response idea={idea} 
                 setIdea={setIdea}
                  getIdea={getIdea} 

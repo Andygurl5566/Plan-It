@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom'
 import React, { useState } from "react";
-import CalendarFeature from './CalendarFeature';
+
 
 function NewProjectForm(){
 
@@ -70,26 +70,6 @@ function NewProjectForm(){
 
               <label>Image</label>
               <input type="text" className="form-control" name="image" id="image" onChange={handleChange} value={formData.image} placeholder="Image"/>
-
-{/* 
-      <CalendarFeature/> */}
-
-
-              {/* Will make this a file upload with active storage? */}
-
-              {/* <button onClick={handleToggle}>More Options</button>
-
-              {toggle == true? <h1>hi</h1> : "" }
-
-              <label>Start Date</label>
-              <input type="text" class="form-control" name="start_date" id="start_date" onChange={handleChange}  placeholder="Start Date"/>
-
-              <label>Due Date</label>
-              <input type="text" class="form-control" name="title" id="title" onChange={handleChange}  placeholder="Due Date"/>
-
-              <label>Tag</label>
-              <input type="text" class="form-control" name="title" id="title" onChange={handleChange}  placeholder="Tag"/> */}
-
 
                   <div className ="formbuttondiv">
                       <button type = "submit" className="formbtn"> Submit </button>

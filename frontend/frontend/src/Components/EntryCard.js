@@ -7,6 +7,14 @@ import EditEntryForm from "./EditEntryForm";
 function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEntry, setMenuItem}){
     const {id} = entries
     const [toggle, setToggle] = useState(false);
+    const [test1, setTest1] = useState("");
+
+    const [yearstate, setYear] = useState("0000");
+    const [daystate, setDay] = useState("0");
+    const [monthstate, setMonth] = useState("0");
+
+
+
    
   const gapi = window.gapi
   const CLIENT_ID = "227745994117-ib0imbkhlnl5vnulgn4aghqhjkih9nut.apps.googleusercontent.com"
@@ -16,7 +24,7 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
   var SCOPES = "https://www.googleapis.com/auth/calendar.events";
   // must have only scopes that match in your api console
 
-console.log(`${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
+// console.log(`${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
 //gets users current timezone
 
 
@@ -35,20 +43,38 @@ console.log(`${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
 
     gapi.client.load('calendar', 'v3', () => console.log('bam!'))
 
+
+// date format = `2020-06-28T09:00:00-00:00`
+
+
+
+//winner winner chicken dinner
+// const d = new Date(2017,1,1);
+// console.log(d.toISOString().slice(0,19))
+
+//converts to correct format
+// function formatDate(year, monthNum, day){
+//     const date = new Date(year,monthNum,day);
+//     return (date.toISOString().slice(0,19))
+// }
+
+console.log(entries.due_date)
+
+
     gapi.auth2.getAuthInstance().signIn()
     .then(() => {
       
       var event = {
         'summary': `${entries.title}`,
-        'location': '800 Howard St., San Francisco, CA 94103',
+        // 'location': '800 Howard St., San Francisco, CA 94103',
         'description': `${entries.details}`,
         'start': {
-          'dateTime': '2020-06-28T09:00:00-07:00',
+          'dateTime': `${entries.due_date}:00`,
           'timeZone':`${Intl.DateTimeFormat().resolvedOptions().timeZone}`
         },
         'end': {
-          'dateTime': '2020-06-28T17:00:00-07:00',
-          'timeZone': `${Intl.DateTimeFormat().resolvedOptions().timeZone}`
+          'dateTime': `${entries.due_date}:00`,
+          'timeZone':`${Intl.DateTimeFormat().resolvedOptions().timeZone}`
         },
         'recurrence': [
           'RRULE:FREQ=DAILY;COUNT=2'
@@ -118,10 +144,14 @@ console.log(`${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
 
             
           }
-       console.log(entries)
 
-
+          //Date Conversion
+          console.log (new Date(entries.due_date.slice(0,10).toString()))
+          let date = new Date(entries.due_date.slice(0,10).toString())
+          let formattedDate = date.toString().slice(4,16)
       
+     
+
 
     return (
         <div className = "card" style={{ width: '25rem' }}>
@@ -137,13 +167,15 @@ console.log(`${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
 
             <p className="card-text">{entries.details}</p>
             
+            {entries.due_date == "" ? "" : <p className="card-text"> Due : {formattedDate}</p>}
+            
             {/* <a href="#" className="btn btn-primary">Details</a> */}
            
             <button onClick={handleToggle} className="general-button2">{toggle==false? "Edit":"Close"}</button>
             
             <button onClick={confirmDelete} className="general-button2"> Delete </button>
 
-            <button onClick={addEvent} className="general-button2"> Add To Calander</button>
+            {entries.due_date ==  "" ? "" : <button onClick={addEvent} className="general-button2"> Add To Calander</button>}
 
             {toggle == false? "" : <EditEntryForm 
                 edited={edited}
@@ -151,19 +183,14 @@ console.log(`${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
                 onDeleteEntry={onDeleteEntries}
                 handleDeleteEntry={handleDeleteEntry}
                 entries ={entries} 
-                id={id} setToggle={setToggle} />  }
-
-
-  {/* {1 == 1? "" : <AddEventForm 
-            test = {test}/>  }     */}
-
-
-                {/*add event logic ______________________________________________ */}
-
-
-
+                id={id} setToggle={setToggle} 
+                test1={test1}
+                setTest1={setTest1}
+                // setYear={setYear}
+                // setMonth={setMonth}
+                // setday={setDay} 
                 
-
+                />  }
           
 
         </div>
