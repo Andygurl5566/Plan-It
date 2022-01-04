@@ -61,7 +61,7 @@ function NewEntryForm({toggle, setToggle, edited, setEdited}){
         <form onSubmit={handleSubmit}>
     <div className="entryform">
         <label for="title">Entry Title</label>
-        <input type="text" className="form-control" id ="title" name="title"  onChange={handleChange} />
+        <input type="text" required className="form-control" id ="title" name="title"  onChange={handleChange} />
     </div>
     <div className="entryform">
         <label for="details">Details</label>

@@ -71,7 +71,7 @@ function EditProfile({currentUser, setCurrentUser}){
             <div className='newforms'>
               <div className="newprojectform2">
               <label>Name</label>
-              <input type="text" className="form-control" name="name" id="name" onChange={handleChange} value={formData.name} placeholder="Project Name"/>
+              <input type="text" required className="form-control" name="name" id="name" onChange={handleChange} value={formData.name} placeholder="Project Name"/>
               
 
               <label>Image</label>
