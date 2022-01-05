@@ -14,8 +14,9 @@ function Response({idea, setIdea, getIdea, handleOverlay, setOpen}){
             </p>
          </div>  
          <div className="askdivbuttons">
-                    <button onClick={handleOverlay} className="closeaskdivbtn">Awesome!</button>
                     <button onClick={getIdea} className="closeaskdivbtn">Meh...next</button>
+                    <button onClick={handleOverlay} className="closeaskdivbtn">Awesome!</button>
+
                 </div> 
         </>
     )

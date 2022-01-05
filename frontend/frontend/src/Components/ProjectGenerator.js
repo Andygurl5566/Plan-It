@@ -32,7 +32,7 @@ function ProjectGenerator({setOpen, open, handleOverlay}){
         <div className="overlay">
         <div className="askdiv">
             <div >
-                <button className ="askPlan" onClick={getIdea}>?</button>
+                <button className ="askPlan" onClick={getIdea()}>?</button>
                 {/* {open == true ? "" : <p> Need a project idea? <p>  Click the question mark above </p></p>}       */}
                 <h5>Here's an Idea:</h5>
                 {open == false ? "" : <Response idea={idea} 

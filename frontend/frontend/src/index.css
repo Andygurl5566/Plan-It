@@ -1,3 +1,6 @@
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,6 +18,7 @@ code {
 .projecttitle{
 margin-top:45px ;
   top:100px;
+  /* font-family: Georgia, 'Times New Roman', Times, serif */
 }
 
 #CardsDiv { 
@@ -25,6 +29,8 @@ margin-top:45px ;
   grid-auto-rows: minmax(3rem, auto);
   padding-right: 10%;
   padding-left: 15%;
+  /* background-image: url(http://savedelete.com/wp-content/uploads/2012/07/paperlinetexture-e1280161142622.jpg); */
+  background-image: cover;
 
 
 }
@@ -92,11 +98,14 @@ margin-top:45px ;
  
   border-radius: 15px;
   /* background-color: rgb(243, 243, 243); */
-  background-color: rgb(236, 241, 241);
+  /* background-color: rgb(236, 241, 241); */
   /* color: rgb(48, 47, 47); */
+  background-color: rgb(248, 248, 248);
   color: rgb(48, 47, 47);
   letter-spacing: 2px;
 outline: none; 
+
+
 
 }
 
@@ -162,7 +171,7 @@ margin-left: 1.5rem;
    padding: 20px;
   font-size: 20px;
   position:absolute;
-  margin-left: 1008px;
+  margin-left: 900px;
   top:224px;
   
 }
@@ -170,7 +179,7 @@ margin-left: 1.5rem;
 .searchicon{
   width: 30px;
   top:231px;
-  margin-left: 960px;
+  margin-left: 860px;
   position: absolute;
 }
 
@@ -191,7 +200,7 @@ margin-left: 1.5rem;
    padding: 20px;
   font-size: 20px;
   position:absolute;
-  margin-left: 1150px;
+  margin-left: 1050px;
   top:152px;
   
   
@@ -200,7 +209,7 @@ margin-left: 1.5rem;
 .searchiconentries{
   width: 30px;
   top:158px;
-  margin-left: 1099px;
+  margin-left: 999px;
   position: absolute;
 }
 
@@ -221,7 +230,7 @@ margin-left: 1.5rem;
    padding: 20px;
   font-size: 20px;
   position:absolute;
-  margin-left: 970px;
+  margin-left: 870px;
   top:164px;
   
 }
@@ -229,7 +238,7 @@ margin-left: 1.5rem;
 .searchiconentries2{
   width: 30px;
   top:171px;
-  margin-left: 920px;
+  margin-left: 820px;
   position: absolute;
 }
 
@@ -268,14 +277,32 @@ margin-left: 1.5rem;
 }
 
 .profileImage{
-  width: 270px;
+  width: 200px;
   border-radius: 50%;
+  margin-top:80px;
   display: center;
   object-fit: cover;
   object-position: center;
+  border-color: rgb(255, 255, 255);
+  border-style: 10px ;
   
  
 }
+
+.profile-background-image{
+  background-image: url("https://i.imgur.com/RopPVa1.png");
+  background-size: cover;
+  background-position: center;
+  width: 850px;
+  height: 100%;
+  text-align: center;
+  margin:auto;
+  padding-bottom:40px;
+  
+  
+  
+}
+
 
 .profileImagepreview{
   width: 270px;
@@ -305,18 +332,25 @@ vertical-align: middle;
   
 line-height: normal;
 vertical-align: middle;
+opacity: 100%;
   
 }
 
 .biodiv{
-  background-color: rgb(243, 239, 239);
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(243, 239, 239); */
+  color: rgb(97, 86, 86);
   width: 500px;
+  min-height:00px;
   text-align: center;
   display: inline-block;
 line-height: normal;
 vertical-align: middle;
 padding:20px;
-border-radius: 10px;
+border-radius: 8px;
+border: black;
+border-color: black;
+
 }
 
 .profilebtnedit{
@@ -325,16 +359,16 @@ border-radius: 10px;
   width: 130px;
 height: 30px;
 margin:10px;
-border-radius: 10px;
-color:rgb(95, 94, 94);
-background-color:  rgb(243, 239, 239);
+border-radius: 8px;
+color:rgb(47, 49, 49);
+background-color: rgb(188, 219, 240);
 letter-spacing: 2px;
 border-color:  rgb(243, 239, 239);
 border:none;
 }
 .profilebtnedit:hover{
-  background-color:rgb(168, 164, 164);
-  color:rgb(255, 254, 254);
+  background-color:rgb(248, 246, 246);
+  color:rgb(0, 0, 0);
   
   letter-spacing: 2px;
 }
@@ -351,9 +385,8 @@ background-color: rgb(255, 255, 255);
 letter-spacing: 2px;
 }
 .profilebtn:hover{
-  background-color:rgb(34, 32, 32);
+  background-color:rgb(54, 54, 54);
   color:rgb(255, 254, 254);
-  font-weight: bolder;
   letter-spacing: 2px;
 }
 
@@ -366,7 +399,30 @@ margin-top:20px;
   height:80px;
   background-color:rgba(0, 0, 0, 0.808);
   text-decoration: none;
+  position: relative;
 }
+
+.nav-link:hover{
+  text-decoration: none;
+  color: burlywood;
+}
+a.nav-link{
+  color:burlywood;
+  text-decoration:none ;
+}
+
+a.nav-link:hover
+{
+  color:burlywood;
+   text-decoration: none;
+}
+
+a.nav-link:active
+{
+  color:burlywood;
+   text-decoration: none;
+}
+
 
 .navdiv a{
 text-decoration: none;
@@ -377,14 +433,41 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 letter-spacing: 3px;
 }
 .navdiv:hover{
-  color: rgb(124, 124, 124);
+  color: burlywood;
   text-decoration: none;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.landingpage-background{
+  background-image: url() repeat-x;
+
+ 
+  height: 480px;
+  width: 5000px;
+
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2600px, 0, 0);
+    /* transform: translate3d(-1692px, 0, 0); */
+  }
 }
 
 .landingpageheader{
  
-  padding-top:30px;
+  padding-top:0px;
   text-align: center;
+  z-index: 100;
+  overflow: hidden;
+  position:relative;
  
 }
 .errorcode{
@@ -396,13 +479,30 @@ letter-spacing: 3px;
  
 }
 .landingImage{
-  width: 750px;
+  width: 400px;
   /* float:left;
   margin-right: 60px;
   margin-left: -40px; */
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  z-index: 0;
+  border-radius: 30px;
+}
+
+.landingImage2{
+  width: 500px;
+  
+  padding-top:60px;
+  
+  /* float:left;
+  margin-right: 60px;
+  margin-left: -40px; */
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+
 }
 
 .logo{
@@ -410,39 +510,99 @@ letter-spacing: 3px;
 }
 
 .header{
+  margin-top:40px;
+  margin-bottom:5px;
   font-family: 'Alice', serif;
   font-size: 100px;
+  
 }
 .subheader{
- 
+  margin-top:0px;
   text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: burlywood;
 }
 .buttondiv{
   margin-top: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 23px;
+  z-index: 1000;
+  background:white;
+  position: relative;
 }
 
 .loginbtn{
 width: 150px;
 height: 70px;
 margin:10px;
+margin-bottom: 90px;
 border-radius: 10px;
-color:azure;
-background-color: black;
+background-color:white;
+color:black;
 letter-spacing: 2px;
+z-index: 1000;
+position:relative;
 }
 .loginbtn:hover{
-  background-color:white;
-  color:black;
-  letter-spacing: 2px;
+ 
 
+  color:azure;
+background-color: black;
+  letter-spacing: 2px;
+  position: relative;
+
+}
+
+.signupimage-div{
+ 
+  margin:auto;
 }
 
 .btn btn-dark{
   width:200px;
   
+}
+
+button.btn-primary{
+  color: #fff;
+    background-color: #000000;
+    border-color: black;
+    margin:5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+   
+}
+
+button.btn-primary:hover{
+  color: rgb(0, 0, 0);
+  border-color: black;
+    background-color: #f8f8f8;
+    border-color: none;
+    margin:5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    border:none;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .form-special{
@@ -472,6 +632,20 @@ letter-spacing: 2px;
     margin-right: auto;
     text-align: left;
 }
+.login-image{
+  display:inline-block;
+  width:400px;
+  
+}
+
+.signup-image{
+  display:inline-block;
+  width:400px;
+  margin:auto;
+  position: relative;
+
+  
+}
 
 #bio{
   
@@ -496,7 +670,7 @@ letter-spacing: 2px;
 }
 
 .formTitle{
-  padding-top:70px;
+  padding-top:100px;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 2px;
@@ -544,7 +718,7 @@ letter-spacing: 2px;
   position: absolute;
 }
 .askdiv{
-  position:absolute;
+  position:relative;
   top: 0;
   text-align: center;
   margin:20px;
@@ -612,7 +786,7 @@ letter-spacing: 2px;
   font-size: 30px;
   border:none;
   /* background-image: ; */
-  margin: 20px;
+  margin: 10px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   
 }
@@ -643,8 +817,9 @@ letter-spacing: 2px;
 .askdiv-img{
   position: fixed;
   top: 55%;
-  right: 50%;
+  right: 48%;
   width: 250px;
+  margin:auto;
   
 }
 
@@ -711,6 +886,7 @@ letter-spacing: 2px;
   margin-right: 10px;
   margin-top:10px;
   font-size: 20px;
+  
   /* background: linear-gradient(rgb(27, 25, 25), rgb(255, 255, 255)); */
   outline: none;
   box-shadow: 5px;

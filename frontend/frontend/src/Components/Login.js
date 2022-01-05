@@ -51,6 +51,10 @@ const Login= ({setCurrentUser}) => {
   
   }
 
+  function navigateBack(){
+    navigate("/")
+  }
+
     return ( 
       <>
 
@@ -84,8 +88,14 @@ const Login= ({setCurrentUser}) => {
       </div>
       <div className="formButton">
       <button className="btn btn-primary" type="submit">Submit</button> 
-      
-      <Link className="btn btn-primary" to="/"> Back</Link> 
+      <button className="btn btn-primary" onClick={navigateBack}> Back</button> 
+
+
+      <div className="loginimage-div">
+      <img className="login-image" src= "https://media0.giphy.com/media/wHoEnL75Jm9O16zgNE/giphy.gif" />
+
+    </div>
+
     </div>
     </form>
 </div>
