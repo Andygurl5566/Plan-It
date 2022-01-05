@@ -381,10 +381,34 @@ letter-spacing: 3px;
   text-decoration: none;
 }
 
+.container {
+  overflow: hidden;
+}
+
+.landingpage-background{
+  background-image: url() repeat-x;
+ 
+  height: 480px;
+  width: 4076px;
+
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+
 .landingpageheader{
  
-  padding-top:30px;
+  padding-top:0px;
   text-align: center;
+  z-index: 100;
+  overflow: hidden;
  
 }
 .errorcode{
@@ -396,13 +420,15 @@ letter-spacing: 3px;
  
 }
 .landingImage{
-  width: 750px;
+  width: 500px;
   /* float:left;
   margin-right: 60px;
   margin-left: -40px; */
-  display: block;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  z-index: 0;
+  border-radius: 30px;
 }
 
 .logo{
@@ -410,11 +436,13 @@ letter-spacing: 3px;
 }
 
 .header{
+  margin-top:40px;
+  margin-bottom:20px;
   font-family: 'Alice', serif;
   font-size: 100px;
 }
 .subheader{
- 
+  margin-top:0px;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif
 }
@@ -428,14 +456,17 @@ letter-spacing: 3px;
 width: 150px;
 height: 70px;
 margin:10px;
+margin-bottom: 90px;
 border-radius: 10px;
-color:azure;
-background-color: black;
+background-color:white;
+color:black;
 letter-spacing: 2px;
 }
 .loginbtn:hover{
-  background-color:white;
-  color:black;
+ 
+
+  color:azure;
+background-color: black;
   letter-spacing: 2px;
 
 }
