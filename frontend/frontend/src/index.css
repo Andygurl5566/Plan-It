@@ -366,6 +366,7 @@ margin-top:20px;
   height:80px;
   background-color:rgba(0, 0, 0, 0.808);
   text-decoration: none;
+  position: relative;
 }
 
 .navdiv a{
@@ -387,9 +388,10 @@ letter-spacing: 3px;
 
 .landingpage-background{
   background-image: url() repeat-x;
+
  
   height: 480px;
-  width: 4076px;
+  width: 4000px;
 
   animation: slide 60s linear infinite;
 }
@@ -409,6 +411,7 @@ letter-spacing: 3px;
   text-align: center;
   z-index: 100;
   overflow: hidden;
+  position:relative;
  
 }
 .errorcode{
@@ -420,7 +423,7 @@ letter-spacing: 3px;
  
 }
 .landingImage{
-  width: 500px;
+  width: 400px;
   /* float:left;
   margin-right: 60px;
   margin-left: -40px; */
@@ -431,13 +434,28 @@ letter-spacing: 3px;
   border-radius: 30px;
 }
 
+.landingImage2{
+  width: 500px;
+  
+  padding-top:60px;
+  
+  /* float:left;
+  margin-right: 60px;
+  margin-left: -40px; */
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+
+}
+
 .logo{
   width: 100px
 }
 
 .header{
   margin-top:40px;
-  margin-bottom:20px;
+  margin-bottom:5px;
   font-family: 'Alice', serif;
   font-size: 100px;
 }
@@ -450,6 +468,9 @@ letter-spacing: 3px;
   margin-top: 20px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 23px;
+  z-index: 1000;
+  background:white;
+  position: relative;
 }
 
 .loginbtn{
@@ -461,6 +482,8 @@ border-radius: 10px;
 background-color:white;
 color:black;
 letter-spacing: 2px;
+z-index: 1000;
+position:relative;
 }
 .loginbtn:hover{
  
@@ -468,6 +491,7 @@ letter-spacing: 2px;
   color:azure;
 background-color: black;
   letter-spacing: 2px;
+  position: relative;
 
 }
 
