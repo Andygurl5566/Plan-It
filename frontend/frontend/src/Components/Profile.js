@@ -18,11 +18,14 @@ function profileEditNav(){
 
     return (
        <>
+             
+
       <div className="bioheader">
+        <div className= "profile-background-image" >
       <h1 className="biotitle">Welcome {currentUser.name == null? currentUser.username : currentUser.name}!</h1> 
-       <p>Another day, another project </p>
-       
-       
+      
+        
+        <p>Another day, another project </p>
 
       <div className = "profileDiv">
        <img className="profileImage" src = {currentUser.image == null ? "https://i.imgur.com/Fo8ESgi.jpg" : `${currentUser.image}`} />
@@ -44,7 +47,7 @@ function profileEditNav(){
 
 
        <div className=""></div>
-    
+    </div>
        </>
     )
 }

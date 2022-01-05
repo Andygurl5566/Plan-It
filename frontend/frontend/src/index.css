@@ -162,7 +162,7 @@ margin-left: 1.5rem;
    padding: 20px;
   font-size: 20px;
   position:absolute;
-  margin-left: 1008px;
+  margin-left: 900px;
   top:224px;
   
 }
@@ -170,7 +170,7 @@ margin-left: 1.5rem;
 .searchicon{
   width: 30px;
   top:231px;
-  margin-left: 960px;
+  margin-left: 860px;
   position: absolute;
 }
 
@@ -191,7 +191,7 @@ margin-left: 1.5rem;
    padding: 20px;
   font-size: 20px;
   position:absolute;
-  margin-left: 1150px;
+  margin-left: 1050px;
   top:152px;
   
   
@@ -200,7 +200,7 @@ margin-left: 1.5rem;
 .searchiconentries{
   width: 30px;
   top:158px;
-  margin-left: 1099px;
+  margin-left: 999px;
   position: absolute;
 }
 
@@ -221,7 +221,7 @@ margin-left: 1.5rem;
    padding: 20px;
   font-size: 20px;
   position:absolute;
-  margin-left: 970px;
+  margin-left: 870px;
   top:164px;
   
 }
@@ -229,7 +229,7 @@ margin-left: 1.5rem;
 .searchiconentries2{
   width: 30px;
   top:171px;
-  margin-left: 920px;
+  margin-left: 820px;
   position: absolute;
 }
 
@@ -277,6 +277,21 @@ margin-left: 1.5rem;
  
 }
 
+.profile-background-image{
+  background-image: url("https://i.imgur.com/RopPVa1.png");
+  background-size: cover;
+  background-position: center;
+  width: 850px;
+  height: 100%;
+  text-align: center;
+  margin:auto;
+  padding-bottom:40px;
+  
+  
+  
+}
+
+
 .profileImagepreview{
   width: 270px;
   border-radius: 50%;
@@ -305,6 +320,7 @@ vertical-align: middle;
   
 line-height: normal;
 vertical-align: middle;
+opacity: 100%;
   
 }
 
@@ -369,6 +385,28 @@ margin-top:20px;
   position: relative;
 }
 
+.nav-link:hover{
+  text-decoration: none;
+  color: burlywood;
+}
+a.nav-link{
+  color:burlywood;
+  text-decoration:none ;
+}
+
+a.nav-link:hover
+{
+  color:burlywood;
+   text-decoration: none;
+}
+
+a.nav-link:active
+{
+  color:burlywood;
+   text-decoration: none;
+}
+
+
 .navdiv a{
 text-decoration: none;
 color: rgb(255, 255, 255);
@@ -378,7 +416,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 letter-spacing: 3px;
 }
 .navdiv:hover{
-  color: rgb(124, 124, 124);
+  color: burlywood;
   text-decoration: none;
 }
 
@@ -391,7 +429,7 @@ letter-spacing: 3px;
 
  
   height: 480px;
-  width: 4000px;
+  width: 5000px;
 
   animation: slide 60s linear infinite;
 }
@@ -401,7 +439,8 @@ letter-spacing: 3px;
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(-1692px, 0, 0);
+    transform: translate3d(-2600px, 0, 0);
+    /* transform: translate3d(-1692px, 0, 0); */
   }
 }
 
@@ -458,11 +497,13 @@ letter-spacing: 3px;
   margin-bottom:5px;
   font-family: 'Alice', serif;
   font-size: 100px;
+  
 }
 .subheader{
   margin-top:0px;
   text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: burlywood;
 }
 .buttondiv{
   margin-top: 20px;
@@ -500,6 +541,48 @@ background-color: black;
   
 }
 
+button.btn-primary{
+  color: #fff;
+    background-color: #000000;
+    border-color: black;
+    margin:5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+   
+}
+
+button.btn-primary:hover{
+  color: rgb(0, 0, 0);
+  border-color: black;
+    background-color: #f8f8f8;
+    border-color: none;
+    margin:5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    border:none;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 .form-special{
   
   display: block;
@@ -527,6 +610,10 @@ background-color: black;
     margin-right: auto;
     text-align: left;
 }
+.login-image{
+  display:inline-block;
+  width:400px;
+}
 
 #bio{
   
@@ -551,7 +638,7 @@ background-color: black;
 }
 
 .formTitle{
-  padding-top:70px;
+  padding-top:100px;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 2px;
