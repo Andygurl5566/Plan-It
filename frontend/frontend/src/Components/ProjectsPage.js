@@ -61,6 +61,7 @@ function ProjectsPage({currentUser}){
     return(
         <>
         <h1 className="cardpagetitle"> {currentUser.name == null? " My Projects": `${currentUser.name}'s Projects`} </h1>
+       {/* <img src="https://media1.giphy.com/media/jTeFZeSI69Kc5uDKLb/giphy.gif?cid=ecf05e476704980ac71cca0e2c07be288804695571a882b2&rid=giphy.gif&ct=s"/> */}
         <div className="pageheader">
             <div className="binding">
                 <button onClick={navigateToProjectForm} className="general-button-special">New Project</button>
