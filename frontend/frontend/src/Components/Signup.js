@@ -45,7 +45,10 @@ const Signup= ({setCurrentUser}) => {
     });
   }
 
-//JSX BEGINGS HERE
+  function navigateBack(){
+    navigate("/")
+  }
+
 
     return ( 
 <>
@@ -67,7 +70,10 @@ const Signup= ({setCurrentUser}) => {
       </div>
       <div className="formButton">
       <button type="submit" className="btn btn-primary">Submit</button>
-      <Link className="btn btn-primary" to="/"> Back</Link>
+      <button className="btn btn-primary" onClick={navigateBack}> Back</button> 
+      <div className="signupimage-div">
+      <img className="signup-image" src= "https://media0.giphy.com/media/5xtDarBbqdSQxfGFdNS/giphy.gif?cid=ecf05e47itwsgia6swwgrj37r88su49fybeg37xz18cj7kd0&rid=giphy.gif&ct=g" />
+    </div>
       </div>
     </form>
 </>
