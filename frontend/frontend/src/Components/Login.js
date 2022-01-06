@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import ProjectGenerator from "./ProjectGenerator";
+import NavBar from "./NavBar";
 
 
 const Login= ({setCurrentUser, setOnline}) => {
@@ -62,6 +63,7 @@ const Login= ({setCurrentUser, setOnline}) => {
 
     return ( 
       <>
+      
 
   <h1 className="formTitle">Login</h1>
 

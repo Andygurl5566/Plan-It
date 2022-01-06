@@ -23,6 +23,7 @@ import CalendarFeature from './Components/CalendarFeature';
 import EditProfile from './Components/EditProfile';
 import { useNavigate } from "react-router-dom";
 import ProtectedRoutes from './Components/ProtectedRoutes';
+import PleaseLogIn from './Components/PleaseLogIn';
 
 
 
@@ -47,7 +48,7 @@ function App() {
 
 
   let navigate = useNavigate()
-
+console.log(online)
   // const [currentAvatar, setCurrentAvatar] = useState({});
 
   const handleOffline =()=>{
@@ -76,15 +77,19 @@ function App() {
 
 const handleLogout = () => {
   fetch('/logout', {method: "DELETE"})
+  .then(()=>handleOffline())
   .then(() => navigate("/"))
   .then(res => { 
       console.log(res);
         if (res.ok) {
-          setCurrentUser(null)
+          setOnline(false)
+          // setCurrentUser(null)
+          
           console.log('you logged out');
         }
       })
-      // .then(()=>handleOffline())
+      
+     
       
 }
 
@@ -109,8 +114,10 @@ const [overlay, setoverlay] = useState(false)
       
       <Route path = "/" element={<Landing />}/>
       <Route path = "/login" element={<Login setCurrentUser={setCurrentUser} setOnline={setOnline}/> }/>
-      <Route path = "/signup" element={<Signup setCurrentUser={setCurrentUser} />}/>
+      <Route path = "/signup" element={<Signup setCurrentUser={setCurrentUser} setOnline={setOnline} />}/>
       <Route path ="/login/error" element={<LoginError setCurrentUser={setCurrentUser}/>}/>
+      <Route path ="/please-login" element={<PleaseLogIn />}/>
+
       {/* < Route path = "/nav" element={<NavBar />}/> */}
 
     <Route element={<ProtectedRoutes online={online}/>}>

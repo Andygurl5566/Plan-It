@@ -555,6 +555,12 @@ background-color: black;
 
 }
 
+.pleaseLogIn{
+  margin:auto;
+  text-align: center;
+ 
+}
+
 .signupimage-div{
  
   margin:auto;
@@ -637,6 +643,13 @@ button.btn-primary:hover{
 .login-image{
   display:inline-block;
   width:400px;
+  
+}
+
+.pleaselogin-image{
+  display:inline-block;
+ height: 450px;
+ width: 600px;
   
 }
 
