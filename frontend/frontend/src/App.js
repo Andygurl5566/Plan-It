@@ -107,7 +107,8 @@ const [overlay, setoverlay] = useState(false)
     currentUser={currentUser} 
     handleOverlay={handleOverlay}
     setoverlay={setoverlay}
-    overlay={overlay}/>
+    overlay={overlay}
+    online={online}/>
     
 
     <Routes>

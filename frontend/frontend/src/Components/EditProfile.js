@@ -12,7 +12,7 @@ function EditProfile({currentUser, setCurrentUser}){
     const [formData, setFormData] = useState({
         name: `${currentUser.name}`,
         bio:`${currentUser.bio}`,
-        image: `${currentUser.image}`,
+        image: `${currentUser.image != null ? currentUser.image : "https://i.imgur.com/Fo8ESgi.jpg"}`,
        
     })
     const handleChange = (e) => {
@@ -59,20 +59,23 @@ function EditProfile({currentUser, setCurrentUser}){
     return(
         <>
 
-        {/* <h5>Image Preview</h5> */}
 
         <button type = "back" className="formbtnedit2" onClick={navigateBack}> Back </button>
         <div className="profileDivpreview">
         <img className="profileImagepreview" src = {currentUser.image == null ? "https://i.imgur.com/Fo8ESgi.jpg" : `${currentUser.image}`} />
                     <p className="preview">Image Preview</p>
-</div>
+        </div>
 
         <form onSubmit={handleSubmit}>
             <div className='newforms'>
               <div className="newprojectform2">
               <label>Name</label>
               <input type="text" required className="form-control" name="name" id="name" onChange={handleChange} value={formData.name} placeholder="Project Name"/>
-              
+              {/* <label>Name</label>
+              <input type="text" required className="form-control" name="name" id="name" onChange={handleChange} value={formData.name} placeholder="Project Name"/>
+               */}
+
+
 
               <label>Image</label>
               <input type="text" className="form-control" name="image" id="image" onChange={handleChange}  value={formData.image} placeholder="Image"/>

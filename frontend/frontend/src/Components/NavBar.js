@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-function NavBar({handleLogout, currentUser, handleOverlay, overlay, setoverlay}){
+function NavBar({handleLogout, online, handleOverlay, overlay, setoverlay}){
   
   let navigate = useNavigate()
 
@@ -47,9 +47,9 @@ function NavBar({handleLogout, currentUser, handleOverlay, overlay, setoverlay})
                   <a className="nav-link" onClick={handleOverlay}>Ideas</a>
               </li>
 
-              {/* <li className="nav-item">
-                  {currentUser.message == "Please Log In" ? "" : <a className="nav-link" onClick={handleLogout}>Logout</a>} 
-               </li> */}
+              <li className="nav-item">
+                  {online == false ? "" : <a className="nav-link" onClick={handleLogout}>Logout</a>} 
+               </li>
 
 
             </ul>

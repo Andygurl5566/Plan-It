@@ -3,10 +3,11 @@ import Response from "./Response"
 
 function ProjectGenerator({setOpen, open, handleOverlay}){
    
-    console.log(open)
+    
 
     const [idea, setIdea] = useState({})
-    const [count, setcount] = useState(0)
+    const [yes, setYes] = useState(false)
+    
 
 
   function getIdea(){
@@ -14,18 +15,19 @@ function ProjectGenerator({setOpen, open, handleOverlay}){
     .then((r) => r.json())
     .then((idea) => {
         setIdea(idea)
+        setYes(true)
         console.log(idea)
     }).then(handleOpen) }
 
     function handleOpen(){
         setOpen(true)
-        setcount(+1)
+       console.log(open)
        
     }
-
+console.log(idea)
    
     
-    
+   
 
 
     return(
@@ -33,8 +35,9 @@ function ProjectGenerator({setOpen, open, handleOverlay}){
         <div className="askdiv">
             <div >
                 <button className ="askPlan" onClick={getIdea}>?</button>
-                {/* {open == true ? "" : <p> Need a project idea? <p>  Click the question mark above </p></p>}       */}
-                <h5>Here's an Idea:</h5>
+                {yes == true ? <h5>Here's an Idea:</h5> : <p> Need a project idea? <p>  Click the question mark above </p></p>}      
+
+                
                 {open == false ? "" : <Response idea={idea} 
                 setIdea={setIdea}
                  getIdea={getIdea} 

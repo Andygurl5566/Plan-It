@@ -445,11 +445,8 @@ letter-spacing: 3px;
 
 .landingpage-background{
   background-image: url() repeat-x;
-
- 
   height: 480px;
   width: 5000px;
-
   animation: slide 60s linear infinite;
 }
 
@@ -472,6 +469,7 @@ letter-spacing: 3px;
   position:relative;
  
 }
+
 .errorcode{
  
   padding-top:30px;

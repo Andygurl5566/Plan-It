@@ -1,9 +1,7 @@
-import {useEffect, useState} from "react"
-import { useNavigate } from "react-router-dom";
 
 
 
-function Response({idea, setIdea, getIdea, handleOverlay, setOpen}){
+function Response({idea, getIdea, handleOverlay}){
 
 
 
@@ -15,7 +13,7 @@ function Response({idea, setIdea, getIdea, handleOverlay, setOpen}){
          </div>  
          <div className="askdivbuttons">
                     <button onClick={getIdea} className="closeaskdivbtn">Meh...next</button>
-                    <button onClick={handleOverlay} className="closeaskdivbtn">Awesome!</button>
+                    <button onClick={handleOverlay} className="closeaskdivbtn">Great! Exit</button>
 
                 </div> 
         </>
