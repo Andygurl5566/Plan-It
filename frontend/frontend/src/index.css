@@ -278,6 +278,7 @@ margin-left: 1.5rem;
 
 .profileImage{
   width: 200px;
+  height: 200px;
   border-radius: 50%;
   margin-top:80px;
   display: center;
@@ -306,6 +307,7 @@ margin-left: 1.5rem;
 
 .profileImagepreview{
   width: 270px;
+ height: 270px;
   border-radius: 50%;
   display: center;
   object-fit: cover;
@@ -701,6 +703,16 @@ button.btn-primary:hover{
   margin-bottom: 0px;
   margin-right: 10px;
   margin-left: 750px;
+  background-color:white;
+  color:black;
+  letter-spacing: 2px;
+}
+
+.formbtnedit2{
+  margin-top: 90px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 665px;
   background-color:white;
   color:black;
   letter-spacing: 2px;

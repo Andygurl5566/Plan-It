@@ -22,6 +22,7 @@ import FlexProjectDetail from './Components/FlexProjectDetail';
 import CalendarFeature from './Components/CalendarFeature';
 import EditProfile from './Components/EditProfile';
 import { useNavigate } from "react-router-dom";
+import ProtectedRoutes from './Components/ProtectedRoutes';
 
 
 
@@ -42,16 +43,23 @@ function App() {
   const [projectList, setProjects] = useState([])
   const [edited, setEdited] = useState(true)
   const [open, setOpen] = useState(false)
+  const [online, setOnline] = useState(false)
+
+
   let navigate = useNavigate()
 
   // const [currentAvatar, setCurrentAvatar] = useState({});
+
+  const handleOffline =()=>{
+    setOnline(false)
+  }
 
   useEffect(() => {
     fetch('/me')
         .then((r) => r.json())
         .then((user) => {
           setCurrentUser(user)
-        
+         
         
         })
   }, [])
@@ -76,6 +84,7 @@ const handleLogout = () => {
           console.log('you logged out');
         }
       })
+      // .then(()=>handleOffline())
       
 }
 
@@ -94,17 +103,22 @@ const [overlay, setoverlay] = useState(false)
     handleOverlay={handleOverlay}
     setoverlay={setoverlay}
     overlay={overlay}/>
-    <Outlet/>
+    
 
     <Routes>
-
+      
       <Route path = "/" element={<Landing />}/>
-      <Route path = "/login" element={<Login setCurrentUser={setCurrentUser}/> }/>
-      <Route path = "/profile" element={<Profile currentUser={currentUser} handleLogout ={handleLogout} setCurrentUser={setCurrentUser}/>}/>
+      <Route path = "/login" element={<Login setCurrentUser={setCurrentUser} setOnline={setOnline}/> }/>
       <Route path = "/signup" element={<Signup setCurrentUser={setCurrentUser} />}/>
+      <Route path ="/login/error" element={<LoginError setCurrentUser={setCurrentUser}/>}/>
+      {/* < Route path = "/nav" element={<NavBar />}/> */}
+
+    <Route element={<ProtectedRoutes online={online}/>}>
+      
 
       <Route path = "/projects" element={<ProjectsPage currentUser={currentUser} />}/>
       <Route path = "/entries" element={<EntryPage currentUser={currentUser} />}/>
+      <Route path = "/profile" element={<Profile currentUser={currentUser} handleLogout ={handleLogout} setCurrentUser={setCurrentUser}/>}/>
 
       <Route path = "/project/edit" element={<EditProjectForm />}/>
        <Route path = "/entry/edit" element={<EditEntryForm />}/>
@@ -121,14 +135,13 @@ const [overlay, setoverlay] = useState(false)
   
     />}/>
       <Route path ="/addprompt" element={<AddPrompt/>}/>
-      <Route path ="/login/error" element={<LoginError setCurrentUser={setCurrentUser}/>}/>
       <Route path ="/flex/:project_id" element={<FlexProjectDetail/>}/>
       <Route path ="/calendar" element={<CalendarFeature/>}/>
       <Route path ="/edit-profile" element={<EditProfile currentUser={currentUser} setCurrentUser={setCurrentUser}/>}/>
    
+  </Route>
 
-
-      <Route path ="*" component={Page404}/>
+      {/* <Route path ="*" component={Page404}/> */}
     </Routes>
 
     </>

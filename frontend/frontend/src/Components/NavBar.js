@@ -5,6 +5,7 @@ import ProjectGenerator from './ProjectGenerator';
 
 
 
+
 function NavBar({handleLogout, currentUser, handleOverlay, overlay, setoverlay}){
   
   

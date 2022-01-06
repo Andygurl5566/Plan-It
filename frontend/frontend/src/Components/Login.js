@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import ProjectGenerator from "./ProjectGenerator";
 
 
-const Login= ({setCurrentUser}) => {
+const Login= ({setCurrentUser, setOnline}) => {
 
   const countReducer = useSelector(state => state.countReducer)
   const dispatch = useDispatch()
@@ -16,6 +16,10 @@ const Login= ({setCurrentUser}) => {
     username: "",
     password: "",
   });
+
+  const handleOnline =()=>{
+    setOnline(true)
+  }
 
   const handleChange = (e) => {
     setFormData({
@@ -41,6 +45,7 @@ const Login= ({setCurrentUser}) => {
           console.log(user.name)
           
         })
+        .then(()=> handleOnline())
         .then(() => navigate("/profile"))
       } else {
         res.json().then((errors) => {

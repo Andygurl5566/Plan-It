@@ -61,7 +61,7 @@ function EditProfile({currentUser, setCurrentUser}){
 
         {/* <h5>Image Preview</h5> */}
 
-        <button type = "back" className="formbtnedit" onClick={navigateBack}> Back </button>
+        <button type = "back" className="formbtnedit2" onClick={navigateBack}> Back </button>
         <div className="profileDivpreview">
         <img className="profileImagepreview" src = {currentUser.image == null ? "https://i.imgur.com/Fo8ESgi.jpg" : `${currentUser.image}`} />
                     <p className="preview">Image Preview</p>
