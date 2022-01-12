@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 
 //SIGNUP FUNCTIONALITY
 
-const Signup= ({setCurrentUser}) => {
+const Signup= ({setCurrentUser, online, setOnline}) => {
   
   let navigate = useNavigate()
   const [formData, setFormData] = useState({
@@ -13,6 +12,10 @@ const Signup= ({setCurrentUser}) => {
     password: "",
     
   });
+
+  const handleOnline =()=>{
+    setOnline(true)
+  }
 
   const handleChange = (e) => {
     setFormData({
@@ -36,6 +39,7 @@ const Signup= ({setCurrentUser}) => {
         res.json().then((user) => {
           setCurrentUser(user);
         })
+        .then(()=> handleOnline())
         .then(() => navigate("/profile"))
       } else {
         res.json().then((errors) => {

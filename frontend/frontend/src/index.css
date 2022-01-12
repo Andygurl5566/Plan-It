@@ -278,6 +278,7 @@ margin-left: 1.5rem;
 
 .profileImage{
   width: 200px;
+  height: 200px;
   border-radius: 50%;
   margin-top:80px;
   display: center;
@@ -306,6 +307,7 @@ margin-left: 1.5rem;
 
 .profileImagepreview{
   width: 270px;
+ height: 270px;
   border-radius: 50%;
   display: center;
   object-fit: cover;
@@ -443,11 +445,8 @@ letter-spacing: 3px;
 
 .landingpage-background{
   background-image: url() repeat-x;
-
- 
   height: 480px;
   width: 5000px;
-
   animation: slide 60s linear infinite;
 }
 
@@ -470,6 +469,7 @@ letter-spacing: 3px;
   position:relative;
  
 }
+
 .errorcode{
  
   padding-top:30px;
@@ -551,6 +551,12 @@ background-color: black;
   letter-spacing: 2px;
   position: relative;
 
+}
+
+.pleaseLogIn{
+  margin:auto;
+  text-align: center;
+ 
 }
 
 .signupimage-div{
@@ -638,6 +644,13 @@ button.btn-primary:hover{
   
 }
 
+.pleaselogin-image{
+  display:inline-block;
+ height: 450px;
+ width: 600px;
+  
+}
+
 .signup-image{
   display:inline-block;
   width:400px;
@@ -701,6 +714,16 @@ button.btn-primary:hover{
   margin-bottom: 0px;
   margin-right: 10px;
   margin-left: 750px;
+  background-color:white;
+  color:black;
+  letter-spacing: 2px;
+}
+
+.formbtnedit2{
+  margin-top: 90px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 665px;
   background-color:white;
   color:black;
   letter-spacing: 2px;

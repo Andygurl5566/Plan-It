@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import ProjectGenerator from "./ProjectGenerator";
+import NavBar from "./NavBar";
 
 
-const Login= ({setCurrentUser}) => {
+const Login= ({setCurrentUser, setOnline}) => {
 
   const countReducer = useSelector(state => state.countReducer)
   const dispatch = useDispatch()
@@ -16,6 +17,10 @@ const Login= ({setCurrentUser}) => {
     username: "",
     password: "",
   });
+
+  const handleOnline =()=>{
+    setOnline(true)
+  }
 
   const handleChange = (e) => {
     setFormData({
@@ -41,6 +46,7 @@ const Login= ({setCurrentUser}) => {
           console.log(user.name)
           
         })
+        .then(()=> handleOnline())
         .then(() => navigate("/profile"))
       } else {
         res.json().then((errors) => {
@@ -57,6 +63,7 @@ const Login= ({setCurrentUser}) => {
 
     return ( 
       <>
+      
 
   <h1 className="formTitle">Login</h1>
 
