@@ -29,6 +29,9 @@ function profileEditNav(){
 
       <div className = "profileDiv">
        <img className="profileImage" src = {currentUser.image == null ? "https://i.imgur.com/Fo8ESgi.jpg" : `${currentUser.image}`} />
+
+
+       
        
       </div>
       <button className="profilebtnedit" onClick={profileEditNav}>Edit Profile</button>  
