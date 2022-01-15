@@ -9,10 +9,6 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
     const [toggle, setToggle] = useState(false);
     const [test1, setTest1] = useState("");
 
-    const [yearstate, setYear] = useState("0000");
-    const [daystate, setDay] = useState("0");
-    const [monthstate, setMonth] = useState("0");
-
 
 
    
@@ -22,10 +18,6 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
 
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
   var SCOPES = "https://www.googleapis.com/auth/calendar.events";
-  // must have only scopes that match in your api console
-
-// console.log(`${Intl.DateTimeFormat().resolvedOptions().timeZone}`)
-//gets users current timezone
 
 
 
@@ -44,21 +36,8 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
     gapi.client.load('calendar', 'v3', () => console.log('bam!'))
 
 
-// date format = `2020-06-28T09:00:00-00:00`
 
-
-
-//winner winner chicken dinner
-// const d = new Date(2017,1,1);
-// console.log(d.toISOString().slice(0,19))
-
-//converts to correct format
-// function formatDate(year, monthNum, day){
-//     const date = new Date(year,monthNum,day);
-//     return (date.toISOString().slice(0,19))
-// }
-
-console.log(entries.due_date)
+    console.log(entries.due_date)
 
 
     gapi.auth2.getAuthInstance().signIn()
@@ -149,7 +128,6 @@ console.log(entries.due_date)
           console.log (new Date(entries.due_date.slice(0,10).toString()))
           let date = new Date(entries.due_date.slice(0,10).toString())
           let formattedDate = date.toString().slice(4,16)
-      
      
 
 
@@ -168,9 +146,7 @@ console.log(entries.due_date)
             <p className="card-text">{entries.details}</p>
             
             {entries.due_date == "" ? "" : <p className="card-text"> Due : {formattedDate}</p>}
-            
-            {/* <a href="#" className="btn btn-primary">Details</a> */}
-           
+                       
             <button onClick={handleToggle} className="general-button2">{toggle==false? "Edit":"Close"}</button>
             
             <button onClick={confirmDelete} className="general-button2"> Delete </button>
@@ -186,10 +162,6 @@ console.log(entries.due_date)
                 id={id} setToggle={setToggle} 
                 test1={test1}
                 setTest1={setTest1}
-                // setYear={setYear}
-                // setMonth={setMonth}
-                // setday={setDay} 
-                
                 />  }
           
 
