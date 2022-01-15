@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import ProjectGenerator from "./ProjectGenerator";
-import NavBar from "./NavBar";
 
 
 const Login= ({setCurrentUser, setOnline}) => {

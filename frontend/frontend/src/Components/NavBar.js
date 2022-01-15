@@ -44,7 +44,7 @@ function NavBar({handleLogout, online, handleOverlay, overlay, setoverlay}){
                   <a className="nav-link" onClick={navEntries} >Entries</a>
               </li>
               <li className="nav-item">
-                  <a className="nav-link" onClick={handleOverlay}>Ideas</a>
+                 {online == false ? "" : <a className="nav-link" onClick={handleOverlay}>Ideas</a>}
               </li>
 
               <li className="nav-item">
@@ -56,8 +56,8 @@ function NavBar({handleLogout, online, handleOverlay, overlay, setoverlay}){
         </nav>    
 
          {overlay == false? "": <ProjectGenerator handleOverlay={handleOverlay}
-    setoverlay={setoverlay}
-    overlay={overlay}/>} 
+           setoverlay={setoverlay}
+           overlay={overlay}/>} 
         </>
     )
 }
