@@ -55,9 +55,9 @@ function EntryCard({entries, edited, setEdited, onDeleteEntries, handleDeleteEnt
           'dateTime': `${entries.due_date}:00`,
           'timeZone':`${Intl.DateTimeFormat().resolvedOptions().timeZone}`
         },
-        'recurrence': [
-          'RRULE:FREQ=DAILY;COUNT=2'
-        ],
+        // 'recurrence': [
+        //   'RRULE:FREQ=DAILY;COUNT=2'
+        // ],
        
         'reminders': {
           'useDefault': false,
