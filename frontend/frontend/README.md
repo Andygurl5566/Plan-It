@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Future Addons
+
+- Checklist
+- Button hover for entries and project page
+- file upload
+- indicates whether or not something has been added to your calander
+- visual calander that shos when everything is happening 
+- large view for projects
