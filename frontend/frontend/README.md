@@ -77,3 +77,5 @@ Future Addons
 - indicates whether or not something has been added to your calander
 - visual calander that shos when everything is happening 
 - large view for projects
+- password reset/retreaval
+- minimum 8 character password

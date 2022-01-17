@@ -80,12 +80,12 @@ const Login= ({setCurrentUser, setOnline}) => {
     </div> */}
 
         <label for="exampleInputEmail1">Username</label>
-        <input type="text" name="username" value={formData.username} onChange={handleChange} className="form-control"  placeholder="Enter Username"/>
+        <input type="text" required name="username" value={formData.username} onChange={handleChange} className="form-control"  placeholder="Enter Username"/>
       
       </div>
       <div className="form-special">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" name="password" value={formData.password} onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+        <input type="password" required name="password" value={formData.password} onChange={handleChange} className="form-control" id="exampleInputPassword1" placeholder="Password"/>
       </div>
       <div className="form-check">
       
