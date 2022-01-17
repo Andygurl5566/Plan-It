@@ -966,7 +966,21 @@ button.btn-primary:hover{
   border: none;
   font-size: 18px;
   
- 
+}
+
+.general-button2:hover{
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 3px;
+  color:white;
+  background-color: rgb(76, 81, 85);
+  outline: none;
+  box-shadow: 5px;
+  border: none;
+  font-size: 18px;
 }
 
 .edit-button{
